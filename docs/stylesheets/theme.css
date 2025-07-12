@@ -1,0 +1,108 @@
+:root {
+    --primary-family: 'Noto Serif Medium', 'Oswald', 'Noto Sans',  'Courier New';
+    --primary-header-0-size: 28px;
+    --primary-header-1-size: 24px;
+    --primary-header-2-size: 22px;
+    --primary-header-3-size: 20px;
+    --primary-header-4-size: 18px;
+    --primary-header-5-size: 16px;
+    --primary-font-size: 15px; /* Light theme background */
+    --primary-padding-common: 10px;
+    --primary-theme-color: #4682B4; /* Light theme text */
+    --primary-theme-color-transparent: #4682B4CC; /* Light theme text */
+    --secondary-theme-color: #498789; /* Accent color */
+    --soft-gray-theme-color: #E2E2E2; /* Accent color */
+    --code-color: black;
+    --code-background-color: #fdddb4aa;
+    --code-font-family: 'Roboto Mono Medium';
+    /* --code-font-family: 'Noto Sans Mono Light'; */
+}
+
+/* Full width */
+.md-grid {
+  max-width: 60%; /* or try 100% or 1280px */
+}
+
+body {
+    font-family: var(--primary-family);
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+mark.green {
+    background-color: #00ff22!important;
+}
+mark.red {
+    background-color: red!important;
+    color: white!important;
+}
+mark.blue {
+    background-color: lightblue!important;
+}
+
+div.note-red {
+  color: white;
+  background-color: #ff1100;
+  padding-left: var(--primary-font-size);;
+  padding-top: var(--primary-padding-common);
+  padding-bottom: var(--primary-padding-common);
+  font-style: italic;
+}
+div.note-yellow {
+  color: black;
+  background-color: #ffffcc;
+  border-left: 6px solid #fbff00;
+  padding-left: var(--primary-font-size);;
+  padding-top: var(--primary-padding-common);
+  padding-bottom: var(--primary-padding-common);
+  font-style: italic;
+}
+div.note-blue {
+  color: black;
+  background-color: #63b9ff;
+  padding-left: var(--primary-font-size);;
+  padding-top: var(--primary-padding-common);
+  padding-bottom: var(--primary-padding-common);
+  font-style: italic;
+}
+div.note-green {
+  color: black;
+  background-color: #00ff22;
+  padding-left: var(--primary-font-size);;
+  padding-top: var(--primary-padding-common);
+  padding-bottom: var(--primary-padding-common);
+  font-style: italic;
+}
+/* This isn't have italic font */
+div.note-gray {
+  color: black;
+  background-color: #808080;
+  padding-left: var(--primary-font-size);
+  padding-top: var(--primary-padding-common);
+  padding-bottom: var(--primary-padding-common);
+  font-style: italic;
+}
+
+.center-table {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.center-table table {
+  margin: 0 auto;
+}
+
+/* Change table size */
+
+th {
+  background-color: #aaa1ff5b;
+  font-size: larger;
+}
+
+td {
+  font-size: large;
+}

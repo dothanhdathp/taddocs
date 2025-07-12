@@ -1,0 +1,81 @@
+site_name: Tad
+theme:
+  name: material
+  highlightjs: true
+  hljs_style: github
+  hljs_style_dark: github-dark
+  palette:
+  - scheme: default
+    primary: indigo
+    accent: pink
+    toggle:
+      icon: material/brightness-4
+      name: Switch to dark mode
+  - scheme: slate
+    primary: indigo
+    accent: pink
+    toggle:
+      icon: material/brightness-7
+      name: Switch to light mode
+  features:
+    - content.code.annotation
+    - content.code.copy
+    - navigation.tabs
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Programming Language:
+    - C: Developer/c/c.md
+    - C++:
+      - Giới thiệu:
+        - Overview: Developer/cpp/cpp-overview.md
+        - Install: Developer/cpp/cpp-install.md
+        - HelloWorld: Developer/cpp/cpp-helloworld.md
+      - Cơ bản:
+        - Data Types: Developer/cpp/cpp-datatypes.md
+        - Basic Operator: Developer/cpp/cpp-basic-operator.md
+        - Flow Control: Developer/cpp/cpp-flow-control.md
+    - C#: Developer/c-sharp/c-sharp.md
+    - Java: Developer/Java/java.md
+    - Javascript: Developer/Javascript/javascript
+    - Kotlin: Developer/Kotlin/kotlin.md
+    - Python: Developer/Python/python.md
+    - Rust: Developer/Rust/rust.md
+    - PhP: Developer/php/php.md
+  - Non Programming Language:
+    - HTML: Developer/html/html.md
+    - CSS: Developer/css/css.md
+    - Markdown: Document/Markdown/markdown.md
+    - Mermaid: Document/Mermaid/mermaid.md
+    - PlantUml: Document/PlantUml/plantUml.md
+    - Latex: Document/Latex/latex.md
+    - Katex: Document/Katex/katex.md
+    - Tooks:
+      - MKDocs:
+        - Getting Start: Document/MKDocs/mkdocs.md
+        - Theme: Document/MKDocs/mkdocs-theme.md
+        - CSS: Document/MKDocs/mkdocs-css.md
+        - Katex: Document/MKDocs/mkdocs-katex.md
+  - Work:
+    - MnM:
+extra_css:
+  - stylesheets/theme.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+markdown_extensions:
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra_javascript:
+  - scripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
