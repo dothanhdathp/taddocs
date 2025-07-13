@@ -25,12 +25,10 @@ theme:
     - navigation.tabs
     - navigation.instant
 
-
 plugins:
   - search
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
-      num_workers: 8
 
 nav:
   - Home: index.md
@@ -98,6 +96,7 @@ nav:
         - Mermaid: Document/MKDocs/mkdocs-mermaid.md
         - PlantUml: Document/MKDocs/mkdocs-plantuml.md
         - Markdown Extensions: Document/MKDocs/mkdocs-markdown-extensions.md
+        - Markdown Github Publish: Document/MKDocs/mkdocs-github-publish.md
   - Tools:
     - VSCode: Tools/VSCode/tools-vscode-overview.md
     - Android Studio: Tools/AndroidStudio/tools-android-studio-overview.md

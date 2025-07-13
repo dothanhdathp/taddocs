@@ -88,9 +88,9 @@ IdentityFile ~/.ssh/ntdung2
 repo init -u ssh://git-proxy/git/HA/product/hu/linux/manifest.git -b <branch>
 ```
 ## Maintain model
-- [Z101](./z101.md)
-- [S210](./s210.md)
-- [S201](./s201.md)
-- [W501](./w501.md)
-- [WSA](./wsa.md)
-- [ZX](./zx.md)
+- [Z101](./work-z101-overview.md)
+- [S210](./work-s210-overview.md)
+- [S201](./work-s201-overview.md)
+- [W501](./work-w501-overview.md)
+- [WSA](./work-wsa-overview.md)
+- [ZX](./work-zx-overview.md)
