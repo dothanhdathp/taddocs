@@ -72,21 +72,33 @@ nav:
         - Giải bảng Sudoku:  Developer/cpp/cpp-project-solver-sudoku.md
     - C#: Developer/c-sharp/c-sharp.md
     - Java:
-      - Java: Developer/Java/java-introduce.md
-      - JDK, JRE và JVM: Developer/Java/java-jdk-jre-jvm.md
+      - Overview:
+        - Java: Developer/Java/java-introduce.md
+        - JDK, JRE và JVM: Developer/Java/java-jdk-jre-jvm.md
+        - Install: Developer/Java/java-install.md
+        - HelloWorld: Developer/Java/java-helloworld.md
+      - Basic:
+        - Basic Syntax: Developer/Java/java-basic-synctax.md
+        - Datatypes & Variables: Developer/Java/java-basic-datatypes-and-variables.md
     - Javascript: Developer/Javascript/javascript.md
     - Kotlin: Developer/Kotlin/kotlin.md
     - Python: Developer/Python/python.md
-    - Rust: Developer/Rust/rust.md
+    - Rust:
+      - Overview:
+        - Setup: Developer/Rust/rust-setup.md
+        - Document: Developer/Rust/rust-document.md
+      - Basic:
+        - Variables: Developer/Rust/rust-variables.md
     - PhP: Developer/php/php.md
   - Non Programming Language:
     - HTML: Developer/html/html.md
     - CSS: Developer/css/css.md
     - Markdown: Document/Markdown/markdown.md
-    - Mermaid: Document/Mermaid/mermaid.md
-    - PlantUml: Document/PlantUml/plantUml.md
-    - Latex: Document/Latex/latex.md
-    - Katex: Document/Katex/katex.md
+    - Mermaid:
+      - Overview: Document/Mermaid/mermaid-overview.md
+    - PlantUml: Document/PlantUml/plantuml.md
+    - Latex: Document/LaTex/latex.md
+    - Katex: Document/KaTex/katex.md
     - Tooks:
       - MKDocs:
         - Getting Start: Document/MKDocs/mkdocs.md
@@ -180,3 +192,10 @@ extra_javascript:
   - scripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/dothanhdathp
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/tad.zeila?locale=vi_VN

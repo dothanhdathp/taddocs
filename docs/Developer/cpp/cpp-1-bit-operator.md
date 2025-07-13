@@ -14,6 +14,7 @@ Nghĩa là các thuật toán liên quan đến `bit`. Máy tính thực hiện 
 #### AND
 
 Phép __AND__ được biểu diễn bằng dấu `&`. __AND__ hai `bit` chỉ trả về `1` khi cả hai đều là `1`.
+
 |a/b | 0 | 1 |
 |:--:|:-:|:-:|
 | 0  | 0 | 0 |
