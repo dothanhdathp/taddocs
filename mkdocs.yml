@@ -25,12 +25,14 @@ theme:
     - navigation.tabs
     - navigation.instant
 
-
 plugins:
   - search
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
-
+  - puml
+  - build_plantuml:
+       render: local
+       bin_path: /path/to/plantuml
 
 nav:
   - Home: index.md
@@ -142,21 +144,21 @@ nav:
         - Usercmd: OS/Windows/os-windows-custom-usercmd.md
     - Android:
       - Overview: OS/Android/os-android-overview.md
-  - Work:
-    - MnM:
-      - Về MnM: Work/MnM/work-about-mnm.md
-      - S201:
-        - Overview: Work/MnM/work-s201-overview.md
-      - W501:
-        - Overview: Work/MnM/work-w501-overview.md
-      - Z101:
-        - Overview: Work/MnM/work-z101-overview.md
-      - S210:
-        - Overview: Work/MnM/work-s210-overview.md
-      - WSA:
-        - Overview: Work/MnM/work-wsa-overview.md
-      - ZX:
-        - Overview: Work/MnM/work-zx-overview.md
+  # - Work:
+  #   - MnM:
+  #     - Về MnM: Work/MnM/work-about-mnm.md
+  #     - S201:
+  #       - Overview: Work/MnM/work-s201-overview.md
+  #     - W501:
+  #       - Overview: Work/MnM/work-w501-overview.md
+  #     - Z101:
+  #       - Overview: Work/MnM/work-z101-overview.md
+  #     - S210:
+  #       - Overview: Work/MnM/work-s210-overview.md
+  #     - WSA:
+  #       - Overview: Work/MnM/work-wsa-overview.md
+  #     - ZX:
+  #       - Overview: Work/MnM/work-zx-overview.md
 
 extra_css:
   - stylesheets/theme.css
