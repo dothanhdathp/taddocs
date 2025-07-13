@@ -29,10 +29,6 @@ plugins:
   - search
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
-  - puml
-  - build_plantuml:
-       render: local
-       bin_path: /path/to/plantuml
 
 nav:
   - Home: index.md
