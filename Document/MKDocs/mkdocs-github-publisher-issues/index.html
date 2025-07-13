@@ -16,7 +16,7 @@
     
     
       
-        <title>S210 - Tad Zeila</title>
+        <title>Github publisher issue - Tad Zeila</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#s210" class="md-skip">
+        <a href="#github-publisher-issue" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              S210
+              Github publisher issue
             
           </span>
         </div>
@@ -1815,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/Markdown/markdown/" class="md-nav__link">
+      <a href="../../Markdown/markdown/" class="md-nav__link">
         
   
   
@@ -1838,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/Mermaid/mermaid/" class="md-nav__link">
+      <a href="../../Mermaid/mermaid/" class="md-nav__link">
         
   
   
@@ -1861,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/PlantUml/plantUml.md" class="md-nav__link">
+      <a href="../../PlantUml/plantUml.md" class="md-nav__link">
         
   
   
@@ -1884,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/Latex/latex.md" class="md-nav__link">
+      <a href="../../Latex/latex.md" class="md-nav__link">
         
   
   
@@ -1907,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/Katex/katex.md" class="md-nav__link">
+      <a href="../../Katex/katex.md" class="md-nav__link">
         
   
   
@@ -2012,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs/" class="md-nav__link">
+      <a href="../mkdocs/" class="md-nav__link">
         
   
   
@@ -2035,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs-theme/" class="md-nav__link">
+      <a href="../mkdocs-theme/" class="md-nav__link">
         
   
   
@@ -2058,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs-css/" class="md-nav__link">
+      <a href="../mkdocs-css/" class="md-nav__link">
         
   
   
@@ -2081,7 +2081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs-katex/" class="md-nav__link">
+      <a href="../mkdocs-katex/" class="md-nav__link">
         
   
   
@@ -2104,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs-mermaid.md" class="md-nav__link">
+      <a href="../mkdocs-mermaid.md" class="md-nav__link">
         
   
   
@@ -2127,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs-plantuml/" class="md-nav__link">
+      <a href="../mkdocs-plantuml/" class="md-nav__link">
         
   
   
@@ -2150,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Document/MKDocs/mkdocs-markdown-extensions/" class="md-nav__link">
+      <a href="../mkdocs-markdown-extensions/" class="md-nav__link">
         
   
   
@@ -3609,6 +3609,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loi-plantuml-plugin-is-not-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lỗi plantuml plugin is not installed
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3623,7 +3640,38 @@
 
 
 
-<h1 id="s210">S210</h1>
+<h1 id="github-publisher-issue">Github publisher issue</h1>
+<h2 id="loi-plantuml-plugin-is-not-installed">Lỗi plantuml plugin is not installed</h2>
+<div class="highlight"><pre><span></span><code>ERROR<span class="w">   </span>-<span class="w">  </span>Config<span class="w"> </span>value<span class="w"> </span><span class="s1">&#39;plugins&#39;</span>:<span class="w"> </span>The<span class="w"> </span><span class="s2">&quot;plantuml&quot;</span><span class="w"> </span>plugin<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>installed
+</code></pre></div>
+<p>Tải về các gói phụ thuộc dưới này:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-puml
+pip<span class="w"> </span>install<span class="w"> </span>mkdocs-plantuml
+pip<span class="w"> </span>install<span class="w"> </span>mkdocs_puml
+pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+pip<span class="w"> </span>mkdocs-material
+pip<span class="w"> </span>mkdocs_puml
+pip<span class="w"> </span>pymdown-extensions
+</code></pre></div>
+<p>Thêm vào tệp <code>.yml</code></p>
+<div class="highlight"><pre><span></span><code>plugins:
+  - search
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+</code></pre></div>
+<p>Bỏ cờ dưới này đi nếu muốn build thành công, mặc dù hiện tại mình cũng chưa rõ nó build ra cái gì.</p>
+<div class="highlight"><pre><span></span><code>plugins:
+<span class="w">  </span>-<span class="w"> </span>puml
+<span class="w">  </span>-<span class="w"> </span>build_plantuml:
+<span class="w">       </span>render:<span class="w"> </span><span class="nb">local</span>
+<span class="w">       </span>bin_path:<span class="w"> </span>/path/to/plantuml
+</code></pre></div>
+<p>Xong sau đó mở <code>python enviroment</code></p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</code></pre></div>
+<p>Rồi build bằng lệnh:</p>
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
+</code></pre></div>
 
 
 
