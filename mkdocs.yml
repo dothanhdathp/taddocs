@@ -168,6 +168,10 @@ nav:
         - Overview: Work/MnM/work-wsa-overview.md
       - ZX:
         - Overview: Work/MnM/work-zx-overview.md
+  - Diary:
+    - Năm 2025: 
+      - Tháng 6: Diary/2025/month-6.md
+      - Tháng 7: Diary/2025/month-7.md
 
 extra_css:
   - stylesheets/theme.css
