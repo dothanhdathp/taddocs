@@ -1,0 +1,106 @@
+:root {
+    --primary-family: 'Noto Serif Medium', 'Oswald', 'Noto Sans',  'Courier New';
+    --primary-header-0-size: 28px;
+    --primary-header-1-size: 24px;
+    --primary-header-2-size: 22px;
+    --primary-header-3-size: 20px;
+    --primary-header-4-size: 18px;
+    --primary-header-5-size: 16px;
+    --primary-font-size: 15px; /* Light theme background */
+    --primary-padding-common: 10px;
+    --primary-theme-color: #4682B4; /* Light theme text */
+    --primary-theme-color-transparent: #4682B4CC; /* Light theme text */
+    --secondary-theme-color: #498789; /* Accent color */
+    --soft-gray-theme-color: #E2E2E2; /* Accent color */
+    --code-color: black;
+    --code-background-color: #fdddb4aa;
+    --code-font-family: 'Roboto Mono Medium';
+    --md-bg-light-color: #d3d3e9;
+    --md-bg-dark-color: #020226;
+    /* --code-font-family: 'Noto Sans Mono Light'; */
+}
+
+[data-md-color-primary=indigo] {
+    --md-primary-fg-color: #383d5b;
+}
+/* Full width */
+.md-grid {
+  /* max-width: initial; /* or try 100% or 1280px or */
+  max-width: 80%; /* or try 100% or 1280px or */
+}
+
+.md-tabs {
+  background-color: #434a74;
+}
+
+body {
+    font-family: var(--primary-family);
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    color:var(--primary-theme-color-transparent);
+}
+h3 {
+    font-weight: bold;
+    color:var(--secondary-theme-color);
+}
+h4 {
+    font-weight: bold;
+    font-style    : italic;
+    color:var(--secondary-theme-color);
+}
+h5 {
+    font-weight: bold;
+    font-style    : italic;
+    color:var(--secondary-theme-color);
+}
+h6 {
+    font-weight: bold;
+    font-style    : italic;
+    color:var(--secondary-theme-color);
+}
+
+mark.green {
+    background-color: #00ff22!important;
+}
+mark.red {
+    background-color: red!important;
+    color: white!important;
+}
+mark.blue {
+    background-color: lightblue!important;
+}
+
+.center-table {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.center-table table {
+  margin: 0 auto;
+}
+
+/* Change table size */
+
+th {
+  background-color: #aaa1ff5b;
+  font-size: larger;
+}
+
+td {
+  font-size: large;
+}
+
+/* code */
+:not(pre):not(.hljs) > code {
+    color: var(--code-color);
+    background-color: var(--code-background-color);
+    font-family: var(--code-font-family);
+}
