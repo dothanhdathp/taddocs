@@ -10,4 +10,12 @@ Học ngôn ngữ lập trình.
 
 Học một số ngôn ngữ thiết kế website, viết tài liệu, 
 
+## [OS (Operator System)](OS/os-overview/)
 
+Các phần về hệ điều hành như Ubuntu, Windows, Android, ...
+
+## [Software]()
+
+## Work
+
+## Research

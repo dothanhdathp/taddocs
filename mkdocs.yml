@@ -1,6 +1,7 @@
-site_name: Tad
+site_name: Tad Zeila
 theme:
   name: material
+  logo: logo/cat_white.png
   highlightjs: true
   hljs_style: github
   hljs_style_dark: github-dark
@@ -20,10 +21,16 @@ theme:
   features:
     - content.code.annotation
     - content.code.copy
+    - content.tabs.link
     - navigation.tabs
+    - navigation.instant
+
 
 plugins:
   - search
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
 
 nav:
   - Home: index.md
@@ -31,16 +38,45 @@ nav:
     - C: Developer/c/c.md
     - C++:
       - Giới thiệu:
-        - Overview: Developer/cpp/cpp-overview.md
-        - Install: Developer/cpp/cpp-install.md
-        - HelloWorld: Developer/cpp/cpp-helloworld.md
+        - Overview: Developer/cpp/cpp-0-overview.md
+        - Install: Developer/cpp/cpp-0-install.md
+        - HelloWorld: Developer/cpp/cpp-0-helloworld.md
       - Cơ bản:
-        - Data Types: Developer/cpp/cpp-datatypes.md
-        - Basic Operator: Developer/cpp/cpp-basic-operator.md
-        - Flow Control: Developer/cpp/cpp-flow-control.md
+        - Data Types: Developer/cpp/cpp-1-datatypes.md
+        - Basic Operator: Developer/cpp/cpp-1-basic-operator.md
+        - Flow Control: Developer/cpp/cpp-1-flow-control.md
+        - Input and Output: Developer/cpp/cpp-1-input-and-output.md
+        - Condition & Loop: Developer/cpp/cpp-1-condition-loop.md
+        - Command Line Arguments: Developer/cpp/cpp-1-command-line-arguments.md
+        - Basic Bit Operator: Developer/cpp/cpp-1-bit-operator.md
+        - Namespace: Developer/cpp/cpp-1-namespace.md
+        - Define: Developer/cpp/cpp-1-define.md
+        - Include: Developer/cpp/cpp-1-include.md
+      - Function:
+        - Function: Developer/cpp/cpp-2-function.md
+        - Lambda: Developer/cpp/cpp-2-lambda.md
+        - Function as Parameter: Developer/cpp/cpp-2-function-as-parameter.md
+      - Pointer:
+        - Pointer: Developer/cpp/cpp-3-pointer.md
+        - Smart Pointer: Developer/cpp/cpp-3-smart-pointer.md
+        - Raw Pointer: Developer/cpp/cpp-3-raw-pointer.md
+        - Memory Model: Developer/cpp/cpp-3-memory-model.md
+      - STANDARD LIBRARY STD:
+        - Type:
+          - std::string: Developer/cpp/cpp-3-std-string.md
+        - Function:
+          - std::sort: Developer/cpp/cpp-3-std-sort.md
+          - std::make_share: Developer/cpp/cpp-3-std-make_share.md
+          - std::distance: Developer/cpp/cpp-3-std-distance.md
+          - std::hash: Developer/cpp/cpp-3-std-hash.md
+          - std::unique: Developer/cpp/cpp-3-std-unique.md
+      - Project:
+        - Giải bảng Sudoku:  Developer/cpp/cpp-project-solver-sudoku.md
     - C#: Developer/c-sharp/c-sharp.md
-    - Java: Developer/Java/java.md
-    - Javascript: Developer/Javascript/javascript
+    - Java:
+      - Java: Developer/Java/java-introduce.md
+      - JDK, JRE và JVM: Developer/Java/java-jdk-jre-jvm.md
+    - Javascript: Developer/Javascript/javascript.md
     - Kotlin: Developer/Kotlin/kotlin.md
     - Python: Developer/Python/python.md
     - Rust: Developer/Rust/rust.md
@@ -59,8 +95,69 @@ nav:
         - Theme: Document/MKDocs/mkdocs-theme.md
         - CSS: Document/MKDocs/mkdocs-css.md
         - Katex: Document/MKDocs/mkdocs-katex.md
+        - Mermaid: Document/MKDocs/mkdocs-mermaid.md
+        - PlantUml: Document/MKDocs/mkdocs-plantuml.md
+        - Markdown Extensions: Document/MKDocs/mkdocs-markdown-extensions.md
+  - Tools:
+    - VSCode: Tools/VSCode/tools-vscode-overview.md
+    - Android Studio: Tools/AndroidStudio/tools-android-studio-overview.md
+    - Git:
+      - About Git: Tools/Git/tools-git-about.md
+      - Install: Tools/Git/tools-git-install.md
+      - Git Config: Tools/Git/tools-git-config.md
+    - Github:
+      - Github Overview: Tools/Github/tools-github-overview.md
+      - Github Start: Tools/Github/tools-github-start.md
+      - Github Page: Tools/Github/tools-github-page.md
+  - Operator System:
+    - OS Overview: OS/os-overview.md
+    - Common:
+      - File System: OS/os-file-system.md
+    - Ubuntu:
+      - Overview & Install: OS/Ubuntu/os-ubuntu-family-overview-and-install.md
+      - Install: OS/Ubuntu/os-ubuntu-install.md
+      - System:
+        - Folder Hierarch: OS/Ubuntu/os-ubuntu-system-folder-hierarch.md
+        - System File: OS/Ubuntu/os-ubuntu-system-file.md
+        - File: OS/Ubuntu/os-ubuntu-file.md
+    - Windows:
+      - Overview: OS/Windows/os-windows-overview.md
+      - System:
+        - Macro PATH: OS/Windows/os-windows-common-path.md
+        - Environment Variables: OS/Windows/os-windows-environment-variables.md
+        - Startup Process: OS/Windows/os-windows-startup-process.md
+        - Run: OS/Windows/os-windows-run.md
+        - Service Tag and Manufacture: OS/Windows/os-windows-service-tag-and-manufacture.md
+      - Network: OS/Windows/os-windows-network.md
+      - Tools:
+        - Putty: OS/Windows/os-windows-tools-putty.md
+      - Shell:
+        - Command Prompt:
+          - Getting Start: OS/Windows/os-windows-cmd-getting-start.md
+          - CMD Call: OS/Windows/os-windows-cmd-executed.md
+          - CMD Script: OS/Windows/os-windows-cmd-write.md
+        - Power Shell:
+          - Command Prompt: OS/Windows/os-windows-cmd-command-prompt.md
+      - Custom:
+        - Usercmd: OS/Windows/os-windows-custom-usercmd.md
+    - Android:
+      - Overview: OS/Android/os-android-overview.md
   - Work:
     - MnM:
+      - Về MnM: Work/MnM/work-about-mnm.md
+      - S201:
+        - Overview: Work/MnM/work-s201-overview.md
+      - W501:
+        - Overview: Work/MnM/work-w501-overview.md
+      - Z101:
+        - Overview: Work/MnM/work-z101-overview.md
+      - S210:
+        - Overview: Work/MnM/work-s210-overview.md
+      - WSA:
+        - Overview: Work/MnM/work-wsa-overview.md
+      - ZX:
+        - Overview: Work/MnM/work-zx-overview.md
+
 extra_css:
   - stylesheets/theme.css
   - https://unpkg.com/katex@0/dist/katex.min.css
@@ -75,6 +172,11 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
 extra_javascript:
   - scripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js

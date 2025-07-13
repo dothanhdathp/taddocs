@@ -30,10 +30,8 @@ Kết quả:
 ```
 Đây là do tính chất quay vòng của số nên số `int` đã sai kết quả và quay vòng. Trong trường hợp này nên tăng thêm kích thước cho biến chẳng hạn dùng `long int`. Nhưng cái quan trọng cần đúc kết ở đây là:
 
-<div class="note-red">
-Khi thực hiện phép tính nên đảm bảo phạm vi giá trị của biến. Bởi khi quá ngưỡng sẽ không có thông báo nào đâu, việc này tự bản thân người lập trình cần phải nắm.
-</div>
-<br>
+!!! warning "Chú ý"
+	Khi thực hiện phép tính nên đảm bảo phạm vi giá trị của biến. Bởi khi quá ngưỡng sẽ không có thông báo nào đâu, việc này tự bản thân người lập trình cần phải nắm.
 
 Việc thực hiện phép nhân cũng tương tự nếu vượt quá kích thước sẽ xảy ra hiện tượng ___overflow___ như cũ.
 
@@ -61,10 +59,8 @@ Kết quả:
 2
 2.5
 ```
-<div class="note-blue">
-
-Thực ra trong phép tính trên không nhất thiết khi dùng `float` phải để là `5.0`, hoàn toàn có thể khai báo như là `float d = 5;`. Mục đích mình làm việc đó chỉ là để tạo thói quen không để chương trình dịch phải ngầm hiểu gây mất kiểm soát.
-</div>
+!!! note "Note"
+	Thực ra trong phép tính trên không nhất thiết khi dùng `float` phải để là `5.0`, hoàn toàn có thể khai báo như là `float d = 5;`. Mục đích mình làm việc đó chỉ là để tạo thói quen không để chương trình dịch phải ngầm hiểu gây mất kiểm soát.
 
 #### Phép chia lấy dư
 

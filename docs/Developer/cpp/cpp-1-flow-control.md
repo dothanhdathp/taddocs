@@ -4,7 +4,7 @@
 
 `if/else` đơn giản là kiểm tra đúng sai, luồng đơn giản như này:
 
-```plantuml
+```puml
 @startuml
 if (condition?) is (true) then
 :does true;

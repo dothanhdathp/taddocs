@@ -147,10 +147,9 @@ Kết quả:
 Hello
 Hello World
 ```
-<div class="note-red">
 
-Bạn không thể gọi đến vị trí vượt quá giới hạn của chuỗi. Ví dụ như `i[6]`
-</div>
+!!! warning "Chú ý"
+	Bạn không thể gọi đến vị trí vượt quá giới hạn của chuỗi. Ví dụ như `i[6]`
 
 ### string
 
