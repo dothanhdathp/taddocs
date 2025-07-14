@@ -1,0 +1,5495 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../work-wsa-fwdn-and-hdf/">
+      
+      
+        <link rel="next" href="../work-zx-overview/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Phone Noise - Tad Zeila</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#phone-mic-noise" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Tad Zeila" class="md-header__button md-logo" aria-label="Tad Zeila" data-md-component="logo">
+      
+  <img src="../../../logo/cat_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tad Zeila
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Phone Noise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Developer/c/c/" class="md-tabs__link">
+          
+  
+  
+  Programming Language
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Developer/html/html/" class="md-tabs__link">
+          
+  
+  
+  Non Programming Language
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Developer/dev/dev-oop/" class="md-tabs__link">
+          
+  
+  
+  Developer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Software/VSCode/software-vscode-overview/" class="md-tabs__link">
+          
+  
+  
+  Software
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../OS/os-overview/" class="md-tabs__link">
+          
+  
+  
+  Operator System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../work-about-mnm/" class="md-tabs__link">
+          
+  
+  
+  Work
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Diary/2025/month-7/" class="md-tabs__link">
+          
+  
+  
+  Diary
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tad Zeila" class="md-nav__button md-logo" aria-label="Tad Zeila" data-md-component="logo">
+      
+  <img src="../../../logo/cat_white.png" alt="logo">
+
+    </a>
+    Tad Zeila
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programming Language
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programming Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/c/c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Giới thiệu
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Giới thiệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-0-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-0-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-0-helloworld/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HelloWorld
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cơ bản
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Cơ bản
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-datatypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Types
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-basic-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Operator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-flow-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flow Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-input-and-output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input and Output
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-condition-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Condition & Loop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-command-line-arguments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Line Arguments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-bit-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Bit Operator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Namespace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-define/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Define
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-1-include/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Include
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Function
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Function
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-2-function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-2-lambda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lambda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-2-function-as-parameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Function as Parameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pointer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Pointer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-pointer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pointer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-smart-pointer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Smart Pointer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-raw-pointer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raw Pointer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-memory-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_5" id="__nav_2_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    STANDARD LIBRARY STD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            STANDARD LIBRARY STD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_5_1" id="__nav_2_2_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Type
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Type
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-std-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    std::string
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_5_2" id="__nav_2_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Function
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Function
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-std-sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    std::sort
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-std-make_share/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    std::make_share
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-std-distance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    std::distance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-std-hash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    std::hash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-3-std-unique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    std::unique
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_6" id="__nav_2_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Project
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/cpp/cpp-project-solver-sudoku/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Giải bảng Sudoku
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/c-sharp/c-sharp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C#
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Java
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Java/java-introduce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Java
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Java/java-jdk-jre-jvm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JDK, JRE và JVM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Java/java-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Java/java-helloworld/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HelloWorld
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Java/java-basic-synctax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Java/java-basic-datatypes-and-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datatypes & Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Javascript/javascript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Kotlin/kotlin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kotlin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Python/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Rust
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Rust
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_1" id="__nav_2_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Rust/rust-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Rust/rust-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/Rust/rust-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/php/php/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PhP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Non Programming Language
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Non Programming Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/html/html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/css/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/Markdown/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mermaid
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Mermaid
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/Mermaid/mermaid-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/PlantUml/plantuml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PlantUml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/LaTex/latex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Latex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/KaTex/katex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Katex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tooks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8_1" id="__nav_3_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MKDocs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            MKDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-theme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-katex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Katex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-mermaid.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mermaid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-plantuml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PlantUml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-markdown-extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Document/MKDocs/mkdocs-github-publish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown Github Publish
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Developer/dev/dev-oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OOP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/VSCode/software-vscode-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/AndroidStudio/software-android-studio-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Android Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Git/software-git-about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Git/software-git-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Git/software-git-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git Config
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Github
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Github
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Github/software-github-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Github/software-github-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Github/software-github-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Repo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Repo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Repo/software-repo-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repo Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Other/software-sambashare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sambashare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/Other/software-putty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Putty
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operator System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Operator System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/os-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OS Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Common
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Common
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/os-file-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ubuntu
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ubuntu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Ubuntu/os-ubuntu-family-overview-and-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview & Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Ubuntu/os-ubuntu-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Ubuntu/os-ubuntu-system-folder-hierarch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Folder Hierarch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Ubuntu/os-ubuntu-system-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Ubuntu/os-ubuntu-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Windows
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_2" id="__nav_6_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-common-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Macro PATH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-environment-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-startup-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Startup Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-service-tag-and-manufacture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Tag and Manufacture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_4" id="__nav_6_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Shell
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Shell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_4_1" id="__nav_6_4_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Command Prompt
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Command Prompt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-cmd-getting-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-cmd-executed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CMD Call
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-cmd-write/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CMD Script
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_4_2" id="__nav_6_4_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Power Shell
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Power Shell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-cmd-command-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Command Prompt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4_5" id="__nav_6_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Custom
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Windows/os-windows-custom-usercmd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usercmd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Android
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../OS/Android/os-android-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Work
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Work
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    MnM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            MnM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_1" id="__nav_7_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Common
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Common
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-about-mnm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Về MnM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-mnm-common-osal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OSAL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_2" id="__nav_7_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    S201
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            S201
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-s201-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_3" id="__nav_7_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    W501
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            W501
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-w501-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_4" id="__nav_7_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Z101
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Z101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-z101-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_5" id="__nav_7_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    S210
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            S210
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-s210-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_6" id="__nav_7_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    WSA
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            WSA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-wsa-download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Download
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-wsa-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-wsa-fwdn-and-hdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FWDN/HDF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_6_4" id="__nav_7_1_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Task
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_1_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Task
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_6_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_6_4_1" id="__nav_7_1_6_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Request Via Mail
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_1_6_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1_6_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Request Via Mail
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Phone Noise
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phone Noise
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tom-tat-noi-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tóm tắt nội dung:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-hoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phản hồi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_7" id="__nav_7_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ZX
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            ZX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-zx-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Diary
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Diary
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Năm 2025
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Năm 2025
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Diary/2025/month-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tháng 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Diary/2025/month-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tháng 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tom-tat-noi-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tóm tắt nội dung:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phan-hoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phản hồi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="phone-mic-noise">Phone Mic Noise</h1>
+<h2 id="tom-tat-noi-dung">Tóm tắt nội dung:</h2>
+<ol>
+<li>Bên WSA yêu cầu <em>sửa đổi tính năng</em>.<ul>
+<li>Mục đích: <mark>Giảm thiểu tiếng ồn khi chuyển <strong><em>mode</em></strong> Hands-free/Handset</mark></li>
+</ul>
+</li>
+<li>Thay đổi<ul>
+<li><strong>Previous</strong>: Tạo một thread với Hands-free (SCO On) và đầy vào <strong><em>terminated</em></strong> khi mà <strong>Handset</strong> hoặc <strong>Call End</strong></li>
+<li><strong>Hiện tại__: Giữ lại <em>thread_ SCO và chỉ kết thúc khi mà ___call end</em></strong>.<ul>
+<li><em>Mình không rõ cái này lắm nhưng mà có lẽ là BT sẽ biết chắc chắn hơn.</em></li>
+</ul>
+</li>
+<li><mark class=red>Tôi muốn nhận phương thức được sử dụng trước đây trong UX để xác định kết thúc cuộc gọi.</mark> <em>(I would like to receive the method used previously in UX for determining the end of a call.)</em></li>
+</ul>
+</li>
+</ol>
+<h2 id="phan-hoi">Phản hồi</h2>
+<p>Mình trả lại cho họ một luồng hoạt động của ứng dụng và để bên HQ tự quyết định.</p>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="1348px" preserveAspectRatio="xMidYMid meet" style="width:1794px;height:1348px;background:#FFFFFF;" version="1.1" viewBox="0 0 1794 1348" width="1794px" zoomAndPan="magnify" class="diagram"><defs/><g><rect fill="none" height="193" style="stroke:#000000;stroke-width:1.5;" width="566.6685" x="62" y="188.6484"/><rect fill="none" height="229.8047" style="stroke:#000000;stroke-width:1.5;" width="393.9585" x="523.6753" y="472.5703"/><g><title>HacPhoneMains</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="63.4429" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="67" x2="67" y1="52.5938" y2="1296.5"/></g><g><title>BluetoothManager</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="289.042" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="292.3774" x2="292.3774" y1="52.5938" y2="1296.5"/></g><g><title>CallStatusObserver</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="445.1909" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="448.7065" x2="448.7065" y1="52.5938" y2="1296.5"/></g><g><title>BluetoothDevice</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="594.5962" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="597.6753" x2="597.6753" y1="52.5938" y2="1296.5"/></g><g><title>BluetoothAdapter</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="823.1304" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="826.627" x2="826.627" y1="52.5938" y2="1296.5"/></g><g><title>PiBluetoothService</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="986.6519" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="990.6338" x2="990.6338" y1="52.5938" y2="1296.5"/></g><g><title>PiBluetoothSys</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="1129.0503" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="1132.6699" x2="1132.6699" y1="52.5938" y2="1296.5"/></g><g><title>PiBluetoothHfp</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="1257.7495" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="1261.4307" x2="1261.4307" y1="52.5938" y2="1296.5"/></g><g><title>.diva-service.</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="1466.8535" y="52.5938"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5,5;" x1="1470.7026" x2="1470.7026" y1="52.5938" y2="1296.5"/></g><g class="participant participant-head" data-participant="HPM"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124.8857" x="5" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.8857" x="12" y="41.292">HacPhoneMains</text></g><g class="participant participant-tail" data-participant="HPM"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="124.8857" x="5" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.8857" x="12" y="1315.4951">HacPhoneMains</text></g><g class="participant participant-head" data-participant="BtM"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143.3291" x="221.3774" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.3291" x="228.3774" y="41.292">BluetoothManager</text></g><g class="participant participant-tail" data-participant="BtM"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="143.3291" x="221.3774" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.3291" x="228.3774" y="1315.4951">BluetoothManager</text></g><g class="participant participant-head" data-participant="CSO"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148.9688" x="374.7065" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134.9688" x="381.7065" y="41.292">CallStatusObserver</text></g><g class="participant participant-tail" data-participant="CSO"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148.9688" x="374.7065" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134.9688" x="381.7065" y="1315.4951">CallStatusObserver</text></g><g class="participant participant-head" data-participant="BtD"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129.8418" x="533.6753" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.8418" x="540.6753" y="41.292">BluetoothDevice</text></g><g class="participant participant-tail" data-participant="BtD"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129.8418" x="533.6753" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.8418" x="540.6753" y="1315.4951">BluetoothDevice</text></g><g class="participant participant-head" data-participant="PBtA"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161.0068" x="746.627" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.751" x="765.2549" y="24.9951">BluetoothAdapter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.0068" x="753.627" y="41.292">(PiBluetoothAdapter)</text></g><g class="participant participant-tail" data-participant="PBtA"><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161.0068" x="746.627" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.751" x="765.2549" y="1315.4951">BluetoothAdapter</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.0068" x="753.627" y="1331.792">(PiBluetoothAdapter)</text></g><g class="participant participant-head" data-participant="PBtS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146.0361" x="917.6338" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132.0361" x="924.6338" y="41.292">PiBluetoothService</text></g><g class="participant participant-tail" data-participant="PBtS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146.0361" x="917.6338" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132.0361" x="924.6338" y="1315.4951">PiBluetoothService</text></g><g class="participant participant-head" data-participant="PBtSys"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118.7607" x="1073.6699" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.7607" x="1080.6699" y="41.292">PiBluetoothSys</text></g><g class="participant participant-tail" data-participant="PBtSys"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118.7607" x="1073.6699" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.7607" x="1080.6699" y="1315.4951">PiBluetoothSys</text></g><g class="participant participant-head" data-participant="PBtH"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118.6377" x="1202.4307" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.6377" x="1209.4307" y="41.292">PiBluetoothHfp</text></g><g class="participant participant-tail" data-participant="PBtH"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118.6377" x="1202.4307" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.6377" x="1209.4307" y="1315.4951">PiBluetoothHfp</text></g><g class="participant participant-head" data-participant="DvS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122.3018" x="1409.7026" y="21.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.3018" x="1416.7026" y="41.292">&lt;diva-service&gt;</text></g><g class="participant participant-tail" data-participant="DvS"><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122.3018" x="1409.7026" y="1295.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.3018" x="1416.7026" y="1315.4951">&lt;diva-service&gt;</text></g><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="1787.1987" x="0" y="85.4883"/><line style="stroke:#000000;stroke-width:1;" x1="0" x2="1787.1987" y1="85.4883" y2="85.4883"/><line style="stroke:#000000;stroke-width:1;" x1="0" x2="1787.1987" y1="88.4883" y2="88.4883"/><rect fill="#EEEEEE" height="27.7891" style="stroke:#000000;stroke-width:2;" width="76.8535" x="855.1726" y="72.5938"/><text fill="#000000" font-family="sans-serif" font-size="17" font-weight="bold" lengthAdjust="spacing" textLength="62.8535" x="861.1726" y="92.3735">Init BT</text><g class="message" data-participant-1="BtM" data-participant-2="HPM"><polygon fill="#181818" points="78.4429,127.5156,68.4429,131.5156,78.4429,135.5156,74.4429,131.5156" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="72.4429" x2="292.042" y1="131.5156" y2="131.5156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201.0684" x="84.4429" y="126.4497">notifyBTDeviceStateChanged()</text></g><g class="message" data-participant-1="HPM" data-participant-2="HPM"><line style="stroke:#181818;stroke-width:1;" x1="67.4429" x2="109.4429" y1="160.6484" y2="160.6484"/><line style="stroke:#181818;stroke-width:1;" x1="109.4429" x2="109.4429" y1="160.6484" y2="173.6484"/><line style="stroke:#181818;stroke-width:1;" x1="68.4429" x2="109.4429" y1="173.6484" y2="173.6484"/><polygon fill="#181818" points="78.4429,169.6484,68.4429,173.6484,78.4429,177.6484,74.4429,173.6484" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187.332" x="74.4429" y="155.5825">slotBTDeviceStateChanged()</text></g><path d="M62,188.6484 L126.4429,188.6484 L126.4429,195.7813 L116.4429,205.7813 L62,205.7813 L62,188.6484" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="193" style="stroke:#000000;stroke-width:1.5;" width="566.6685" x="62" y="188.6484"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19.4429" x="77" y="201.7153">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="178.4976" x="141.4429" y="200.8589">[BT_DEVICE_DISCONNECTED]</text><path d="M72,210.7813 L72,280.7813 L618,280.7813 L618,220.7813 L608,210.7813 L72,210.7813" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M608,210.7813 L608,220.7813 L618,220.7813 L608,210.7813" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="525.6685" x="78" y="227.8481">&lt;disconnect&gt; notifyBTDeviceCallStateChanged / slotBTDeviceCallStateChanged</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="483.52" x="78" y="242.981">&lt;disconnect&gt; notifyBTDeviceHFAudioStatus / slotBTDeviceHFAudioStatus</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="403.0444" x="78" y="258.1138">&lt;disconnect&gt; notifyMessageReceived / slotMessageReceived</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="329.9194" x="78" y="273.2466">&lt;disconnect&gt; notifyGetMessage / slotGetMessage</text><line style="stroke:#000000;stroke-width:1;stroke-dasharray:2,2;" x1="62" x2="628.6685" y1="287.3125" y2="287.3125"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="157.3516" x="67" y="297.5229">[BT_DEVICE_CONNECTED]</text><path d="M72,306.1172 L72,376.1172 L600,376.1172 L600,316.1172 L590,306.1172 L72,306.1172" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M590,306.1172 L590,316.1172 L600,316.1172 L590,306.1172" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="507.0317" x="78" y="323.1841">&lt;connect&gt; notifyBTDeviceCallStateChanged / slotBTDeviceCallStateChanged</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="464.8833" x="78" y="338.3169">&lt;connect&gt; notifyBTDeviceHFAudioStatus / slotBTDeviceHFAudioStatus</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="384.4077" x="78" y="353.4497">&lt;connect&gt; notifyMessageReceived / slotMessageReceived</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="311.2827" x="78" y="368.5825">&lt;connect&gt; notifyGetMessage / slotGetMessage</text><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="1787.1987" x="0" y="411.543"/><line style="stroke:#000000;stroke-width:1;" x1="0" x2="1787.1987" y1="411.543" y2="411.543"/><line style="stroke:#000000;stroke-width:1;" x1="0" x2="1787.1987" y1="414.543" y2="414.543"/><rect fill="#EEEEEE" height="27.7891" style="stroke:#000000;stroke-width:2;" width="229.6377" x="778.7805" y="398.6484"/><text fill="#000000" font-family="sans-serif" font-size="17" font-weight="bold" lengthAdjust="spacing" textLength="215.6377" x="784.7805" y="418.4282">UI Request Cancel Call</text><g class="message" data-participant-1="HPM" data-participant-2="BtD"><polygon fill="#181818" points="586.5962,453.5703,596.5962,457.5703,586.5962,461.5703,590.5962,457.5703" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="67.4429" x2="592.5962" y1="457.5703" y2="457.5703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66.3774" x="74.4429" y="452.5044">cancelCall</text></g><path d="M523.6753,472.5703 L588.1182,472.5703 L588.1182,479.7031 L578.1182,489.7031 L523.6753,489.7031 L523.6753,472.5703" fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="229.8047" style="stroke:#000000;stroke-width:1.5;" width="393.9585" x="523.6753" y="472.5703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19.4429" x="538.6753" y="485.6372">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="196.0073" x="603.1182" y="484.7808">[CONTROL_BT_CALL_INCOMING]</text><g class="message" data-participant-1="BtD" data-participant-2="PBtA"><polygon fill="#181818" points="815.1304,506.8359,825.1304,510.8359,815.1304,514.8359,819.1304,510.8359" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="598.5962" x2="821.1304" y1="510.8359" y2="510.8359"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135.751" x="605.5962" y="505.77">ignoreIncomingCall()</text></g><line style="stroke:#000000;stroke-width:1;stroke-dasharray:2,2;" x1="523.6753" x2="917.6338" y1="519.8359" y2="519.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="231.8379" x="528.6753" y="530.0464">[Case CONTROL_BT_CALL_OUTGOING]</text><g class="message" data-participant-1="BtD" data-participant-2="PBtA"><polygon fill="#181818" points="815.1304,550.7734,825.1304,554.7734,815.1304,558.7734,819.1304,554.7734" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="598.5962" x2="821.1304" y1="554.7734" y2="554.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97.5571" x="605.5962" y="549.7075">cancelDialing()</text></g><line style="stroke:#000000;stroke-width:1;stroke-dasharray:2,2;" x1="523.6753" x2="917.6338" y1="563.7734" y2="563.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="154.478" x="528.6753" y="573.9839">[Remainning Legal Case]</text><path d="M603,582.5781 L603,667.5781 L869,667.5781 L869,592.5781 L859,582.5781 L603,582.5781" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M859,582.5781 L859,592.5781 L869,592.5781 L859,582.5781" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179.1499" x="609" y="599.645">CONTROL_BT_CALL_ACTIVE</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167.54" x="609" y="614.7778">CONTROL_BT_CALL_HELD</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="219.1719" x="609" y="629.9106">CONTROL_BT_CALL_ACTIVE_WAIT</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="245.667" x="609" y="645.0435">CONTROL_BT_CALL_HELD_OUTGOING</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="220.8921" x="609" y="660.1763">CONTROL_BT_CALL_ACTIVE_HELD</text><g class="message" data-participant-1="BtD" data-participant-2="PBtA"><polygon fill="#181818" points="815.1304,690.375,825.1304,694.375,815.1304,698.375,819.1304,694.375" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="598.5962" x2="821.1304" y1="694.375" y2="694.375"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98.4268" x="605.5962" y="689.3091">terminateCall()</text></g><g class="message" data-participant-1="PBtA" data-participant-2="PBtS"><polygon fill="#181818" points="978.6519,726.5078,988.6519,730.5078,978.6519,734.5078,982.6519,730.5078" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="827.1304" x2="984.6519" y1="730.5078" y2="730.5078"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.5986" x="834.1304" y="725.4419">hangupCall()</text></g><g class="message" data-participant-1="PBtS" data-participant-2="PBtH"><polygon fill="#181818" points="1249.7495,755.6406,1259.7495,759.6406,1249.7495,763.6406,1253.7495,759.6406" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="990.6519" x2="1255.7495" y1="759.6406" y2="759.6406"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.5986" x="997.6519" y="754.5747">hangupCall()</text></g><g class="message" data-participant-1="PBtH" data-participant-2="DvS"><polygon fill="#181818" points="1458.8535,784.7734,1468.8535,788.7734,1458.8535,792.7734,1462.8535,788.7734" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1261.7495" x2="1464.8535" y1="788.7734" y2="788.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140.6577" x="1268.7495" y="783.7075">SRV_BT_HF_Hangup()</text></g><rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="1787.1987" x="0" y="817.3398"/><line style="stroke:#000000;stroke-width:1;" x1="0" x2="1787.1987" y1="817.3398" y2="817.3398"/><line style="stroke:#000000;stroke-width:1;" x1="0" x2="1787.1987" y1="820.3398" y2="820.3398"/><rect fill="#EEEEEE" height="23.1328" style="stroke:#000000;stroke-width:2;" width="235.9204" x="775.6392" y="806.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="217.3945" x="781.6392" y="822.8403">Take the responed call status</text><g class="message" data-participant-1="DvS" data-participant-2="DvS"><line style="stroke:#181818;stroke-width:1;" x1="1470.8535" x2="1512.8535" y1="861.0391" y2="861.0391"/><line style="stroke:#181818;stroke-width:1;" x1="1512.8535" x2="1512.8535" y1="861.0391" y2="874.0391"/><line style="stroke:#181818;stroke-width:1;" x1="1471.8535" x2="1512.8535" y1="874.0391" y2="874.0391"/><polygon fill="#181818" points="1481.8535,870.0391,1471.8535,874.0391,1481.8535,878.0391,1477.8535,874.0391" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="302.3452" x="1477.8535" y="855.9731">srv_bt_send_ui_event(event, (void*)&amp;call_ind);</text></g><path d="M1475,887.0391 L1475,912.0391 L1751,912.0391 L1751,897.0391 L1741,887.0391 L1475,887.0391" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1741,887.0391 L1741,897.0391 L1751,897.0391 L1741,887.0391" fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="255.7915" x="1481" y="904.106">event = SRV_BT_HF_CALL_STATUS_IND</text><g class="message" data-participant-1="DvS" data-participant-2="DvS"><line style="stroke:#181818;stroke-width:1;" x1="1470.8535" x2="1512.8535" y1="938.3047" y2="938.3047"/><line style="stroke:#181818;stroke-width:1;" x1="1512.8535" x2="1512.8535" y1="938.3047" y2="951.3047"/><line style="stroke:#181818;stroke-width:1;" x1="1471.8535" x2="1512.8535" y1="951.3047" y2="951.3047"/><polygon fill="#181818" points="1481.8535,947.3047,1471.8535,951.3047,1481.8535,955.3047,1477.8535,951.3047" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124.8457" x="1477.8535" y="933.2388">hf_call_status_ind()</text></g><g class="message" data-participant-1="DvS" data-participant-2="PBtH"><polygon fill="#181818" points="1272.7495,976.4375,1262.7495,980.4375,1272.7495,984.4375,1268.7495,980.4375" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1266.7495" x2="1469.8535" y1="980.4375" y2="980.4375"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185.104" x="1278.7495" y="975.3716">PI_BT_HF_CALL_STATUS_IND</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtH"><line style="stroke:#181818;stroke-width:1;" x1="1261.7495" x2="1303.7495" y1="1009.5703" y2="1009.5703"/><line style="stroke:#181818;stroke-width:1;" x1="1303.7495" x2="1303.7495" y1="1009.5703" y2="1022.5703"/><line style="stroke:#181818;stroke-width:1;" x1="1262.7495" x2="1303.7495" y1="1022.5703" y2="1022.5703"/><polygon fill="#181818" points="1272.7495,1018.5703,1262.7495,1022.5703,1272.7495,1026.5703,1268.7495,1022.5703" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141.7178" x="1268.7495" y="1004.5044">cb_CALL_STATUS_IND</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtH"><line style="stroke:#181818;stroke-width:1;" x1="1261.7495" x2="1303.7495" y1="1051.7031" y2="1051.7031"/><line style="stroke:#181818;stroke-width:1;" x1="1303.7495" x2="1303.7495" y1="1051.7031" y2="1064.7031"/><line style="stroke:#181818;stroke-width:1;" x1="1262.7495" x2="1303.7495" y1="1064.7031" y2="1064.7031"/><polygon fill="#181818" points="1272.7495,1060.7031,1262.7495,1064.7031,1272.7495,1068.7031,1268.7495,1064.7031" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168.0225" x="1268.7495" y="1046.6372">handleCallStatusChanged</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtH"><line style="stroke:#181818;stroke-width:1;" x1="1261.7495" x2="1303.7495" y1="1093.8359" y2="1093.8359"/><line style="stroke:#181818;stroke-width:1;" x1="1303.7495" x2="1303.7495" y1="1093.8359" y2="1106.8359"/><line style="stroke:#181818;stroke-width:1;" x1="1262.7495" x2="1303.7495" y1="1106.8359" y2="1106.8359"/><polygon fill="#181818" points="1272.7495,1102.8359,1262.7495,1106.8359,1272.7495,1110.8359,1268.7495,1106.8359" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109.9985" x="1268.7495" y="1088.77">handleCallStatus</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtA"><polygon fill="#181818" points="838.1304,1131.9688,828.1304,1135.9688,838.1304,1139.9688,834.1304,1135.9688" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="832.1304" x2="1260.7495" y1="1135.9688" y2="1135.9688"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117.2412" x="844.1304" y="1130.9028">onEvtHfCallStatus</text></g><g class="message" data-participant-1="PBtA" data-participant-2="BtD"><polygon fill="#181818" points="609.5962,1161.1016,599.5962,1165.1016,609.5962,1169.1016,605.5962,1165.1016" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="603.5962" x2="826.1304" y1="1165.1016" y2="1165.1016"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="204.5342" x="615.5962" y="1160.0356">emit notifyCallStatusChanged()</text></g><g class="message" data-participant-1="BtD" data-participant-2="BtD"><line style="stroke:#181818;stroke-width:1;" x1="598.5962" x2="640.5962" y1="1194.2344" y2="1194.2344"/><line style="stroke:#181818;stroke-width:1;" x1="640.5962" x2="640.5962" y1="1194.2344" y2="1207.2344"/><line style="stroke:#181818;stroke-width:1;" x1="599.5962" x2="640.5962" y1="1207.2344" y2="1207.2344"/><polygon fill="#181818" points="609.5962,1203.2344,599.5962,1207.2344,609.5962,1211.2344,605.5962,1207.2344" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150.0522" x="605.5962" y="1189.1685">onCallStatusChanged()</text></g><g class="message" data-participant-1="BtD" data-participant-2="HPM"><polygon fill="#181818" points="78.4429,1232.3672,68.4429,1236.3672,78.4429,1240.3672,74.4429,1236.3672" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="72.4429" x2="597.5962" y1="1236.3672" y2="1236.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="225.3354" x="84.4429" y="1231.3013">notifyBTDeviceCallStateChanged()</text></g><g class="message" data-participant-1="HPM" data-participant-2="HPM"><line style="stroke:#181818;stroke-width:1;" x1="67.4429" x2="109.4429" y1="1265.5" y2="1265.5"/><line style="stroke:#181818;stroke-width:1;" x1="109.4429" x2="109.4429" y1="1265.5" y2="1278.5"/><line style="stroke:#181818;stroke-width:1;" x1="68.4429" x2="109.4429" y1="1278.5" y2="1278.5"/><polygon fill="#181818" points="78.4429,1274.5,68.4429,1278.5,78.4429,1282.5,74.4429,1278.5" style="stroke:#181818;stroke-width:1;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211.5991" x="74.4429" y="1260.4341">slotBTDeviceCallStateChanged()</text></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="SEQUENCE" height="1348px" preserveAspectRatio="xMidYMid meet" style="width:1794px;height:1348px;background:#1B1B1B;" version="1.1" viewBox="0 0 1794 1348" width="1794px" zoomAndPan="magnify" class="diagram"><defs/><g><rect fill="#1B1B1B" height="1348" style="stroke:none;stroke-width:1;" width="1794" x="0" y="0"/><rect fill="none" height="193" style="stroke:#FFFFFF;stroke-width:1.5;" width="566.6685" x="62" y="188.6484"/><rect fill="none" height="229.8047" style="stroke:#FFFFFF;stroke-width:1.5;" width="393.9585" x="523.6753" y="472.5703"/><g><title>HacPhoneMains</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="63.4429" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="67" x2="67" y1="52.5938" y2="1296.5"/></g><g><title>BluetoothManager</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="289.042" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="292.3774" x2="292.3774" y1="52.5938" y2="1296.5"/></g><g><title>CallStatusObserver</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="445.1909" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="448.7065" x2="448.7065" y1="52.5938" y2="1296.5"/></g><g><title>BluetoothDevice</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="594.5962" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="597.6753" x2="597.6753" y1="52.5938" y2="1296.5"/></g><g><title>BluetoothAdapter</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="823.1304" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="826.627" x2="826.627" y1="52.5938" y2="1296.5"/></g><g><title>PiBluetoothService</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="986.6519" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="990.6338" x2="990.6338" y1="52.5938" y2="1296.5"/></g><g><title>PiBluetoothSys</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="1129.0503" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="1132.6699" x2="1132.6699" y1="52.5938" y2="1296.5"/></g><g><title>PiBluetoothHfp</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="1257.7495" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="1261.4307" x2="1261.4307" y1="52.5938" y2="1296.5"/></g><g><title>.diva-service.</title><rect fill="#000000" fill-opacity="0.00000" height="1243.9063" width="8" x="1466.8535" y="52.5938"/><line style="stroke:#E7E7E7;stroke-width:0.5;stroke-dasharray:5,5;" x1="1470.7026" x2="1470.7026" y1="52.5938" y2="1296.5"/></g><g class="participant participant-head" data-participant="HPM"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="124.8857" x="5" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.8857" x="12" y="41.292">HacPhoneMains</text></g><g class="participant participant-tail" data-participant="HPM"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="124.8857" x="5" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.8857" x="12" y="1315.4951">HacPhoneMains</text></g><g class="participant participant-head" data-participant="BtM"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="143.3291" x="221.3774" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.3291" x="228.3774" y="41.292">BluetoothManager</text></g><g class="participant participant-tail" data-participant="BtM"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="143.3291" x="221.3774" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.3291" x="228.3774" y="1315.4951">BluetoothManager</text></g><g class="participant participant-head" data-participant="CSO"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="148.9688" x="374.7065" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134.9688" x="381.7065" y="41.292">CallStatusObserver</text></g><g class="participant participant-tail" data-participant="CSO"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="148.9688" x="374.7065" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134.9688" x="381.7065" y="1315.4951">CallStatusObserver</text></g><g class="participant participant-head" data-participant="BtD"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="129.8418" x="533.6753" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.8418" x="540.6753" y="41.292">BluetoothDevice</text></g><g class="participant participant-tail" data-participant="BtD"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="129.8418" x="533.6753" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.8418" x="540.6753" y="1315.4951">BluetoothDevice</text></g><g class="participant participant-head" data-participant="PBtA"><rect fill="#222222" height="46.5938" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="161.0068" x="746.627" y="5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.751" x="765.2549" y="24.9951">BluetoothAdapter</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.0068" x="753.627" y="41.292">(PiBluetoothAdapter)</text></g><g class="participant participant-tail" data-participant="PBtA"><rect fill="#222222" height="46.5938" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="161.0068" x="746.627" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123.751" x="765.2549" y="1315.4951">BluetoothAdapter</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.0068" x="753.627" y="1331.792">(PiBluetoothAdapter)</text></g><g class="participant participant-head" data-participant="PBtS"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="146.0361" x="917.6338" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132.0361" x="924.6338" y="41.292">PiBluetoothService</text></g><g class="participant participant-tail" data-participant="PBtS"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="146.0361" x="917.6338" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132.0361" x="924.6338" y="1315.4951">PiBluetoothService</text></g><g class="participant participant-head" data-participant="PBtSys"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="118.7607" x="1073.6699" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.7607" x="1080.6699" y="41.292">PiBluetoothSys</text></g><g class="participant participant-tail" data-participant="PBtSys"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="118.7607" x="1073.6699" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.7607" x="1080.6699" y="1315.4951">PiBluetoothSys</text></g><g class="participant participant-head" data-participant="PBtH"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="118.6377" x="1202.4307" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.6377" x="1209.4307" y="41.292">PiBluetoothHfp</text></g><g class="participant participant-tail" data-participant="PBtH"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="118.6377" x="1202.4307" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.6377" x="1209.4307" y="1315.4951">PiBluetoothHfp</text></g><g class="participant participant-head" data-participant="DvS"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="122.3018" x="1409.7026" y="21.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.3018" x="1416.7026" y="41.292">&lt;diva-service&gt;</text></g><g class="participant participant-tail" data-participant="DvS"><rect fill="#222222" height="30.2969" rx="2.5" ry="2.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="122.3018" x="1409.7026" y="1295.5"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108.3018" x="1416.7026" y="1315.4951">&lt;diva-service&gt;</text></g><rect fill="#111111" height="3" style="stroke:#111111;stroke-width:1;" width="1787.1987" x="0" y="85.4883"/><line style="stroke:#FFFFFF;stroke-width:1;" x1="0" x2="1787.1987" y1="85.4883" y2="85.4883"/><line style="stroke:#FFFFFF;stroke-width:1;" x1="0" x2="1787.1987" y1="88.4883" y2="88.4883"/><rect fill="#111111" height="27.7891" style="stroke:#FFFFFF;stroke-width:2;" width="76.8535" x="855.1726" y="72.5938"/><text fill="#FFFFFF" font-family="sans-serif" font-size="17" font-weight="bold" lengthAdjust="spacing" textLength="62.8535" x="861.1726" y="92.3735">Init BT</text><g class="message" data-participant-1="BtM" data-participant-2="HPM"><polygon fill="#E7E7E7" points="78.4429,127.5156,68.4429,131.5156,78.4429,135.5156,74.4429,131.5156" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="72.4429" x2="292.042" y1="131.5156" y2="131.5156"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201.0684" x="84.4429" y="126.4497">notifyBTDeviceStateChanged()</text></g><g class="message" data-participant-1="HPM" data-participant-2="HPM"><line style="stroke:#E7E7E7;stroke-width:1;" x1="67.4429" x2="109.4429" y1="160.6484" y2="160.6484"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="109.4429" x2="109.4429" y1="160.6484" y2="173.6484"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.4429" x2="109.4429" y1="173.6484" y2="173.6484"/><polygon fill="#E7E7E7" points="78.4429,169.6484,68.4429,173.6484,78.4429,177.6484,74.4429,173.6484" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187.332" x="74.4429" y="155.5825">slotBTDeviceStateChanged()</text></g><path d="M62,188.6484 L126.4429,188.6484 L126.4429,195.7813 L116.4429,205.7813 L62,205.7813 L62,188.6484" fill="#555555" style="stroke:#FFFFFF;stroke-width:1.5;"/><rect fill="none" height="193" style="stroke:#FFFFFF;stroke-width:1.5;" width="566.6685" x="62" y="188.6484"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19.4429" x="77" y="201.7153">alt</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="178.4976" x="141.4429" y="200.8589">[BT_DEVICE_DISCONNECTED]</text><path d="M72,210.7813 L72,280.7813 L618,280.7813 L618,220.7813 L608,210.7813 L72,210.7813" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M608,210.7813 L608,220.7813 L618,220.7813 L608,210.7813" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="525.6685" x="78" y="227.8481">&lt;disconnect&gt; notifyBTDeviceCallStateChanged / slotBTDeviceCallStateChanged</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="483.52" x="78" y="242.981">&lt;disconnect&gt; notifyBTDeviceHFAudioStatus / slotBTDeviceHFAudioStatus</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="403.0444" x="78" y="258.1138">&lt;disconnect&gt; notifyMessageReceived / slotMessageReceived</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="329.9194" x="78" y="273.2466">&lt;disconnect&gt; notifyGetMessage / slotGetMessage</text><line style="stroke:#FFFFFF;stroke-width:1;stroke-dasharray:2,2;" x1="62" x2="628.6685" y1="287.3125" y2="287.3125"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="157.3516" x="67" y="297.5229">[BT_DEVICE_CONNECTED]</text><path d="M72,306.1172 L72,376.1172 L600,376.1172 L600,316.1172 L590,306.1172 L72,306.1172" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M590,306.1172 L590,316.1172 L600,316.1172 L590,306.1172" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="507.0317" x="78" y="323.1841">&lt;connect&gt; notifyBTDeviceCallStateChanged / slotBTDeviceCallStateChanged</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="464.8833" x="78" y="338.3169">&lt;connect&gt; notifyBTDeviceHFAudioStatus / slotBTDeviceHFAudioStatus</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="384.4077" x="78" y="353.4497">&lt;connect&gt; notifyMessageReceived / slotMessageReceived</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="311.2827" x="78" y="368.5825">&lt;connect&gt; notifyGetMessage / slotGetMessage</text><rect fill="#111111" height="3" style="stroke:#111111;stroke-width:1;" width="1787.1987" x="0" y="411.543"/><line style="stroke:#FFFFFF;stroke-width:1;" x1="0" x2="1787.1987" y1="411.543" y2="411.543"/><line style="stroke:#FFFFFF;stroke-width:1;" x1="0" x2="1787.1987" y1="414.543" y2="414.543"/><rect fill="#111111" height="27.7891" style="stroke:#FFFFFF;stroke-width:2;" width="229.6377" x="778.7805" y="398.6484"/><text fill="#FFFFFF" font-family="sans-serif" font-size="17" font-weight="bold" lengthAdjust="spacing" textLength="215.6377" x="784.7805" y="418.4282">UI Request Cancel Call</text><g class="message" data-participant-1="HPM" data-participant-2="BtD"><polygon fill="#E7E7E7" points="586.5962,453.5703,596.5962,457.5703,586.5962,461.5703,590.5962,457.5703" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="67.4429" x2="592.5962" y1="457.5703" y2="457.5703"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66.3774" x="74.4429" y="452.5044">cancelCall</text></g><path d="M523.6753,472.5703 L588.1182,472.5703 L588.1182,479.7031 L578.1182,489.7031 L523.6753,489.7031 L523.6753,472.5703" fill="#555555" style="stroke:#FFFFFF;stroke-width:1.5;"/><rect fill="none" height="229.8047" style="stroke:#FFFFFF;stroke-width:1.5;" width="393.9585" x="523.6753" y="472.5703"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19.4429" x="538.6753" y="485.6372">alt</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="196.0073" x="603.1182" y="484.7808">[CONTROL_BT_CALL_INCOMING]</text><g class="message" data-participant-1="BtD" data-participant-2="PBtA"><polygon fill="#E7E7E7" points="815.1304,506.8359,825.1304,510.8359,815.1304,514.8359,819.1304,510.8359" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="598.5962" x2="821.1304" y1="510.8359" y2="510.8359"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135.751" x="605.5962" y="505.77">ignoreIncomingCall()</text></g><line style="stroke:#FFFFFF;stroke-width:1;stroke-dasharray:2,2;" x1="523.6753" x2="917.6338" y1="519.8359" y2="519.8359"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="231.8379" x="528.6753" y="530.0464">[Case CONTROL_BT_CALL_OUTGOING]</text><g class="message" data-participant-1="BtD" data-participant-2="PBtA"><polygon fill="#E7E7E7" points="815.1304,550.7734,825.1304,554.7734,815.1304,558.7734,819.1304,554.7734" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="598.5962" x2="821.1304" y1="554.7734" y2="554.7734"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97.5571" x="605.5962" y="549.7075">cancelDialing()</text></g><line style="stroke:#FFFFFF;stroke-width:1;stroke-dasharray:2,2;" x1="523.6753" x2="917.6338" y1="563.7734" y2="563.7734"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="154.478" x="528.6753" y="573.9839">[Remainning Legal Case]</text><path d="M603,582.5781 L603,667.5781 L869,667.5781 L869,592.5781 L859,582.5781 L603,582.5781" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M859,582.5781 L859,592.5781 L869,592.5781 L859,582.5781" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179.1499" x="609" y="599.645">CONTROL_BT_CALL_ACTIVE</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167.54" x="609" y="614.7778">CONTROL_BT_CALL_HELD</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="219.1719" x="609" y="629.9106">CONTROL_BT_CALL_ACTIVE_WAIT</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="245.667" x="609" y="645.0435">CONTROL_BT_CALL_HELD_OUTGOING</text><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="220.8921" x="609" y="660.1763">CONTROL_BT_CALL_ACTIVE_HELD</text><g class="message" data-participant-1="BtD" data-participant-2="PBtA"><polygon fill="#E7E7E7" points="815.1304,690.375,825.1304,694.375,815.1304,698.375,819.1304,694.375" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="598.5962" x2="821.1304" y1="694.375" y2="694.375"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98.4268" x="605.5962" y="689.3091">terminateCall()</text></g><g class="message" data-participant-1="PBtA" data-participant-2="PBtS"><polygon fill="#E7E7E7" points="978.6519,726.5078,988.6519,730.5078,978.6519,734.5078,982.6519,730.5078" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="827.1304" x2="984.6519" y1="730.5078" y2="730.5078"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.5986" x="834.1304" y="725.4419">hangupCall()</text></g><g class="message" data-participant-1="PBtS" data-participant-2="PBtH"><polygon fill="#E7E7E7" points="1249.7495,755.6406,1259.7495,759.6406,1249.7495,763.6406,1253.7495,759.6406" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="990.6519" x2="1255.7495" y1="759.6406" y2="759.6406"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.5986" x="997.6519" y="754.5747">hangupCall()</text></g><g class="message" data-participant-1="PBtH" data-participant-2="DvS"><polygon fill="#E7E7E7" points="1458.8535,784.7734,1468.8535,788.7734,1458.8535,792.7734,1462.8535,788.7734" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1261.7495" x2="1464.8535" y1="788.7734" y2="788.7734"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140.6577" x="1268.7495" y="783.7075">SRV_BT_HF_Hangup()</text></g><rect fill="#111111" height="3" style="stroke:#111111;stroke-width:1;" width="1787.1987" x="0" y="817.3398"/><line style="stroke:#FFFFFF;stroke-width:1;" x1="0" x2="1787.1987" y1="817.3398" y2="817.3398"/><line style="stroke:#FFFFFF;stroke-width:1;" x1="0" x2="1787.1987" y1="820.3398" y2="820.3398"/><rect fill="#111111" height="23.1328" style="stroke:#FFFFFF;stroke-width:2;" width="235.9204" x="775.6392" y="806.7734"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="217.3945" x="781.6392" y="822.8403">Take the responed call status</text><g class="message" data-participant-1="DvS" data-participant-2="DvS"><line style="stroke:#E7E7E7;stroke-width:1;" x1="1470.8535" x2="1512.8535" y1="861.0391" y2="861.0391"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1512.8535" x2="1512.8535" y1="861.0391" y2="874.0391"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1471.8535" x2="1512.8535" y1="874.0391" y2="874.0391"/><polygon fill="#E7E7E7" points="1481.8535,870.0391,1471.8535,874.0391,1481.8535,878.0391,1477.8535,874.0391" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="302.3452" x="1477.8535" y="855.9731">srv_bt_send_ui_event(event, (void*)&amp;call_ind);</text></g><path d="M1475,887.0391 L1475,912.0391 L1751,912.0391 L1751,897.0391 L1741,887.0391 L1475,887.0391" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><path d="M1741,887.0391 L1741,897.0391 L1751,897.0391 L1741,887.0391" fill="#714137" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="255.7915" x="1481" y="904.106">event = SRV_BT_HF_CALL_STATUS_IND</text><g class="message" data-participant-1="DvS" data-participant-2="DvS"><line style="stroke:#E7E7E7;stroke-width:1;" x1="1470.8535" x2="1512.8535" y1="938.3047" y2="938.3047"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1512.8535" x2="1512.8535" y1="938.3047" y2="951.3047"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1471.8535" x2="1512.8535" y1="951.3047" y2="951.3047"/><polygon fill="#E7E7E7" points="1481.8535,947.3047,1471.8535,951.3047,1481.8535,955.3047,1477.8535,951.3047" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124.8457" x="1477.8535" y="933.2388">hf_call_status_ind()</text></g><g class="message" data-participant-1="DvS" data-participant-2="PBtH"><polygon fill="#E7E7E7" points="1272.7495,976.4375,1262.7495,980.4375,1272.7495,984.4375,1268.7495,980.4375" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1266.7495" x2="1469.8535" y1="980.4375" y2="980.4375"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185.104" x="1278.7495" y="975.3716">PI_BT_HF_CALL_STATUS_IND</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtH"><line style="stroke:#E7E7E7;stroke-width:1;" x1="1261.7495" x2="1303.7495" y1="1009.5703" y2="1009.5703"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1303.7495" x2="1303.7495" y1="1009.5703" y2="1022.5703"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1262.7495" x2="1303.7495" y1="1022.5703" y2="1022.5703"/><polygon fill="#E7E7E7" points="1272.7495,1018.5703,1262.7495,1022.5703,1272.7495,1026.5703,1268.7495,1022.5703" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141.7178" x="1268.7495" y="1004.5044">cb_CALL_STATUS_IND</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtH"><line style="stroke:#E7E7E7;stroke-width:1;" x1="1261.7495" x2="1303.7495" y1="1051.7031" y2="1051.7031"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1303.7495" x2="1303.7495" y1="1051.7031" y2="1064.7031"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1262.7495" x2="1303.7495" y1="1064.7031" y2="1064.7031"/><polygon fill="#E7E7E7" points="1272.7495,1060.7031,1262.7495,1064.7031,1272.7495,1068.7031,1268.7495,1064.7031" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168.0225" x="1268.7495" y="1046.6372">handleCallStatusChanged</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtH"><line style="stroke:#E7E7E7;stroke-width:1;" x1="1261.7495" x2="1303.7495" y1="1093.8359" y2="1093.8359"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1303.7495" x2="1303.7495" y1="1093.8359" y2="1106.8359"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1262.7495" x2="1303.7495" y1="1106.8359" y2="1106.8359"/><polygon fill="#E7E7E7" points="1272.7495,1102.8359,1262.7495,1106.8359,1272.7495,1110.8359,1268.7495,1106.8359" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109.9985" x="1268.7495" y="1088.77">handleCallStatus</text></g><g class="message" data-participant-1="PBtH" data-participant-2="PBtA"><polygon fill="#E7E7E7" points="838.1304,1131.9688,828.1304,1135.9688,838.1304,1139.9688,834.1304,1135.9688" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="832.1304" x2="1260.7495" y1="1135.9688" y2="1135.9688"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117.2412" x="844.1304" y="1130.9028">onEvtHfCallStatus</text></g><g class="message" data-participant-1="PBtA" data-participant-2="BtD"><polygon fill="#E7E7E7" points="609.5962,1161.1016,599.5962,1165.1016,609.5962,1169.1016,605.5962,1165.1016" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="603.5962" x2="826.1304" y1="1165.1016" y2="1165.1016"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="204.5342" x="615.5962" y="1160.0356">emit notifyCallStatusChanged()</text></g><g class="message" data-participant-1="BtD" data-participant-2="BtD"><line style="stroke:#E7E7E7;stroke-width:1;" x1="598.5962" x2="640.5962" y1="1194.2344" y2="1194.2344"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="640.5962" x2="640.5962" y1="1194.2344" y2="1207.2344"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="599.5962" x2="640.5962" y1="1207.2344" y2="1207.2344"/><polygon fill="#E7E7E7" points="609.5962,1203.2344,599.5962,1207.2344,609.5962,1211.2344,605.5962,1207.2344" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150.0522" x="605.5962" y="1189.1685">onCallStatusChanged()</text></g><g class="message" data-participant-1="BtD" data-participant-2="HPM"><polygon fill="#E7E7E7" points="78.4429,1232.3672,68.4429,1236.3672,78.4429,1240.3672,74.4429,1236.3672" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="72.4429" x2="597.5962" y1="1236.3672" y2="1236.3672"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="225.3354" x="84.4429" y="1231.3013">notifyBTDeviceCallStateChanged()</text></g><g class="message" data-participant-1="HPM" data-participant-2="HPM"><line style="stroke:#E7E7E7;stroke-width:1;" x1="67.4429" x2="109.4429" y1="1265.5" y2="1265.5"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="109.4429" x2="109.4429" y1="1265.5" y2="1278.5"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="68.4429" x2="109.4429" y1="1278.5" y2="1278.5"/><polygon fill="#E7E7E7" points="78.4429,1274.5,68.4429,1278.5,78.4429,1282.5,74.4429,1278.5" style="stroke:#E7E7E7;stroke-width:1;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211.5991" x="74.4429" y="1260.4341">slotBTDeviceCallStateChanged()</text></g></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/dothanhdathp" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/tad.zeila?locale=vi_VN" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotation", "content.code.copy", "content.tabs.link", "navigation.tabs", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../scripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>

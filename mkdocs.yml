@@ -109,17 +109,24 @@ nav:
         - PlantUml: Document/MKDocs/mkdocs-plantuml.md
         - Markdown Extensions: Document/MKDocs/mkdocs-markdown-extensions.md
         - Markdown Github Publish: Document/MKDocs/mkdocs-github-publish.md
-  - Tools:
-    - VSCode: Tools/VSCode/tools-vscode-overview.md
-    - Android Studio: Tools/AndroidStudio/tools-android-studio-overview.md
+  - Developer:
+    - OOP: Developer/dev/dev-oop.md
+  - Software:
+    - VSCode: Software/VSCode/software-vscode-overview.md
+    - Android Studio: Software/AndroidStudio/software-android-studio-overview.md
     - Git:
-      - About Git: Tools/Git/tools-git-about.md
-      - Install: Tools/Git/tools-git-install.md
-      - Git Config: Tools/Git/tools-git-config.md
+      - About Git: Software/Git/software-git-about.md
+      - Install: Software/Git/software-git-install.md
+      - Git Config: Software/Git/software-git-config.md
     - Github:
-      - Github Overview: Tools/Github/tools-github-overview.md
-      - Github Start: Tools/Github/tools-github-start.md
-      - Github Page: Tools/Github/tools-github-page.md
+      - Github Overview: Software/Github/software-github-overview.md
+      - Github Start: Software/Github/software-github-start.md
+      - Github Page: Software/Github/software-github-page.md
+    - Repo:
+      - Repo Overview: Software/Repo/software-repo-overview.md
+    - Other:
+      - Sambashare: Software/Other/software-sambashare.md
+      - Putty: Software/Other/software-putty.md
   - Operator System:
     - OS Overview: OS/os-overview.md
     - Common:
@@ -140,8 +147,6 @@ nav:
         - Run: OS/Windows/os-windows-run.md
         - Service Tag and Manufacture: OS/Windows/os-windows-service-tag-and-manufacture.md
       - Network: OS/Windows/os-windows-network.md
-      - Tools:
-        - Putty: OS/Windows/os-windows-tools-putty.md
       - Shell:
         - Command Prompt:
           - Getting Start: OS/Windows/os-windows-cmd-getting-start.md
@@ -155,7 +160,9 @@ nav:
       - Overview: OS/Android/os-android-overview.md
   - Work:
     - MnM:
-      - Về MnM: Work/MnM/work-about-mnm.md
+      - Common:
+        - Về MnM: Work/MnM/work-about-mnm.md
+        - OSAL: Work/MnM/work-mnm-common-osal.md
       - S201:
         - Overview: Work/MnM/work-s201-overview.md
       - W501:
@@ -165,13 +172,18 @@ nav:
       - S210:
         - Overview: Work/MnM/work-s210-overview.md
       - WSA:
-        - Overview: Work/MnM/work-wsa-overview.md
+        - Download: Work/MnM/work-wsa-download.md
+        - Release: Work/MnM/work-wsa-release.md
+        - FWDN/HDF: Work/MnM/work-wsa-fwdn-and-hdf.md
+        - Task:
+          - Request Via Mail:
+            - Phone Noise: Work/MnM/work-wsa-task-mail-phone-noise.md
       - ZX:
         - Overview: Work/MnM/work-zx-overview.md
   - Diary:
     - Năm 2025: 
-      - Tháng 6: Diary/2025/month-6.md
       - Tháng 7: Diary/2025/month-7.md
+      - Tháng 6: Diary/2025/month-6.md
 
 extra_css:
   - stylesheets/theme.css

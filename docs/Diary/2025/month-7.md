@@ -22,7 +22,7 @@
         y-axis "Count" 0 --> 80
 
         %% Day [01,02,03,04,05, 06,07,08,09,10, 11,12,13,14,15, 16,17,18,19,20, 21,22,23,24,25, 26,27,28,29,30, 31]
-        bar    [30,30,25,65,30, 30,30,30,30,00, 00,00,00,00,00, 00,00,00,00,00, 00,00,00,00,00, 00,00,00,00,00, 00]
+        bar    [30,30,25,65,30, 30,30,30,30,30, 00,00,35,00,00, 00,00,00,00,00, 00,00,00,00,00, 00,00,00,00,00, 00]
         line   [40,40,40,40,40, 50,50,50,50,50, 50,50,50,50,50, 60,60,60,60,60, 60,60,60,60,60, 60,60,60,60,60, 70]
     ```
 
@@ -51,9 +51,35 @@
     |  28   |  29   |  30   |  31   |   _   |   _   |    _     |
 
 ### 14-07-2025
+
+- Chính vì thức cả đêm nên nay không thể đi làm muộn được.
+- Chuyện tốt là vào thang cùng với cụ tổng. Mà thế nào cũng được mình có bị ngại với sếp lớn đâu.
+- Tiếp đến ở công ty là ngồi nghiên cứu cái `DAB+` của `WSA`
+
 ### 13-07-2025
+
+- Hôm nay có hít đất 35 cái.
+- Lại trưa lòi mới dậy nhưng vẫn nhớ được là cần giặt quần áo và làm một số thủ tục.
+- Bỏ bữa trưa nên đói vãi chưởng.
+- Chiều tối Nam4 lên thì mượn xe đi chơi với gái.
+    - Thật sự vẫn khó hiểu tại sao đi chơi vs gái cứ phải mượn xe sang của bạn đi lấy le làm gì? Kiểu sau này yêu đương là biết mà?
+- Chính vì không có Nam4 nên đi ăn cháo lòng. Về chơi game 2 ván win cả 2.
+- Tối ngồi viết mkdocs tiếp và dành cả đêm để deploy cái document này public lên mạng qua `github.io`, thành công rực rỡ.
+
 ### 12-07-2025
+
+- Thứ bảy, như mọi khi, ngủ một mạch cho đến tận trưa mới dậy đi ăn bánh mỳ thịt xiên.
+- Cả buổi chiều không có nhiều việc làm, chủ yếu là chill chill. Không phải viết document thì là ngồi chơi điện tử.
+- Tối, mưa, sml. Hải bánh và mình gọi gà ở Texas về chén. Bữa tối đơn giản.
+- À mẹ gọi điện và cả nhắn tin mình được ông ngoại cho 100k tiền ... nhặt ví trả người mất. Người ta ở Hà Nội nhất định cảm ơn.
+- Well như mọi lần lại là ngồi code đến đêm.
+
 ### 11-07-2025
+
+- Thứ sáu, hôm này lại không có ý muốn làm việc gì lắm.
+- Sau ngày làm việc về thì tối Nam về quê còn mỗi mình với Hải ở nhà.
+- Tối này đi ăn ... ăn gì nhỉ? Tối ăn mỳ tôm thì phải, ăn uống đơn giản và chơi.
+- Tối nay tự nhiên phát hiện cái MKDocs, nghịch đến tận sáng.
 
 ### 10-07-2025
 
