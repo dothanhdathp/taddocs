@@ -111,8 +111,19 @@ nav:
         - Markdown Github Publish: Document/MKDocs/mkdocs-github-publish.md
   - Developer:
     - OOP: Developer/dev/dev-oop.md
+    - Make: Developer/dev/dev-make.md
+    - Yocto:
+      - Overview: Developer/Yocto/yocto-overview.md
+      - Bitbake: Developer/Yocto/yocto-bitbake.md
+    - Practice:
+      - Leetcode:
+        - Leetcode 46 - Permutations: Developer/practice/leetcode-44.md
   - Software:
-    - VSCode: Software/VSCode/software-vscode-overview.md
+    - VSCode:
+      - Install: Software/VSCode/software-vscode-install.md
+      - Settings: Software/VSCode/software-vscode-settings.md
+      - Keybindings: Software/VSCode/software-vscode-keybindings.md
+      - Snippets: Software/VSCode/software-vscode-snippets.md
     - Android Studio: Software/AndroidStudio/software-android-studio-overview.md
     - Git:
       - About Git: Software/Git/software-git-about.md
@@ -173,11 +184,13 @@ nav:
         - Overview: Work/MnM/work-s210-overview.md
       - WSA:
         - Download: Work/MnM/work-wsa-download.md
-        - Release: Work/MnM/work-wsa-release.md
-        - FWDN/HDF: Work/MnM/work-wsa-fwdn-and-hdf.md
+        - Released: Work/MnM/work-wsa-released.md
+        - Use FWDN and HDF: Work/MnM/work-wsa-fwdn-and-hdf.md
+        - Build: Work/MnM/work-wsa-build.md
         - Task:
           - Request Via Mail:
             - Phone Noise: Work/MnM/work-wsa-task-mail-phone-noise.md
+
       - ZX:
         - Overview: Work/MnM/work-zx-overview.md
   - Diary:

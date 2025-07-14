@@ -62,11 +62,13 @@ Các bước FWDN:
         - _Có thể sửa trực tiếp trong tệp `FWDN_V7_0.INI`_
 1. Ấn nút __Create Image__ ở dưới cùng, một tệp `*.fai` sẽ được tạo ra theo tên và đường dẫn được điền trong ô màu đỏ. Ở đây chính là `WSYAL3000MS_EMMC.fai`
     - _Việc đặt tên các tệp không có yêu cầu cụ thể, nhưng tốt nhất nên có quy luật để tránh gây hiểu lầm về sau hoặc khó lòng kiểm tra, tìm kiếm sai sót_
+
         |                | Tên tệp                   |
         | :------------- | :------------------------ |
         | SD Data        | __WSYAL3000MS_EMMC.fai__  |
         | SNOR BOOT ROM  | __WSYAL3000MS_EMMC.fai__  |
         | SNOR MICOM ROM | __WSYAL3000MS_MICOM.fai__ |
+
     - <mark class="red">Lặp lại các bước như trên với hai chế độ còn lại.</mark>
     - Nếu các tệp mới được tạo ra không tự động được thêm vào trong bảng, hãy tự thêm bằng tay như với chế độ __Release__
 1. Có hai chế độ để ___write___ là ___Default download___ và ___Low format whole memory before download___
