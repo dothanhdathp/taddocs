@@ -26,7 +26,7 @@
 /* Full width */
 .md-grid {
   /* max-width: initial; /* or try 100% or 1280px or */
-  max-width: 80%; /* or try 100% or 1280px or */
+  max-width: inherit; /* or try 100% or 1280px or */
 }
 
 .md-tabs {
