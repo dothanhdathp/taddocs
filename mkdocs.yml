@@ -31,8 +31,11 @@ plugins:
       puml_url: https://www.plantuml.com/plantuml/
 
 nav:
-  - Home: index.md
-  - Programming Language:
+  - Home: 
+    - About me: index.md
+    - Note: note.md
+    - Life: life.md
+  - Programming:
     - C: Developer/c/c.md
     - C++:
       - Giới thiệu:
@@ -90,7 +93,7 @@ nav:
       - Basic:
         - Variables: Developer/Rust/rust-variables.md
     - PhP: Developer/php/php.md
-  - Non Programming Language:
+  - Non Programming:
     - HTML: Developer/html/html.md
     - CSS: Developer/css/css.md
     - Markdown: Document/Markdown/markdown.md
@@ -115,10 +118,13 @@ nav:
     - Yocto:
       - Overview: Developer/Yocto/yocto-overview.md
       - Bitbake: Developer/Yocto/yocto-bitbake.md
+    - Qt:
+      - Overview: Developer/Qt/qt-overview.md
     - Practice:
       - Leetcode:
         - Leetcode 46 - Permutations: Developer/practice/leetcode-44.md
   - Software:
+    - Overview: Software/software-overview.md
     - VSCode:
       - Install: Software/VSCode/software-vscode-install.md
       - Settings: Software/VSCode/software-vscode-settings.md
@@ -135,6 +141,8 @@ nav:
       - Github Page: Software/Github/software-github-page.md
     - Repo:
       - Repo Overview: Software/Repo/software-repo-overview.md
+    - Qt:
+      - QtCreator: Software/Qt/qt-software-qt-creator.md
     - Other:
       - Sambashare: Software/Other/software-sambashare.md
       - Putty: Software/Other/software-putty.md
@@ -190,9 +198,33 @@ nav:
         - Task:
           - Request Via Mail:
             - Phone Noise: Work/MnM/work-wsa-task-mail-phone-noise.md
-
       - ZX:
         - Overview: Work/MnM/work-zx-overview.md
+  - Học Tập:
+    - Overview: Resarch/overview.md
+    - Toán học:
+      - Chung:
+        - Tổng quan: Resarch/Math/math-overview.md
+        - Tập hợp số: Resarch/Math/math-phan-so.md
+      - Số học:
+        - Số học: Resarch/Math/math-numberic-overview.md
+      - Hình học:
+        - Hình học cơ bản: Resarch/Math/math-geometry-overview.md
+    - Vật Lý:
+      - Overview: Resarch/Physics/physics-overview.md
+    - Hoá học:
+      - Overview: Resarch/Chemistry/chemistry-overview.md
+    - Lịch Sử:
+      - Overview: Resarch/History/history-overview.md
+    - Tin học:
+      - Overview: Resarch/IT/it-overview.md
+  - Ngôn Ngữ:
+    - Tiếng Anh:
+      - Kiến thức:
+        - Từ và Câu: Language/English/language-english-words-and-sentences.md
+      - Bài Tập:
+        - Reading:
+          - An Introduction to Film Sound: Language/English/language-english-an-introduction-to-film-sound.md
   - Diary:
     - Năm 2025: 
       - Tháng 7: Diary/2025/month-7.md
@@ -216,6 +248,9 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
 
 extra_javascript:
   - scripts/katex.js

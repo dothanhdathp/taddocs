@@ -50,6 +50,12 @@
     |  21   |  22   |  23   |  24   |  25   |  26   |    27    |
     |  28   |  29   |  30   |  31   |   _   |   _   |    _     |
 
+### 15-07-2025
+
+- Hôm nay mình không đi làm sáng. Đêm qua ngủ từ 12h khá sớm so với mọi hôm không hiểu sao lại bị ngủ rũ đến quá giờ.
+    - Mình bị làm sao vậy? Tại sao luôn bị mệt mỏi vậy chứ? Vậy là thế nào? Mình có làm gì sao? Tại sao não mình lại không quen với chế độ ngủ?
+- Sáng không đi làm cũng không biết làm gì luôn. Nay mới là thứ 3. Có tập thể dục đều đặn vẫn không khá hơn được, có nên xin nghỉ việc để đi khám sức khoẻ hay không?
+
 ### 14-07-2025
 
 - Chính vì thức cả đêm nên nay không thể đi làm muộn được.
