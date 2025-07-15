@@ -92,11 +92,27 @@ Xong sau đó mở `python enviroment`
 python -m venv venv
 ```
 
+Tiếp đến là chạy biến môi trường:
+
+=== "Windows Batch"
+    ```batch
+    venv\Scripts\activate.bat
+    ```
+=== "Windows Power Shell"
+    ```ps
+    .\venv\Scripts\Activate.ps1
+    ```
+=== "Bash (Linux, Ubuntu, ...)"
+    ```bash
+    source venv/Scripts/activate
+    ```
+
 Rồi build bằng lệnh:
 
 ```bash
 mkdocs build
 ```
+
 
 Rồi chạy lại lệnh dưới này:
 
