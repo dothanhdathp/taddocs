@@ -67,14 +67,16 @@ h6 {
 }
 
 mark.green {
-    background-color: #00ff22!important;
+    color: #020226;
+    background-color: #81ff92!important;
 }
 mark.red {
-    background-color: red!important;
-    color: white!important;
+    color: #020226;
+    background-color: #ff8585!important;
 }
 mark.blue {
-    background-color: lightblue!important;
+    color: #020226;
+    background-color: rgb(109, 218, 255)!important;
 }
 
 .center-table {
