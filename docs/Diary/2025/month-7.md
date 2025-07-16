@@ -50,11 +50,20 @@
     |  21   |  22   |  23   |  24   |  25   |  26   |    27    |
     |  28   |  29   |  30   |  31   |   _   |   _   |    _     |
 
+### 16-07-2025
+
+- Như mọi ngày, không thể ngủ được vào ban đêm và trở nên mệt mỏi mỗi khi sáng.
+- Kiểm tra xem màn hình Likebook Ares thế nào 3.500.000 ạ, thật là vl. Thế khác nào mua máy mới cho nhanh.
+- Hôm qua đã quên không có tập thể dục rồi, liệu hôm nay thì sao?
+- Cuối tuần về nhà. Lười chết mất.
+- Thế mà đã sắp hết tháng rồi, nhanh thật.
+
 ### 15-07-2025
 
 - Hôm nay mình không đi làm sáng. Đêm qua ngủ từ 12h khá sớm so với mọi hôm không hiểu sao lại bị ngủ rũ đến quá giờ.
     - Mình bị làm sao vậy? Tại sao luôn bị mệt mỏi vậy chứ? Vậy là thế nào? Mình có làm gì sao? Tại sao não mình lại không quen với chế độ ngủ?
 - Sáng không đi làm cũng không biết làm gì luôn. Nay mới là thứ 3. Có tập thể dục đều đặn vẫn không khá hơn được, có nên xin nghỉ việc để đi khám sức khoẻ hay không?
+- Chiều đi làm làm được cái WSA
 
 ### 14-07-2025
 

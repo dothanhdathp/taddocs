@@ -2,6 +2,8 @@ site_name: Tad Zeila
 theme:
   name: material
   logo: logo/cat_white.png
+  text: Noto Serif Medium
+  code: Roboto Mono Medium
   highlightjs: true
   hljs_style: github
   hljs_style_dark: github-dark
@@ -36,6 +38,7 @@ nav:
     - Note: note.md
     - Life: life.md
   - Programming:
+    - Overview: Developer/dev-overview.md
     - C: Developer/c/c.md
     - C++:
       - Giới thiệu:
@@ -169,10 +172,10 @@ nav:
       - Shell:
         - Command Prompt:
           - Getting Start: OS/Windows/os-windows-cmd-getting-start.md
-          - CMD Call: OS/Windows/os-windows-cmd-executed.md
-          - CMD Script: OS/Windows/os-windows-cmd-write.md
+          - Command: OS/Windows/os-windows-cmd-command.md
+          - Write Script: OS/Windows/os-windows-cmd-write-scripts.md
         - Power Shell:
-          - Command Prompt: OS/Windows/os-windows-cmd-command-prompt.md
+          - Getting Start: OS/Windows/os-windows-ps-getting-start.md
       - Custom:
         - Usercmd: OS/Windows/os-windows-custom-usercmd.md
     - Android:
@@ -196,10 +199,13 @@ nav:
         - Use FWDN and HDF: Work/MnM/work-wsa-fwdn-and-hdf.md
         - Build: Work/MnM/work-wsa-build.md
         - Task:
-          - Request Via Mail:
-            - Phone Noise: Work/MnM/work-wsa-task-mail-phone-noise.md
+          - Phone Noise Sound: Work/MnM/work-wsa-task-mail-phone-noise.md
+          - DAB+: Work/MnM/work-wsa-dab+.md
       - ZX:
         - Overview: Work/MnM/work-zx-overview.md
+    - BHMC:
+      - About BHMC:  Work/BHMC/work-about-bhmc.md
+      - Download:  Work/BHMC/work-bhmc-download.md
   - Học Tập:
     - Overview: Resarch/overview.md
     - Toán học:
@@ -229,12 +235,16 @@ nav:
     - Năm 2025: 
       - Tháng 7: Diary/2025/month-7.md
       - Tháng 6: Diary/2025/month-6.md
-
+  - Sách:
+    - Tổng Quan: Book/book-overview.md
+    - Review:
+      - Book/book-review.md
 extra_css:
   - stylesheets/theme.css
   - https://unpkg.com/katex@0/dist/katex.min.css
 
 markdown_extensions:
+  - attr_list
   - md_in_html
   - pymdownx.arithmatex:
       generic: true
