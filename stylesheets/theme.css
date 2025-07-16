@@ -28,6 +28,8 @@
     --md-bg-light-color: #d3d3e9;
     --md-bg-dark-color: #020226;
     /* --code-font-family: 'Noto Sans Mono Light'; */
+    --md-text-font:"Noto Serif Medium";
+    --md-code-font:"Roboto Mono Medium";
 }
 
 [data-md-color-primary=indigo] {
