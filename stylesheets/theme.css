@@ -106,3 +106,13 @@ td {
     background-color: var(--code-background-color);
     font-family: var(--code-font-family);
 }
+
+div.grid-container-4-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+    padding: 0px;
+    height: fit-content;
+    box-sizing: border-box;
+}
