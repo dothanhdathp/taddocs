@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "Noto Serif Medium";
+  src: url("/assets/fonts/NotoSerif-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Mono Medium";
+  src: url("/assets/fonts/RobotoMono-Medium.ttf") format("truetype");
+}
+
 :root {
-    --primary-family: 'Noto Serif Medium', 'Oswald', 'Noto Sans',  'Courier New';
+    --primary-family: 'Noto Serif Medium';
     --primary-header-0-size: 28px;
     --primary-header-1-size: 24px;
     --primary-header-2-size: 22px;
