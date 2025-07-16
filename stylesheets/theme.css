@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "Noto Serif Medium";
+  font-family: "NotoSerifMedium";
   src: url("/assets/fonts/NotoSerif-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto Mono Medium";
+  font-family: "RobotoMonoMedium";
   src: url("/assets/fonts/RobotoMono-Medium.ttf") format("truetype");
 }
 
 :root {
-    --primary-family: 'Noto Serif Medium';
+    --primary-family: "NotoSerifMedium";
     --primary-header-0-size: 28px;
     --primary-header-1-size: 24px;
     --primary-header-2-size: 22px;
@@ -24,12 +24,12 @@
     --soft-gray-theme-color: #E2E2E2; /* Accent color */
     --code-color: black;
     --code-background-color: #fdddb4aa;
-    --code-font-family: 'Roboto Mono Medium';
+    --code-font-family: "RobotoMonoMedium";
     --md-bg-light-color: #d3d3e9;
     --md-bg-dark-color: #020226;
     /* --code-font-family: 'Noto Sans Mono Light'; */
-    --md-text-font:"Noto Serif Medium";
-    --md-code-font:"Roboto Mono Medium";
+    --md-text-font: "NotoSerifMedium";
+    --md-code-font: "RobotoMonoMedium";
 }
 
 [data-md-color-primary=indigo] {
