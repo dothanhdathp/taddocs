@@ -13,7 +13,7 @@ bitbake diva-ivi-image
 ```
 Kết quả sẽ thu được trong `/home/dtdat/work/wsa/build-tcc8021-hmx/tmp/deploy/images/tcc8021-hmx`
 
-Hoặc trở lại thẻ [Release](work-wsa-release.md) và tải bất kỳ một phiên bản nào đó về.
+Hoặc trở lại thẻ [Release](work-wsa-released.md) và tải bất kỳ một phiên bản nào đó về.
 
 ## FWDN
 

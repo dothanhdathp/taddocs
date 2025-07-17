@@ -44,7 +44,7 @@ System.out.println("float  : " + f);
 System.out.println("double : " + d);
 ```
 
-```bash
+```txt
 byte   : 0
 short  : 0
 char   : 0

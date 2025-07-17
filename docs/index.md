@@ -2,19 +2,19 @@
 
 Xin chào đến với tài liệu của Tad Zeila. Tên mình là Đạt và Tad là tên viết ngược.
 
-## [Programming Language](Developer/c/c/)
+## Programming
 
 Học ngôn ngữ lập trình.
 
-## [Non Programming Language](Developer/html/html/)
+## Non Programming
 
 Học một số ngôn ngữ thiết kế website, viết tài liệu, 
 
-## [OS (Operator System)](OS/os-overview/)
+## OS (Operator System)
 
 Các phần về hệ điều hành như Ubuntu, Windows, Android, ...
 
-## [Software](Software/software-overview/)
+## Software
 
 ## Work
 

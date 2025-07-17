@@ -8,7 +8,7 @@
 
 - Vào đường dẫn `%USERPROFILE%` trên ___explorer___ tạo một thư mục tên ví dụ như `.usercmd`
 - Và thêm đường dẫn đó vào __Environment Variables__
-    - _Có thể xem hướng dẫn ở đây_ [Environment Variables](OS/Windows/os-windows-environment-variables.md)
+    - _Có thể xem hướng dẫn ở đây_ [Environment Variables](os-windows-environment-variables.md)
 
 ## Các lệnh thường dùng
 

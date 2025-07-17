@@ -53,7 +53,7 @@ ls /home/${USER}/bhmc/dn8c/out/target/common/obj/JAVA_LIBRARIES/android.humaxdig
 git clone ssh://<your_account>@exg.humaxdigital.com:29418/Automotive/DN8C/Carlife && scp -p -P 29418 <your_account>@exg.humaxdigital.com:hooks/commit-msg Carlife/.git/hooks/
 ```
 
-Đây là một phần độc lập với phần còn lại của hệ thống và build bằng [Android Studio](ftware/AndroidStudio/software-android-studio-overview)
+Đây là một phần độc lập với phần còn lại của hệ thống và build bằng [Android Studio](../../Software/AndroidStudio/software-android-studio-overview.md)
 
 ### Android Studio 4.1.3
 

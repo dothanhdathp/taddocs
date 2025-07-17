@@ -63,9 +63,9 @@ Cách chia này khoa học và hợp lý hơn. Các hệ điều hành khác nha
 ## Các Hệ Điều Hành Quan trọng
 
 - Microsoft
-    - [Windows](/OS/Windows/os-windows-overview/)
-- [Linux](/OS/Linux/os-linux-overview/)
-    - Ubuntu
+    - [Windows](Windows/os-windows-overview.md)
+- Linux
+    - [Ubuntu](Ubuntu/os-ubuntu-install.md)
     - Debian
 - Google
     - Android

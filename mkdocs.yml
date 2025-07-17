@@ -33,10 +33,11 @@ plugins:
       puml_url: https://www.plantuml.com/plantuml/
 
 nav:
+  # ---------- Home ----------
   - Home: 
     - About me: index.md
     - Note: note.md
-    - Life: life.md
+  # ---------- Programming ----------
   - Programming:
     - Overview: Developer/dev-overview.md
     - C: Developer/c/c.md
@@ -96,6 +97,7 @@ nav:
       - Basic:
         - Variables: Developer/Rust/rust-variables.md
     - PhP: Developer/php/php.md
+  # ---------- Non Programming ----------
   - Non Programming:
     - HTML: Developer/html/html.md
     - CSS: Developer/css/css.md
@@ -115,6 +117,7 @@ nav:
         - PlantUml: Document/MKDocs/mkdocs-plantuml.md
         - Markdown Extensions: Document/MKDocs/mkdocs-markdown-extensions.md
         - Markdown Github Publish: Document/MKDocs/mkdocs-github-publish.md
+  # ---------- Developer ----------
   - Developer:
     - OOP: Developer/dev/dev-oop.md
     - Make: Developer/dev/dev-make.md
@@ -123,9 +126,28 @@ nav:
       - Bitbake: Developer/Yocto/yocto-bitbake.md
     - Qt:
       - Overview: Developer/Qt/qt-overview.md
+    - DataStruct:
+      - Overview: Developer/DataStruct/dev-dataStruct-overview.md
+    - Algorithm:
+      - Overview: Developer/Algorithm/dev-algorithm-overview.md
+      - Sorting:
+        - About Sort: Developer/Algorithm/dev-algorithm-sort.md
+        - Selection Sort: Developer/Algorithm/dev-algorithm-selection-sort.md
+        - Bubble Sort: Developer/Algorithm/dev-algorithm-bubble-sort.md
+        - Insertion Sort: Developer/Algorithm/dev-algorithm-insertion-sort.md
+        - Quick Sort: Developer/Algorithm/dev-algorithm-quick-sort.md
+        - Counting Sort: Developer/Algorithm/dev-algorithm-counting-sort.md
+      - Hash:
+        - FNV1a: Developer/Algorithm/dev-algorithm-hashing-fnv1a.md
+    - Design Pattern:
+      - Overview: Developer/Design_Pattern/dev-design-pattern-overview.md
+    - Lib:
+      - FTXUI:
+        - Getting Start: Developer/Lib/dev-lib-ftxui.md
     - Practice:
       - Leetcode:
         - Leetcode 46 - Permutations: Developer/practice/leetcode-44.md
+  # ---------- Software ----------
   - Software:
     - Overview: Software/software-overview.md
     - VSCode:
@@ -133,22 +155,31 @@ nav:
       - Settings: Software/VSCode/software-vscode-settings.md
       - Keybindings: Software/VSCode/software-vscode-keybindings.md
       - Snippets: Software/VSCode/software-vscode-snippets.md
-    - Android Studio: Software/AndroidStudio/software-android-studio-overview.md
-    - Git:
-      - About Git: Software/Git/software-git-about.md
-      - Install: Software/Git/software-git-install.md
-      - Git Config: Software/Git/software-git-config.md
-    - Github:
-      - Github Overview: Software/Github/software-github-overview.md
-      - Github Start: Software/Github/software-github-start.md
-      - Github Page: Software/Github/software-github-page.md
-    - Repo:
-      - Repo Overview: Software/Repo/software-repo-overview.md
+    - Android Studio:
+      - Overview: Software/AndroidStudio/software-android-studio-overview.md
+      - Install: Software/AndroidStudio/software-android-studio-install.md
     - Qt:
       - QtCreator: Software/Qt/qt-software-qt-creator.md
-    - Other:
-      - Sambashare: Software/Other/software-sambashare.md
-      - Putty: Software/Other/software-putty.md
+    - MSYS2:
+      - Overview: Software/msys2/software-msys2-overview.md
+      - Install: Software/msys2/software-msys2-install.md
+      - Package: Software/msys2/software-msys2-pacman.md
+    - Sambashare: Software/Other/software-sambashare.md
+    - Putty: Software/Other/software-putty.md
+    - Version Control:
+      - Git:
+        - About Git: Software/Git/software-git-about.md
+        - Install: Software/Git/software-git-install.md
+        - Git Config: Software/Git/software-git-config.md
+      - Github:
+        - Github Overview: Software/Github/software-github-overview.md
+        - Github Start: Software/Github/software-github-start.md
+        - Github Page: Software/Github/software-github-page.md
+      - Repo:
+        - Repo Overview: Software/Repo/software-repo-overview.md
+    - Thảo luận:
+      - IDE & Code Editor: Software/software-paper-ide-code-editor.md
+  # ---------- Operator System ----------
   - Operator System:
     - OS Overview: OS/os-overview.md
     - Common:
@@ -180,6 +211,7 @@ nav:
         - Usercmd: OS/Windows/os-windows-custom-usercmd.md
     - Android:
       - Overview: OS/Android/os-android-overview.md
+  # ---------- Work ----------
   - Work:
     - MnM:
       - Common:
@@ -194,6 +226,7 @@ nav:
       - S210:
         - Overview: Work/MnM/work-s210-overview.md
       - WSA:
+        - Overview: Work/MnM/work-wsa-overview.md
         - Download: Work/MnM/work-wsa-download.md
         - Released: Work/MnM/work-wsa-released.md
         - Use FWDN and HDF: Work/MnM/work-wsa-fwdn-and-hdf.md
@@ -206,7 +239,11 @@ nav:
     - BHMC:
       - About BHMC:  Work/BHMC/work-about-bhmc.md
       - Download:  Work/BHMC/work-bhmc-download.md
-  - Học Tập:
+    - EVO:
+      - Start: Work/EVO/work-evo-start.md
+      - FWDN: Work/EVO/work-evo-fwdn.md
+  # ---------- Study ----------
+  - Study:
     - Overview: Resarch/overview.md
     - Toán học:
       - Chung:
@@ -224,6 +261,7 @@ nav:
       - Overview: Resarch/History/history-overview.md
     - Tin học:
       - Overview: Resarch/IT/it-overview.md
+  # ---------- Ngôn Ngữ ----------
   - Ngôn Ngữ:
     - Tiếng Anh:
       - Kiến thức:
@@ -231,14 +269,20 @@ nav:
       - Bài Tập:
         - Reading:
           - An Introduction to Film Sound: Language/English/language-english-an-introduction-to-film-sound.md
+  # ---------- Diary ----------
   - Diary:
     - Năm 2025: 
       - Tháng 7: Diary/2025/month-7.md
       - Tháng 6: Diary/2025/month-6.md
+  - Project:
+    - Pokedex: 
+      - README: Project/Pokedex/project-pokedex.md
+  # ---------- Sách ----------
   - Sách:
     - Tổng Quan: Book/book-overview.md
     - Review:
       - Book/book-review.md
+
 extra_css:
   - stylesheets/theme.css
   - https://unpkg.com/katex@0/dist/katex.min.css

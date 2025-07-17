@@ -50,6 +50,12 @@
     |  21   |  22   |  23   |  24   |  25   |  26   |    27    |
     |  28   |  29   |  30   |  31   |   _   |   _   |    _     |
 
+### 17-07-2025
+
+- Tối qua không hiểu sao có thể ngủ sớm thế nên nay đi là đúng giờ.
+- Trưa mệt với buồn ngủ nhưng không sao, ổn, giữ vững chỉ ngủ tối.
+- Hôm nay cũng như mọi ngày, yên ả. Chỉ là thông tin thằng em __Jason__ sẽ ngủ bắt đầu phổ biến.
+
 ### 16-07-2025
 
 - Như mọi ngày, không thể ngủ được vào ban đêm và trở nên mệt mỏi mỗi khi sáng.

@@ -1,0 +1,5 @@
+# MSYS2 Overview
+
+- MSYS2 là ___Software Distribution and Building Platform for Windows___
+- Nó bao gồm một thiết bị đầu cuối dòng lệnh có tên là Mintty, Bash, các hệ thống điều khiển phiên bản như Git và Subversion, các công cụ như TAR và AWK và thậm chí xây dựng các hệ thống như autotools, tất cả đều dựa trên phiên bản sửa đổi của Cygwin.Mặc dù một số bộ phận trung tâm này dựa trên Cygwin, trọng tâm chính của MSYS2 là cung cấp môi trường xây dựng cho phần mềm Windows gốc và các bộ phận sử dụng Cygwin được giữ ở mức tối thiểu.MSYS2 cung cấp các bản dựng gốc cập nhật cho GCC, MingW-W64, Cpython, CMake, Meson, OpenSSL, FFMPEG, Rust, Ruby, chỉ kể tên một số.
+- Ứng dụng này giống Cygwn hay Bash, ... điều khiến mình quyết định sử dụng nó làm hệ thống chính vì nó được khuyến nghị bởi Microsoft và có nhiều hệ thống dựng __build tool__ dành cho đa dạng các loại ngôn ngữ lập trình.

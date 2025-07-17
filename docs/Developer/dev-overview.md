@@ -4,14 +4,14 @@
 
 <div class="grid cards" markdown>
 
-- [C](/Developer/c/c/)
-- [C++](/Developer/cpp/cpp-0-overview/)
-- [C#](/Developer/c-sharp/c-sharp)
-- [Java](/Developer/Java/java-introduce)
-- [Python](/Developer/Python/python)
-- [Kotlin](/Developer/Kotlin/kotlin)
-- [Rust](/Developer/Rust/rust-setup)
-- [PHP](/Developer/php/php)
+- C
+- C++
+- C#
+- Java
+- Python
+- Kotlin
+- Rust
+- PHP
 
 </div>
 
