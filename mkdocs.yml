@@ -158,6 +158,7 @@ nav:
       - Overview: Software/AndroidStudio/software-android-studio-overview.md
       - Install: Software/AndroidStudio/software-android-studio-install.md
       - SDK: Software/AndroidStudio/software-android-studio-sdk.md
+      - Theme: Software/AndroidStudio/software-android-studio-theme.md
       - Troubleshoot: Software/AndroidStudio/software-android-studio-troubleshoot.md
     - QtCreator:
       - Download: Software/Qt/qt-software-qt-creator.md
