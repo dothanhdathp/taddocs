@@ -30,4 +30,4 @@
 ## Hashing
 
 - hash
-- [FNV1a](./code-algorithm-hashing-fnv1a.md)
+- [FNV1a](dev-algorithm-hashing-fnv1a.md)

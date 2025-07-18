@@ -8,7 +8,7 @@ Cần có tài khoản `git` phù hợp để kéo dự án về. Hỏi người
 
 ## Clone
 
-1. Cài đặt [repo](../../Software/Repo/software-repo-overview.md)
+1. Cài đặt [repo](../../Tools/Repo/repo-overview.md)
 2. Dùng `repo` clone __project__.
     ```bash
     repo init -u git@github.com:kanavi-yap/manifest_evo7.git -b main -m default.xml

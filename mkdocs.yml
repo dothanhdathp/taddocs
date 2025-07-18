@@ -39,93 +39,85 @@ nav:
     - Note: note.md
   # ---------- Programming ----------
   - Programming:
-    - Overview: Developer/dev-overview.md
-    - C: Developer/c/c.md
+    - Programming: Programming/programming-language.md
+    - C: Programming/c/c.md
     - C++:
       - Giới thiệu:
-        - Overview: Developer/cpp/cpp-0-overview.md
-        - Install: Developer/cpp/cpp-0-install.md
-        - HelloWorld: Developer/cpp/cpp-0-helloworld.md
+        - Overview: Programming/cpp/cpp-0-overview.md
+        - Install: Programming/cpp/cpp-0-install.md
+        - HelloWorld: Programming/cpp/cpp-0-helloworld.md
       - Cơ bản:
-        - Data Types: Developer/cpp/cpp-1-datatypes.md
-        - Basic Operator: Developer/cpp/cpp-1-basic-operator.md
-        - Flow Control: Developer/cpp/cpp-1-flow-control.md
-        - Input and Output: Developer/cpp/cpp-1-input-and-output.md
-        - Condition & Loop: Developer/cpp/cpp-1-condition-loop.md
-        - Command Line Arguments: Developer/cpp/cpp-1-command-line-arguments.md
-        - Basic Bit Operator: Developer/cpp/cpp-1-bit-operator.md
-        - Namespace: Developer/cpp/cpp-1-namespace.md
-        - Define: Developer/cpp/cpp-1-define.md
-        - Include: Developer/cpp/cpp-1-include.md
+        - Data Types: Programming/cpp/cpp-1-datatypes.md
+        - Basic Operator: Programming/cpp/cpp-1-basic-operator.md
+        - Flow Control: Programming/cpp/cpp-1-flow-control.md
+        - Input and Output: Programming/cpp/cpp-1-input-and-output.md
+        - Condition & Loop: Programming/cpp/cpp-1-condition-loop.md
+        - Command Line Arguments: Programming/cpp/cpp-1-command-line-arguments.md
+        - Basic Bit Operator: Programming/cpp/cpp-1-bit-operator.md
+        - Namespace: Programming/cpp/cpp-1-namespace.md
+        - Define: Programming/cpp/cpp-1-define.md
+        - Include: Programming/cpp/cpp-1-include.md
       - Function:
-        - Function: Developer/cpp/cpp-2-function.md
-        - Lambda: Developer/cpp/cpp-2-lambda.md
-        - Function as Parameter: Developer/cpp/cpp-2-function-as-parameter.md
+        - Function: Programming/cpp/cpp-2-function.md
+        - Lambda: Programming/cpp/cpp-2-lambda.md
+        - Function as Parameter: Programming/cpp/cpp-2-function-as-parameter.md
       - Pointer:
-        - Pointer: Developer/cpp/cpp-3-pointer.md
-        - Smart Pointer: Developer/cpp/cpp-3-smart-pointer.md
-        - Raw Pointer: Developer/cpp/cpp-3-raw-pointer.md
-        - Memory Model: Developer/cpp/cpp-3-memory-model.md
+        - Pointer: Programming/cpp/cpp-3-pointer.md
+        - Smart Pointer: Programming/cpp/cpp-3-smart-pointer.md
+        - Raw Pointer: Programming/cpp/cpp-3-raw-pointer.md
+        - Memory Model: Programming/cpp/cpp-3-memory-model.md
       - STANDARD LIBRARY STD:
         - Type:
-          - std::string: Developer/cpp/cpp-3-std-string.md
+          - std::string: Programming/cpp/cpp-3-std-string.md
         - Function:
-          - std::sort: Developer/cpp/cpp-3-std-sort.md
-          - std::make_share: Developer/cpp/cpp-3-std-make_share.md
-          - std::distance: Developer/cpp/cpp-3-std-distance.md
-          - std::hash: Developer/cpp/cpp-3-std-hash.md
-          - std::unique: Developer/cpp/cpp-3-std-unique.md
+          - std::sort: Programming/cpp/cpp-3-std-sort.md
+          - std::make_share: Programming/cpp/cpp-3-std-make_share.md
+          - std::distance: Programming/cpp/cpp-3-std-distance.md
+          - std::hash: Programming/cpp/cpp-3-std-hash.md
+          - std::unique: Programming/cpp/cpp-3-std-unique.md
       - Project:
-        - Giải bảng Sudoku:  Developer/cpp/cpp-project-solver-sudoku.md
-    - C#: Developer/c-sharp/c-sharp.md
+        - Giải bảng Sudoku:  Programming/cpp/cpp-project-solver-sudoku.md
+    - C#: Programming/c-sharp/c-sharp.md
     - Java:
       - Overview:
-        - Java: Developer/Java/java-introduce.md
-        - JDK, JRE và JVM: Developer/Java/java-jdk-jre-jvm.md
-        - Install: Developer/Java/java-install.md
-        - HelloWorld: Developer/Java/java-helloworld.md
+        - Java: Programming/Java/java-introduce.md
+        - JDK, JRE và JVM: Programming/Java/java-jdk-jre-jvm.md
+        - Install: Programming/Java/java-install.md
+        - HelloWorld: Programming/Java/java-helloworld.md
       - Basic:
-        - Basic Syntax: Developer/Java/java-basic-synctax.md
-        - Datatypes & Variables: Developer/Java/java-basic-datatypes-and-variables.md
-    - Javascript: Developer/Javascript/javascript.md
-    - Kotlin: Developer/Kotlin/kotlin.md
-    - Python: Developer/Python/python.md
+        - Basic Syntax: Programming/Java/java-basic-synctax.md
+        - Datatypes & Variables: Programming/Java/java-basic-datatypes-and-variables.md
+    - Javascript: Programming/Javascript/javascript.md
+    - Kotlin: Programming/Kotlin/kotlin.md
+    - Python: Programming/Python/python.md
     - Rust:
       - Overview:
-        - Setup: Developer/Rust/rust-setup.md
-        - Document: Developer/Rust/rust-document.md
+        - Setup: Programming/Rust/rust-setup.md
+        - Document: Programming/Rust/rust-document.md
       - Basic:
-        - Variables: Developer/Rust/rust-variables.md
-    - PhP: Developer/php/php.md
+        - Variables: Programming/Rust/rust-variables.md
+    - PhP: Programming/php/php.md
   # ---------- Non Programming ----------
   - Non Programming:
-    - HTML: Developer/html/html.md
-    - CSS: Developer/css/css.md
-    - Markdown: Document/Markdown/markdown.md
+    - Non Programming: NonProgramming/non-programming-language.md
+    - HTML: NonProgramming/html/html.md
+    - CSS: NonProgramming/css/css.md
+    - Markdown: NonProgramming/Markdown/markdown.md
     - Mermaid:
-      - Overview: Document/Mermaid/mermaid-overview.md
-    - PlantUml: Document/PlantUml/plantuml.md
-    - Latex: Document/LaTex/latex.md
-    - Katex: Document/KaTex/katex.md
-    - Tooks:
-      - MKDocs:
-        - Getting Start: Document/MKDocs/mkdocs.md
-        - Theme: Document/MKDocs/mkdocs-theme.md
-        - CSS: Document/MKDocs/mkdocs-css.md
-        - Katex: Document/MKDocs/mkdocs-katex.md
-        - Mermaid: Document/MKDocs/mkdocs-mermaid.md
-        - PlantUml: Document/MKDocs/mkdocs-plantuml.md
-        - Markdown Extensions: Document/MKDocs/mkdocs-markdown-extensions.md
-        - Markdown Github Publish: Document/MKDocs/mkdocs-github-publish.md
+      - Overview: NonProgramming/Mermaid/mermaid-overview.md
+    - PlantUml: NonProgramming/PlantUml/plantuml.md
+    - Latex: NonProgramming/LaTex/latex.md
+    - Katex: NonProgramming/KaTex/katex.md
   # ---------- Developer ----------
   - Developer:
-    - OOP: Developer/dev/dev-oop.md
-    - Make: Developer/dev/dev-make.md
+    - Developer: Developer/dev.md
+    - Một số khái niệm:
+      - OOP: Developer/dev/dev-oop.md
+    - Build Tools:
+      - Make: Developer/dev/dev-make.md
     - Yocto:
       - Overview: Developer/Yocto/yocto-overview.md
       - Bitbake: Developer/Yocto/yocto-bitbake.md
-    - Qt:
-      - Overview: Developer/Qt/qt-overview.md
     - DataStruct:
       - Overview: Developer/DataStruct/dev-dataStruct-overview.md
     - Algorithm:
@@ -141,9 +133,16 @@ nav:
         - FNV1a: Developer/Algorithm/dev-algorithm-hashing-fnv1a.md
     - Design Pattern:
       - Overview: Developer/Design_Pattern/dev-design-pattern-overview.md
-    - Lib:
+    - Third Party:
       - FTXUI:
-        - Getting Start: Developer/Lib/dev-lib-ftxui.md
+        - Getting Start: Developer/FTXUI/dev-lib-ftxui.md
+      - ROS2: Developer/ROS2/dev-ros2.md
+      - AWE:
+        - AWE: Developer/AWE/awe.md
+        - AWE Core: Developer/AWE/awe-core.md
+        - AWE Core OS: Developer/AWE/awe-coreos.md
+      - Qt:
+        - Overview: Developer/Qt/qt-overview.md
     - Practice:
       - Leetcode:
         - Leetcode 46 - Permutations: Developer/practice/leetcode-44.md
@@ -158,27 +157,41 @@ nav:
     - Android Studio:
       - Overview: Software/AndroidStudio/software-android-studio-overview.md
       - Install: Software/AndroidStudio/software-android-studio-install.md
-    - Qt:
-      - QtCreator: Software/Qt/qt-software-qt-creator.md
+      - SDK: Software/AndroidStudio/software-android-studio-sdk.md
+      - Troubleshoot: Software/AndroidStudio/software-android-studio-troubleshoot.md
+    - QtCreator:
+      - Download: Software/Qt/qt-software-qt-creator.md
     - MSYS2:
       - Overview: Software/msys2/software-msys2-overview.md
       - Install: Software/msys2/software-msys2-install.md
       - Package: Software/msys2/software-msys2-pacman.md
-    - Sambashare: Software/Other/software-sambashare.md
-    - Putty: Software/Other/software-putty.md
-    - Version Control:
-      - Git:
-        - About Git: Software/Git/software-git-about.md
-        - Install: Software/Git/software-git-install.md
-        - Git Config: Software/Git/software-git-config.md
-      - Github:
-        - Github Overview: Software/Github/software-github-overview.md
-        - Github Start: Software/Github/software-github-start.md
-        - Github Page: Software/Github/software-github-page.md
-      - Repo:
-        - Repo Overview: Software/Repo/software-repo-overview.md
+    - Putty: Software/Other/putty.md
+    - Sambashare: Software/Other/sambashare.md
     - Thảo luận:
       - IDE & Code Editor: Software/software-paper-ide-code-editor.md
+  # ---------- Tools ----------
+  - Tools:
+    - Tools: Tools/tools.md
+    - MKDocs:
+      - Getting Start: Tools/MKDocs/mkdocs.md
+      - Theme: Tools/MKDocs/mkdocs-theme.md
+      - CSS: Tools/MKDocs/mkdocs-css.md
+      - Katex: Tools/MKDocs/mkdocs-katex.md
+      - Mermaid: Tools/MKDocs/mkdocs-mermaid.md
+      - PlantUml: Tools/MKDocs/mkdocs-plantuml.md
+      - Markdown Extensions: Tools/MKDocs/mkdocs-markdown-extensions.md
+      - Markdown Github Publish: Tools/MKDocs/mkdocs-github-publish.md
+    - Version Control:
+      - Git:
+        - About Git: Tools/Git/git-about.md
+        - Install: Tools/Git/git-install.md
+        - Git Config: Tools/Git/git-config.md
+      - Github:
+        - Github Overview: Tools/Github/github-overview.md
+        - Github Start: Tools/Github/github-start.md
+        - Github Page: Tools/Github/github-page.md
+      - Repo:
+        - Repo Overview: Tools/Repo/repo-overview.md
   # ---------- Operator System ----------
   - Operator System:
     - OS Overview: OS/os-overview.md
@@ -193,6 +206,7 @@ nav:
         - File: OS/Ubuntu/os-ubuntu-file.md
     - Windows:
       - Overview: OS/Windows/os-windows-overview.md
+      - Một số lệnh thường dùng: OS/Windows/os-windows-cmd-common-command.md
       - System:
         - Macro PATH: OS/Windows/os-windows-common-path.md
         - Environment Variables: OS/Windows/os-windows-environment-variables.md
@@ -244,23 +258,29 @@ nav:
       - FWDN: Work/EVO/work-evo-fwdn.md
   # ---------- Study ----------
   - Study:
-    - Overview: Resarch/overview.md
+    - Overview: Study/overview.md
     - Toán học:
       - Chung:
-        - Tổng quan: Resarch/Math/math-overview.md
-        - Tập hợp số: Resarch/Math/math-phan-so.md
+        - Tổng quan: Study/Math/math-overview.md
+        - Tập hợp số: Study/Math/math-phan-so.md
       - Số học:
-        - Số học: Resarch/Math/math-numberic-overview.md
+        - Số học: Study/Math/math-numberic-overview.md
       - Hình học:
-        - Hình học cơ bản: Resarch/Math/math-geometry-overview.md
+        - Hình học cơ bản: Study/Math/math-geometry-overview.md
     - Vật Lý:
-      - Overview: Resarch/Physics/physics-overview.md
+      - Overview: Study/Physics/physics-overview.md
     - Hoá học:
-      - Overview: Resarch/Chemistry/chemistry-overview.md
+      - Overview: Study/Chemistry/chemistry-overview.md
     - Lịch Sử:
-      - Overview: Resarch/History/history-overview.md
+      - Overview: Study/History/history-overview.md
     - Tin học:
-      - Overview: Resarch/IT/it-overview.md
+      - Overview: Study/IT/it-overview.md
+    - Triết học:
+      - Overview: Study/IT/it-overview.md
+    - Nghệ thuật:
+      - Overview: Study/IT/it-overview.md
+    - Âm nhạc:
+      - Overview: Study/IT/it-overview.md
   # ---------- Ngôn Ngữ ----------
   - Ngôn Ngữ:
     - Tiếng Anh:

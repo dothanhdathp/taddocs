@@ -1,5 +1,9 @@
 # Install Android Studio
 
+## Đôi lời
+
+Hướng dẫn tải về __Android Studio__. Tải rất dễ cài cũng rất dễ. Cái quan trọng là ở phiên bản của __Android Studio__ thì nhiều vấn đề. __Android__ chỉ tồn tại một số phiên bản ổn định và một số trong đó là thỏa mãn các điều kiện cho phép việc chuyển đổi/sửa đổi tốt.
+
 ## Tải về Android Studio
 
 - Tải về Android Studio ___mới nhất___ từ trang chủ [link](https://developer.android.com/studio)
@@ -16,3 +20,9 @@
 !!! note "Note"
     - __Android Studio Hedgehog__: Bản này thì là bản ổn định nhất với UI được thay đổi gọn gàng hơn rất nhiều so với các bản cũ.
     - __Android Studio 4.1.3__: Dành riêng cho Carlife và hệ thống cũ.
+
+## MultilInstall
+
+1. Không nhất thiết chỉ có một bản cài đặt của __Android Studio__. Có thể cài đặt nhiều phiên bản __Android Studio__ trên cùng một máy.
+1. Nếu cài đặt là mặc định thì nó sẽ để ở trong đường dẫn `C:\Program Files\Android`
+1. Trong đó sẽ có nhiều thư mục của __Android Studio__
