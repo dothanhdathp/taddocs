@@ -115,24 +115,31 @@ nav:
       - OOP: Developer/dev/dev-oop.md
     - Build Tools:
       - Make: Developer/dev/dev-make.md
-    - Yocto:
-      - Overview: Developer/Yocto/yocto-overview.md
-      - Bitbake: Developer/Yocto/yocto-bitbake.md
-    - DataStruct:
-      - Overview: Developer/DataStruct/dev-dataStruct-overview.md
-    - Algorithm:
-      - Overview: Developer/Algorithm/dev-algorithm-overview.md
-      - Sorting:
-        - About Sort: Developer/Algorithm/dev-algorithm-sort.md
-        - Selection Sort: Developer/Algorithm/dev-algorithm-selection-sort.md
-        - Bubble Sort: Developer/Algorithm/dev-algorithm-bubble-sort.md
-        - Insertion Sort: Developer/Algorithm/dev-algorithm-insertion-sort.md
-        - Quick Sort: Developer/Algorithm/dev-algorithm-quick-sort.md
-        - Counting Sort: Developer/Algorithm/dev-algorithm-counting-sort.md
-      - Hash:
-        - FNV1a: Developer/Algorithm/dev-algorithm-hashing-fnv1a.md
-    - Design Pattern:
-      - Overview: Developer/Design_Pattern/dev-design-pattern-overview.md
+      - Yocto:
+        - Overview: Developer/Yocto/yocto-overview.md
+        - Bitbake: Developer/Yocto/yocto-bitbake.md
+    - Technique:
+      - DataStruct:
+        - Overview: Developer/DataStruct/dev-dataStruct-overview.md
+      - Algorithm:
+        - Overview: Developer/Algorithm/dev-algorithm-overview.md
+        - Sorting:
+          - About Sort: Developer/Algorithm/dev-algorithm-sort.md
+          - Selection Sort: Developer/Algorithm/dev-algorithm-selection-sort.md
+          - Bubble Sort: Developer/Algorithm/dev-algorithm-bubble-sort.md
+          - Insertion Sort: Developer/Algorithm/dev-algorithm-insertion-sort.md
+          - Quick Sort: Developer/Algorithm/dev-algorithm-quick-sort.md
+          - Counting Sort: Developer/Algorithm/dev-algorithm-counting-sort.md
+        - Hash:
+          - FNV1a: Developer/Algorithm/dev-algorithm-hashing-fnv1a.md
+      - Design Pattern:
+        - Overview: Developer/Design_Pattern/dev-design-pattern-overview.md
+    - Android:
+      - Android Application:
+        - Activity: Developer/Android/dev-android-app-activity.md
+        - ListView:
+          - ListView: Developer/Android/dev-android-app-listview.md
+          - ListView Custom: Developer/Android/dev-android-app-listview-custom.md
     - Third Party:
       - FTXUI:
         - Getting Start: Developer/FTXUI/dev-lib-ftxui.md
