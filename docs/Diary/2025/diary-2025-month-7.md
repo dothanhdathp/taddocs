@@ -50,6 +50,38 @@
     |  21   |  22   |  23   |  24   |  25   |  26   |    27    |
     |  28   |  29   |  30   |  31   |   _   |   _   |    _     |
 
+### 21-07-2025
+
+- Bắt đầu ngày mới đầy, ... ngủ muộn. Lại ngủ dậy muộn và ngủ rũ, mỗi lần ngủ là không thể dậy nổi ạ. Làm sao bây giờ?
+- Chiều đến làm mới có việc mới để làm, ồ ổn thôi. Làm việc thôi.
+- Có mấy ngày cuối tháng chắc _logwork_ luôn nhỉ! Nhắc cho mai luôn.
+- Hôm nay mới nhận ra là ăn luôn hạt cafe đi vừa nhanh vừa tiện vừa đỡ phải pha mà đỡ tốn bã.
+
+### 🔴 20-07-2025
+
+- Sáng mình ngủ không dậy nổi cho đến 3h chiều.
+- Chiều rất mệt nhưng vẫn cố lên công ty lấy cái USB về rồi mới đi ăn.
+- Này không có việc gì cả, đi ăn _lạp xưởng nướng đá_ rồi về chơi game.
+- Chơi mãi vẫn thua toàn do __AFK__, mệt thật sự! __AFK__ thì sớm đi cho đỡ nhọc mọi người.
+- Và chiều tối thì sao đấy nhỉ? Mình đi ăn bún riêu cá.
+- Tối muộn Nam mới về, tốt thôi hết một ngày chả có gì cả.
+
+!!! note "Ngày tệ hại"
+    Ê thật sự hai ngày cuối tuần mình chả làm được cái cm gì hết ngoài cái __CustomListView__ cho __Android__ á. Rồi lại nghĩ quẩn suy nghĩ về nhân sinh quan các kiểu các kiểu.
+
+### 🟠 19-07-2025
+
+- Ngày thứ bảy ê chề. Sáng ngủ dậy tầm trưa nhỉ? Nam phò rủ đi ăn ... nhưng hết hàng, qua ăn bánh cuốn trứng lộn. Xong mua nước về nhà.
+- Ok ở nhà một mình. Nam đi ăn cưới bên Thanh Hóa, còn Hải Bánh về quê.
+- Rồi thì sao nữa mình chả có việc gì ngoài chơi điện tử.
+- Thề là mình chả có ấn tượng gì mấy ở hôm nay ngoài hút thuốc và chơi điện tử thì chẳng có gì. Chỉ có mưa mưa và mưa mãi đến tận 9h tối chưa dứt, mình phải ăn mì gói cho qua bữa, xong lại ngủ lại thức.
+
+### 18-07-2025
+
+- Thế là đến thứ sáu, cuối tuần và cuối tuần. Mình chỉ nhớ hôm nay là ngày khá là tệ và chả có việc ma gì cả.
+- Chiều cùng Thương đi mua đồ ăn.
+- Sáng thì nghỉ chăng?
+
 ### 17-07-2025
 
 - Tối qua không hiểu sao có thể ngủ sớm thế nên nay đi là đúng giờ.
@@ -77,7 +109,7 @@
 - Chuyện tốt là vào thang cùng với cụ tổng. Mà thế nào cũng được mình có bị ngại với sếp lớn đâu.
 - Tiếp đến ở công ty là ngồi nghiên cứu cái `DAB+` của `WSA`
 
-### 13-07-2025
+### 🔴 13-07-2025
 
 - Hôm nay có hít đất 35 cái.
 - Lại trưa lòi mới dậy nhưng vẫn nhớ được là cần giặt quần áo và làm một số thủ tục.
@@ -87,7 +119,7 @@
 - Chính vì không có Nam4 nên đi ăn cháo lòng. Về chơi game 2 ván win cả 2.
 - Tối ngồi viết mkdocs tiếp và dành cả đêm để deploy cái document này public lên mạng qua `github.io`, thành công rực rỡ.
 
-### 12-07-2025
+### 🟠 12-07-2025
 
 - Thứ bảy, như mọi khi, ngủ một mạch cho đến tận trưa mới dậy đi ăn bánh mỳ thịt xiên.
 - Cả buổi chiều không có nhiều việc làm, chủ yếu là chill chill. Không phải viết document thì là ngồi chơi điện tử.
@@ -134,13 +166,13 @@
 - Quên tai nghe nên trưa lọc cọc về nhà lấy.
 - Tối ngồi sửa con tai nghe Senheiser, bóc ra với hy vọng có cơ may nào không, rất tiếc - không. Nó chết ở loa trong thì chịu rồi. Giờ chỉ còn có mỗi một bên tai nghe.
 
-### 06-07-2025
+### 🔴 06-07-2025
 
 - Cả ngày ngồi chơi LOL với Pokemon thôi. Như mọi lần, trưa bảnh mắt ra mới ngủ dậy.
 - Hôm nay Hương lên HN dẫn em gái đi mổ mắt. Thế nên rủ mọi người tối đi chơi.
 - Tối đi ăn nhà hàng Nhật __Chibo__ xong đi ăn kem __Bingxu__
 
-### 05-07-2025
+### 🟠 05-07-2025
 
 - Cả ngày ngồi chơi LOL với Pokemon thôi. Như mọi lần, trưa bảnh mắt ra mới ngủ dậy.
 - Thứ bày này không có gì nhiều, ngủ dậy đi ăn bún đậu. Nam phò chiều mới đi làm và có thêm thằng em Tiến nữa. Chiều thằng em về quê, Nam Phò đi làm, ở nhà không ngủ thì chơi đến chiều tối.

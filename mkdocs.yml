@@ -37,6 +37,10 @@ nav:
   - Home: 
     - About me: index.md
     - Note: note.md
+    - Diary:
+      - Năm 2025: 
+        - Tháng 7: Diary/2025/diary-2025-month-7.md
+        - Tháng 6: Diary/2025/diary-2025-month-6.md
   # ---------- Programming ----------
   - Programming:
     - Programming: Programming/programming-language.md
@@ -136,6 +140,7 @@ nav:
         - Overview: Developer/Design_Pattern/dev-design-pattern-overview.md
     - Android:
       - Android Application:
+        - First Application: Developer/Android/dev-android-first-application.md
         - Activity: Developer/Android/dev-android-app-activity.md
         - ListView:
           - ListView: Developer/Android/dev-android-app-listview.md
@@ -233,6 +238,7 @@ nav:
         - Usercmd: OS/Windows/os-windows-custom-usercmd.md
     - Android:
       - Overview: OS/Android/os-android-overview.md
+      - ADB: OS/Android/os-android-adb.md
   # ---------- Work ----------
   - Work:
     - MnM:
@@ -264,6 +270,7 @@ nav:
     - EVO:
       - Start: Work/EVO/work-evo-start.md
       - FWDN: Work/EVO/work-evo-fwdn.md
+      - Task: Work/EVO/work-evo-task.md
   # ---------- Study ----------
   - Study:
     - Overview: Study/overview.md
@@ -298,10 +305,6 @@ nav:
         - Reading:
           - An Introduction to Film Sound: Language/English/language-english-an-introduction-to-film-sound.md
   # ---------- Diary ----------
-  - Diary:
-    - Năm 2025: 
-      - Tháng 7: Diary/2025/month-7.md
-      - Tháng 6: Diary/2025/month-6.md
   - Project:
     - Pokedex: 
       - README: Project/Pokedex/project-pokedex.md

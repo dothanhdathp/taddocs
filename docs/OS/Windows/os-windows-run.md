@@ -18,3 +18,4 @@
 1. Nhấn đúp vào tệp vừa tạo lần nữa sẽ nhảy ra hộp thoại. Chỗ __Value Data__ điền vào đường dẫn ứng dụng muốn mở.
 
 > Xong! Từ giờ khi mở hộp thoại `run` và gõ lệnh đó vào, ứng dụng sẽ được mở.
+
