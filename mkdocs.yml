@@ -291,7 +291,10 @@ nav:
     - Tin học:
       - Overview: Study/IT/it-overview.md
     - Triết học:
-      - Overview: Study/IT/it-overview.md
+      - Overview: Study/Philosophy/philosophy-overview.md
+      - Stoicism:
+        - Overview: Study/Philosophy/stoicism-overview.md
+        - Stoicism, Virtue, and Mental Health: Study/Philosophy/stoicism-virtue-and-mental-health.md
     - Nghệ thuật:
       - Overview: Study/IT/it-overview.md
     - Âm nhạc:
