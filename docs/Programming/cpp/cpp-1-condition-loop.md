@@ -4,7 +4,7 @@
 
 ### Phép toán so sánh
 
-#### IF
+#### if
 Điều kiện xoay quanh biến `bool` và hàm `if`\
 Biến bool cũng có thể hiểu là một số với mặc định:
 - `true`  = 1
@@ -31,7 +31,8 @@ Value of A: 1
 ```
 Ngoài ra, các số khác `0` cũng được tính là `true`.
 
-#### IF-ELSE
+#### if/else
+
 Có một kiểu khác của `if` là `if-esle`. Nghĩa là nếu if sai thì vào trường hợp còn lại.
 
 ```c++ title="main.cpp"
@@ -88,7 +89,7 @@ int main()
 a != b
 ```
 
-#### AND và OR
+#### and/or
 
 - Với phép so sánh và ___(AND)___, cả hai điều kiện so sánh đều phải đúng.
 	- So sánh ___(AND)___ dùng dấu `&&`
@@ -110,6 +111,7 @@ int main()
 0
 1
 ```
+
 #### Phép đảo
 Phép đảo để đảo ngược kết quả. Ví dụ muốn kiểm tra với _Điều kiện A không đúng_.
 

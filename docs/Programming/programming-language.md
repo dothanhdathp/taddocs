@@ -174,6 +174,7 @@ left side
 
 !!! note "Tổng kết"
     Vậy nên, mỗi lần học về ngôn ngữ lập trình này đó cần đi qua đủ 6 bài cơ bản về:
+
     1. __Complier/Interpret__ : Biên dịch / Thông dịch
     1. __Variables__ : Biến
     1. __Syntax__ : Cú pháp

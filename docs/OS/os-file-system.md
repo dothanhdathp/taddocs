@@ -3,6 +3,7 @@
 Đây là thuật ngữ chính thống dùng để chỉ cách thức hệ điều hành tổ chức, lưu trữ và quản lý dữ liệu trên thiết bị lưu trữ như ổ đĩa cứng, SSD, thẻ nhớ, v.v.
 
 📂 Một số ví dụ phổ biến về file system:
+
 - `NTFS` (Windows NT File System) – Hệ thống tệp mặc định của Windows hiện đại
 - `FAT32` (File Allocation Table 32) – Phổ biến với các thiết bị USB, nhưng có giới hạn kích thước
 - `exFAT` – Tối ưu cho bộ nhớ di động, hỗ trợ tệp lớn hơn FAT32

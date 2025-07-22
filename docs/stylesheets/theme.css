@@ -8,6 +8,11 @@
   src: url("/assets/fonts/RobotoMono-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+
 :root {
     --primary-family: "NotoSerifMedium";
     --primary-header-0-size: 28px;
@@ -23,23 +28,23 @@
     --secondary-theme-color: #498789; /* Accent color */
     --soft-gray-theme-color: #E2E2E2; /* Accent color */
     --code-color: black;
-    --code-background-color: #fdddb4aa;
-    --code-font-family: "RobotoMonoMedium";
+    --code-background-color: #fdddb490;
+    --code-font-family: "JetBrains Mono";
     --md-bg-light-color: #d3d3e9;
     --md-bg-dark-color: #020226;
     /* --code-font-family: 'Noto Sans Mono Light'; */
     --md-text-font: "NotoSerifMedium";
-    --md-code-font: "RobotoMonoMedium";
+    --md-code-font: "JetBrains Mono";
 }
 
 [data-md-color-primary=indigo] {
     --md-primary-fg-color: #383d5b;
 }
-/* Full width */
-.md-grid {
-  /* max-width: initial; /* or try 100% or 1280px or */
-  max-width: inherit; /* or try 100% or 1280px or */
-}
+
+/* Full width = max-width: initial; or try 100% or 1280px or ...  */
+/* .md-grid {
+  max-width: initial;
+} */
 
 .md-tabs {
   background-color: #434a74;

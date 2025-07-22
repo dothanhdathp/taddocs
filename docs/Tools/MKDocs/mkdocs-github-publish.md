@@ -113,7 +113,6 @@ Rồi build bằng lệnh:
 mkdocs build
 ```
 
-
 Rồi chạy lại lệnh dưới này:
 
 ```bash
