@@ -92,7 +92,8 @@ nav:
       - Basic:
         - Basic Syntax: Programming/Java/java-basic-synctax.md
         - Datatypes & Variables: Programming/Java/java-basic-datatypes-and-variables.md
-    - Javascript: Programming/Javascript/javascript.md
+    - Javascript:
+      - Getting Start: Programming/Javascript/javascript.md
     - Kotlin: Programming/Kotlin/kotlin.md
     - Python: Programming/Python/python.md
     - Rust:
@@ -174,10 +175,6 @@ nav:
       - Troubleshoot: Software/AndroidStudio/software-android-studio-troubleshoot.md
     - QtCreator:
       - Download: Software/Qt/qt-software-qt-creator.md
-    - MSYS2:
-      - Overview: Software/msys2/software-msys2-overview.md
-      - Install: Software/msys2/software-msys2-install.md
-      - Package: Software/msys2/software-msys2-pacman.md
     - Putty: Software/Other/putty.md
     - Sambashare: Software/Other/sambashare.md
     - Thảo luận:
@@ -205,6 +202,17 @@ nav:
         - Github Page: Tools/Github/github-page.md
       - Repo:
         - Repo Overview: Tools/Repo/repo-overview.md
+    - MSYS2:
+      - Overview: Tools/msys2/software-msys2-overview.md
+      - Install: Tools/msys2/software-msys2-install.md
+      - Package: Tools/msys2/software-msys2-pacman.md
+    - NodeJS:
+      - Overview: Tools/NodeJS/nodejs.md
+      - Getting Start: Tools/NodeJS/nodejs-getting-start.md
+    - Electron:
+      - Getting Start: Tools/Electron/electron-getting-start.md
+      - Create App: Tools/Electron/electron-create-app.md
+      - Load Link: Tools/Electron/electron-load-link.md
   # ---------- Operator System ----------
   - Operator System:
     - OS Overview: OS/os.md
