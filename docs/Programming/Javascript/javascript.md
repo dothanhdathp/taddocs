@@ -6,7 +6,7 @@ __Javascript__ là ngôn ngữ đơn giản, được thiết kế chủ yếu �
 
 ## Getting Start
 
-Để bắt đầu cần tải về ứng dụng [__NodeJs__](../../Software/NodeJS/nodejs.md). Có thể chạy trước tiếp nhưng cách này dễ hiểu và dễ tiếp cận hơn.
+Để bắt đầu cần tải về ứng dụng [__NodeJs__](../../Tools/NodeJS/nodejs.md). Có thể chạy trước tiếp nhưng cách này dễ hiểu và dễ tiếp cận hơn.
 
 ## Hello World
 

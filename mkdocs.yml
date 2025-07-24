@@ -35,14 +35,17 @@ plugins:
       puml_url: https://www.plantuml.com/plantuml/
 
 nav:
-  # ---------- Home ----------
+  # ---------- Home (Main page) ----------
   - Home: 
     - About me: index.md
     - Diary:
       - Năm 2025: 
         - Tháng 7: Diary/2025/diary-2025-month-7.md
         - Tháng 6: Diary/2025/diary-2025-month-6.md
+    - Example: example.md
   # ---------- Programming ----------
+  # Tổng hợp các ngôn ngữ lập trình và các cách viết
+  # Phần này chỉ trình bày về hoạt động cũng như cú pháp của ngôn ngữ
   - Programming:
     - Programming: Programming/programming-language.md
     - C: Programming/c/c.md
@@ -62,7 +65,7 @@ nav:
         - Namespace: Programming/cpp/cpp-1-namespace.md
         - Define: Programming/cpp/cpp-1-define.md
         - Include: Programming/cpp/cpp-1-include.md
-      - Function:
+      - Feature:
         - Function: Programming/cpp/cpp-2-function.md
         - Lambda: Programming/cpp/cpp-2-lambda.md
         - Function as Parameter: Programming/cpp/cpp-2-function-as-parameter.md
@@ -72,9 +75,9 @@ nav:
         - Raw Pointer: Programming/cpp/cpp-3-raw-pointer.md
         - Memory Model: Programming/cpp/cpp-3-memory-model.md
       - STANDARD LIBRARY STD:
-        - Type:
+        - std-datatype:
           - std::string: Programming/cpp/cpp-3-std-string.md
-        - Function:
+        - std-function:
           - std::sort: Programming/cpp/cpp-3-std-sort.md
           - std::make_share: Programming/cpp/cpp-3-std-make_share.md
           - std::distance: Programming/cpp/cpp-3-std-distance.md
@@ -82,6 +85,7 @@ nav:
           - std::unique: Programming/cpp/cpp-3-std-unique.md
       - Project:
         - Giải bảng Sudoku:  Programming/cpp/cpp-project-solver-sudoku.md
+      - Reference & Document: Programming/cpp/cpp-reference-document.md
     - C#: Programming/c-sharp/c-sharp.md
     - Java:
       - Overview:
@@ -104,6 +108,7 @@ nav:
         - Variables: Programming/Rust/rust-variables.md
     - PhP: Programming/php/php.md
   # ---------- Non Programming ----------
+  # Các ngôn ngữ không phải để lạo trình
   - Non Programming:
     - Non Programming: NonProgramming/non-programming-language.md
     - HTML: NonProgramming/html/html.md
@@ -213,6 +218,7 @@ nav:
       - Getting Start: Tools/Electron/electron-getting-start.md
       - Create App: Tools/Electron/electron-create-app.md
       - Load Link: Tools/Electron/electron-load-link.md
+      - Troubleshoots: Tools/Electron/electron-troubleshoots.md
   # ---------- Operator System ----------
   - Operator System:
     - OS Overview: OS/os.md

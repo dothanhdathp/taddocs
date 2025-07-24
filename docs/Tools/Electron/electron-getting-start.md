@@ -41,6 +41,9 @@ Sau lệnh đó tạo được tệp `package.json`, nội dung như sau:
 }
 ```
 
+!!! note "Note"
+    Trong tệp `package.json` gốc là `"main": "index.js",`. Nhưng thấy nó không đúng lắm nên mình đã sửa lại thành `main.js`
+
 Tiếp theo chạy lệnh dưới này sẽ cài đặt các _node_module_ cần thiết
 
 ```bash

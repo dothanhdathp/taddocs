@@ -15,28 +15,37 @@ Nghĩa là các thuật toán liên quan đến `bit`. Máy tính thực hiện 
 
 Phép __AND__ được biểu diễn bằng dấu `&`. __AND__ hai `bit` chỉ trả về `1` khi cả hai đều là `1`.
 
+<div class="center-table" markdown>
+
 |a/b | 0 | 1 |
 |:--:|:-:|:-:|
 | 0  | 0 | 0 |
 | 1  | 0 | 1 |
+</div>
 
 #### OR
 
 Phép __OR__ được biểu diễn bằng dấu `|`. __OR__ hai `bit` chỉ trả về `0` khi cả hai đều là `0`.
 
+<div class="center-table" markdown>
+
 |a/b | 0 | 1 |
 |:--:|:-:|:-:|
 | 0  | 0 | 1 |
 | 1  | 1 | 1 |
+</div>
 
 #### XOR
 
 Phép __XOR__ được biểu diễn bằng dấu `^`. __XOR__ hai `bit` trả về `0` khi giống nhau, `1` nếu khác nhau.
 
+<div class="center-table" markdown>
+
 |a/b | 0 | 1 |
 |:--:|:-:|:-:|
 | 0  | 0 | 1 |
 | 1  | 1 | 0 |
+</div>
 
 #### NOT
 

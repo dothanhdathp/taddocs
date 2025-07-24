@@ -5,7 +5,7 @@
 <div class="grid cards" markdown>
 
 - C
-- C++
+- [C++](cpp/cpp-0-overview.md)
 - C#
 - Java
 - Python

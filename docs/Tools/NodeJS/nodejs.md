@@ -10,7 +10,7 @@ Tải về NodeJS tại [_đường dẫn_](https://nodejs.org/en/download)
 Xong tải về bản cài đặt từ trang chủ. Có thể cài bản zip hoặc là cài dặt `.msi`. Với hệ điều hành __Windows__ thì nên dùng `msi`.
 
 <figure markdown="span">
-    ![alt text](img/image.png)
+    ![alt text](img/note-0.png)
     <figcaption>Tải về cài đặt cho NodeJS</figcaption>
 </figure>
 

@@ -13,7 +13,6 @@ Các phần trình bày này về cơ bản là chỉ nói về tải, cài đ�
 - [Visual Studio Code](VSCode/software-vscode-install.md)
 - [Android Studio](AndroidStudio/software-android-studio-overview.md)
 - [Qt Creator](Qt/qt-software-qt-creator.md)
-- [Msys2](msys2/software-msys2-overview.md)
 - [Putty](Other/putty.md)
 - [Sambashare](Other/sambashare.md)
 

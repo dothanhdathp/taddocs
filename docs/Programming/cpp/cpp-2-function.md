@@ -17,6 +17,7 @@ return_type function_name(parameter list) {
 ```
 
 Trong đó:
+
 - `return_type`: Kiểu dữ liệu của đầu ra do hàm tạo ra. Có thể là void, biểu thị rằng hàm không trả về bất kỳ giá trị nào.
 - `function_name`: Tên được đặt cho hàm, theo quy ước đặt tên C++.
 - `parameter list`: Danh sách các tham số/đối số đầu vào cần thiết để thực hiện tác vụ. Đây là tùy chọn, bạn có thể để trống khi không cần tham số nào.
