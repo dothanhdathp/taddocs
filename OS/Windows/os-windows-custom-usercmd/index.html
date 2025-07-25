@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../os-windows-ps-getting-start/">
+        <link rel="prev" href="../os-windows-regedit/">
       
       
         <link rel="next" href="../../Android/os-android-overview/">
@@ -4578,6 +4578,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/VSCode/software-vscode-extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Software/VSCode/software-vscode-my-custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6522,12 +6568,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../os-windows-run/" class="md-nav__link">
+      <a href="../os-windows-service-tag-and-manufacture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Run
+    Service Tag, Manufacture
     
   </span>
   
@@ -6545,12 +6591,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../os-windows-service-tag-and-manufacture/" class="md-nav__link">
+      <a href="../os-windows-service-start-menu/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Service Tag and Manufacture
+    Start Menu
     
   </span>
   
@@ -6835,6 +6881,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../os-windows-regedit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regedit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -6851,10 +6920,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_8_4_6" id="__nav_8_4_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_4_7" id="__nav_8_4_7_label" tabindex="0">
             
   
   
@@ -6867,8 +6936,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8_4_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_4_7">
             <span class="md-nav__icon md-icon"></span>
             Custom
           </label>
@@ -6998,6 +7067,15 @@
   <a href="#chrome" class="md-nav__link">
     <span class="md-ellipsis">
       chrome
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msys" class="md-nav__link">
+    <span class="md-ellipsis">
+      msys
     </span>
   </a>
   
@@ -9599,6 +9677,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#msys" class="md-nav__link">
+    <span class="md-ellipsis">
+      msys
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9637,7 +9724,7 @@
 <li>Xoá tất cả những gì có trong thư mục nơi gõ lệnh này.</li>
 <li>Lệnh này sinh ra bởi vì nếu bạn đã muốn xoá tất cả trong một thư mục trên Windows. Ai bảo command xoá của Windows nó siêu củ chuối.</li>
 </ul>
-<details class="example">
+<details class="abstract">
 <summary>delall.bat</summary>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 <span class="k">del</span> /q *
@@ -9647,7 +9734,7 @@
 </details>
 <h3 id="note">note</h3>
 <p>Cái này để lưu trữ lại một vài command hữu dụng hoặc ghi chú một số thứ quan trọng cho từng máy. Thường thì để tra cứu trực tiếp trong cmd cho tiện, đỡ phải lục lọi mở thêm notepad hoặc gì đó. Nhược điểm đương nhiên là mở ra <code>console</code> nên khả năng tương tác với đa ngôn ngữ rất kém.</p>
-<details class="example">
+<details class="abstract">
 <summary>note.bat</summary>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
@@ -9686,16 +9773,16 @@ explorer <span class="s2">&quot;</span><span class="nv">%rfs%</span><span class=
 - Nếu dùng trực tiếp thì <code>git-here</code> trong cửa sổ <em>console</em> nó sẽ thay thế <em>console</em> hiện tại thành <em>bash</em>.
 - Nếu muốn mở cửa sổ khác thì dùng <code>start git-here</code></p>
 </blockquote>
-<details class="example">
+<details class="abstract">
 <summary>git-here</summary>
-<div class="highlight"><pre><span></span><code>@echo<span class="w"> </span>off
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
-<span class="s2">&quot;C:\Program Files\Git\bin\bash.exe&quot;</span><span class="w"> </span>--cd<span class="o">=</span><span class="s2">&quot;%CD%&quot;</span>
+<span class="s2">&quot;C:\Program Files\Git\bin\bash.exe&quot;</span> --cd=<span class="s2">&quot;</span><span class="nv">%CD%</span><span class="s2">&quot;</span>
 </code></pre></div>
 </details>
 <h3 id="sshw">sshw</h3>
 <p>Dùng để ssh đến các địa chỉ IP đã biết. Lý do để làm cái này là vì trên công ty mình có rất nhiều địa chỉ ip</p>
-<details class="example">
+<details class="abstract">
 <summary>sshw.bat</summary>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 <span class="k">setlocal</span> enabledelayedexpansion
@@ -9793,59 +9880,85 @@ ssh <span class="nv">!username!</span>@!server!
 <li><code>mkcmd &lt;command&gt;</code> sẽ tự động tạo một <em>command</em> mới có tên như thế vào ngay lập tức mở trình duyệt chỉnh sửa văn bản mặc định cho người dùng sửa đổi.</li>
 <li><code>mkcmd -d &lt;command&gt;</code>: Với cờ <code>-d</code> nghĩa là <strong><em>delete</em></strong>, cờ này sẽ chuyển thao tác sang lệnh xóa <em>command</em> được đề cập tới tránh làm lãng phí bộ nhớ.</li>
 </ul>
-<details class="example">
+<details class="abstract">
 <summary>mkcmd.bat</summary>
-<div class="highlight"><pre><span></span><code>@echo<span class="w"> </span>off
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
-IF<span class="w"> </span><span class="s2">&quot;%1&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="w"> </span>goto<span class="w"> </span>ERR_EMPTY_ALIAS
-IF<span class="w"> </span><span class="s2">&quot;%1&quot;</span><span class="o">==</span><span class="s2">&quot;-d&quot;</span><span class="w"> </span>goto<span class="w"> </span>REMOVE_ALIAS
-goto<span class="w"> </span>CREATE_ALIAS
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="k">goto</span> <span class="nl">ERR_EMPTY_ALIAS</span>
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;-d&quot;</span> <span class="k">goto</span> <span class="nl">REMOVE_ALIAS</span>
+<span class="k">goto</span> <span class="nl">CREATE_ALIAS</span>
 
-:ERR_EMPTY_ALIAS
-<span class="nb">echo</span><span class="w"> </span>Error:<span class="w"> </span>use<span class="w"> </span><span class="nb">alias</span><span class="w"> </span><span class="o">[</span>command_name<span class="o">]</span>
-goto<span class="w"> </span>QUIT
+<span class="p">:</span><span class="nl">ERR_EMPTY_ALIAS</span>
+<span class="k">echo</span> Error: use alias [command_name]
+<span class="k">goto</span> <span class="nl">QUIT</span>
 
-:ERR_DELETE_FALSE
-<span class="nb">echo</span><span class="w"> </span>Error:<span class="w"> </span>use<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>-d<span class="w"> </span><span class="o">[</span>command_name<span class="o">]</span>
-goto<span class="w"> </span>QUIT
+<span class="p">:</span><span class="nl">ERR_DELETE_FALSE</span>
+<span class="k">echo</span> Error: use alias -d [command_name]
+<span class="k">goto</span> <span class="nl">QUIT</span>
 
-:CREATE_ALIAS
-<span class="nb">set</span><span class="w"> </span><span class="s2">&quot;filebat=%USERPROFILE%\.user_cmd\%1.bat&quot;</span>
+<span class="p">:</span><span class="nl">CREATE_ALIAS</span>
+<span class="k">set</span> <span class="s2">&quot;filebat=</span><span class="nv">%USERPROFILE%</span><span class="s2">\.user_cmd\</span><span class="nv">%1</span><span class="s2">.bat&quot;</span>
 
-IF<span class="w"> </span>NOT<span class="w"> </span>EXIST<span class="w"> </span><span class="s2">&quot;%filebat%&quot;</span><span class="w"> </span><span class="o">(</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>Create<span class="w"> </span>%1<span class="w"> </span>command,<span class="w"> </span>editting<span class="w"> </span>...
-<span class="w">    </span><span class="nb">type</span><span class="w"> </span>nul<span class="w"> </span>&gt;<span class="w"> </span>%filebat%
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>@echo<span class="w"> </span>off<span class="w"> </span>&gt;<span class="w"> </span>%filebat%
-<span class="w">    </span>sublime<span class="w"> </span>%filebat%
-<span class="o">)</span><span class="w"> </span>ELSE<span class="w"> </span><span class="o">(</span>
-<span class="w">    </span>sublime<span class="w"> </span>%filebat%
-<span class="o">)</span>
-goto<span class="w"> </span>QUIT
+<span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXIST</span> <span class="s2">&quot;</span><span class="nv">%filebat%</span><span class="s2">&quot;</span> <span class="p">(</span>
+    <span class="k">echo</span> Create <span class="nv">%1</span> command, editting ...
+    <span class="k">type</span> nul <span class="p">&gt;</span> <span class="nv">%filebat%</span>
+    <span class="k">echo</span> @echo off <span class="p">&gt;</span> <span class="nv">%filebat%</span>
+    sublime <span class="nv">%filebat%</span>
+<span class="p">)</span> <span class="k">ELSE</span> <span class="p">(</span>
+    sublime <span class="nv">%filebat%</span>
+<span class="p">)</span>
+<span class="k">goto</span> <span class="nl">QUIT</span>
 
 
-:REMOVE_ALIAS
-IF<span class="w"> </span><span class="s2">&quot;%2&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span><span class="w"> </span>goto<span class="w"> </span>ERR_DELETE_FALSE
+<span class="p">:</span><span class="nl">REMOVE_ALIAS</span>
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%2</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="k">goto</span> <span class="nl">ERR_DELETE_FALSE</span>
 
-<span class="nb">set</span><span class="w"> </span><span class="s2">&quot;filebat=%USERPROFILE%\.user_cmd\%2.bat&quot;</span>
+<span class="k">set</span> <span class="s2">&quot;filebat=</span><span class="nv">%USERPROFILE%</span><span class="s2">\.user_cmd\</span><span class="nv">%2</span><span class="s2">.bat&quot;</span>
 
-IF<span class="w"> </span>NOT<span class="w"> </span>EXIST<span class="w"> </span><span class="s2">&quot;%filebat%&quot;</span><span class="w"> </span><span class="o">(</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>delete<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>%2<span class="w"> </span><span class="nb">false</span>
-<span class="o">)</span><span class="w"> </span>ELSE<span class="w"> </span><span class="o">(</span>
-<span class="w">    </span>del<span class="w"> </span><span class="se">\s</span><span class="w"> </span><span class="se">\q</span><span class="w"> </span>%filebat%
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span>delete<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>%2<span class="w"> </span>suggest
-<span class="o">)</span>
-goto<span class="w"> </span>QUIT
+<span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXIST</span> <span class="s2">&quot;</span><span class="nv">%filebat%</span><span class="s2">&quot;</span> <span class="p">(</span>
+    <span class="k">echo</span> delete alias <span class="nv">%2</span> false
+<span class="p">)</span> <span class="k">ELSE</span> <span class="p">(</span>
+    <span class="k">del</span> \s \q <span class="nv">%filebat%</span>
+    <span class="k">echo</span> delete alias <span class="nv">%2</span> suggest
+<span class="p">)</span>
+<span class="k">goto</span> <span class="nl">QUIT</span>
 
-:QUIT
+<span class="p">:</span><span class="nl">QUIT</span>
 </code></pre></div>
 </details>
 <h3 id="chrome">chrome</h3>
 <p>Bật <strong>Google Chrome</strong> dựa bằng nhiều <strong><em>accounts</em></strong> khác nhau</p>
-<details class="example">
+<details class="abstract">
 <summary>chrome.bat</summary>
-<div class="highlight"><pre><span></span><code>@echo<span class="w"> </span>off
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
-<span class="s2">&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;</span><span class="w"> </span>--profile-directory<span class="o">=</span><span class="s2">&quot;Profile %1&quot;</span>
+<span class="s2">&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;</span> --profile-directory=<span class="s2">&quot;Profile </span><span class="nv">%1</span><span class="s2">&quot;</span>
+</code></pre></div>
+</details>
+<h3 id="msys">msys</h3>
+<p>Sử dụng msys2 trong cmd (tuyệt vời luôn ạ)</p>
+<details class="abstract">
+<summary>msys.bat</summary>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off 
+
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;-m64&quot;</span> <span class="p">(</span>
+    C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64 -where <span class="s2">&quot;</span><span class="nv">%CD%</span><span class="s2">&quot;</span>
+    <span class="k">exit</span> /b
+<span class="p">)</span>
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;-m32&quot;</span> <span class="p">(</span>
+    C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw32 -where <span class="s2">&quot;</span><span class="nv">%CD%</span><span class="s2">&quot;</span>
+    <span class="k">exit</span> /b
+<span class="p">)</span>
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;-c&quot;</span> <span class="p">(</span>
+    C:\msys64\msys2_shell.cmd -defterm -here -no-start -ucrt64 -where <span class="s2">&quot;</span><span class="nv">%CD%</span><span class="s2">&quot;</span>
+    <span class="k">exit</span> /b
+<span class="p">)</span>
+<span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;-u&quot;</span> <span class="p">(</span>
+    C:\msys64\msys2_shell.cmd -defterm -here -no-start -ucrt64 -where <span class="s2">&quot;</span><span class="nv">%CD%</span><span class="s2">&quot;</span>
+    <span class="k">exit</span> /b
+<span class="p">)</span>
+
+C<span class="p">:</span><span class="nl">\msys64\msys2_shell.cmd</span><span class="c1"> -defterm -here -no-start -ucrt64 -where &quot;%CD%&quot;</span>
 </code></pre></div>
 </details>
 
@@ -9879,7 +9992,7 @@ goto<span class="w"> </span>QUIT
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../os-windows-ps-getting-start/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Start">
+          <a href="../os-windows-regedit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Regedit">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -9889,7 +10002,7 @@ goto<span class="w"> </span>QUIT
                 Previous
               </span>
               <div class="md-ellipsis">
-                Getting Start
+                Regedit
               </div>
             </div>
           </a>
