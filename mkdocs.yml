@@ -172,6 +172,8 @@ nav:
       - Settings: Software/VSCode/software-vscode-settings.md
       - Keybindings: Software/VSCode/software-vscode-keybindings.md
       - Snippets: Software/VSCode/software-vscode-snippets.md
+      - Extensions: Software/VSCode/software-vscode-extensions.md
+      - Custom: Software/VSCode/software-vscode-my-custom.md
     - Android Studio:
       - Overview: Software/AndroidStudio/software-android-studio-overview.md
       - Install: Software/AndroidStudio/software-android-studio-install.md
@@ -238,8 +240,8 @@ nav:
         - Macro PATH: OS/Windows/os-windows-common-path.md
         - Environment Variables: OS/Windows/os-windows-environment-variables.md
         - Startup Process: OS/Windows/os-windows-startup-process.md
-        - Run: OS/Windows/os-windows-run.md
-        - Service Tag and Manufacture: OS/Windows/os-windows-service-tag-and-manufacture.md
+        - Service Tag, Manufacture: OS/Windows/os-windows-service-tag-and-manufacture.md
+        - Start Menu: OS/Windows/os-windows-service-start-menu.md
       - Network: OS/Windows/os-windows-network.md
       - Shell:
         - Command Prompt:
@@ -248,6 +250,7 @@ nav:
           - Write Script: OS/Windows/os-windows-cmd-write-scripts.md
         - Power Shell:
           - Getting Start: OS/Windows/os-windows-ps-getting-start.md
+      - Regedit: OS/Windows/os-windows-regedit.md
       - Custom:
         - Usercmd: OS/Windows/os-windows-custom-usercmd.md
     - Android:

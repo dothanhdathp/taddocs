@@ -17,8 +17,8 @@
 - Xoá tất cả những gì có trong thư mục nơi gõ lệnh này.
 - Lệnh này sinh ra bởi vì nếu bạn đã muốn xoá tất cả trong một thư mục trên Windows. Ai bảo command xoá của Windows nó siêu củ chuối.
 
-??? example "delall.bat"
-	```bat
+??? abstract "delall.bat"
+	```batch
 	@echo off
 	del /q *
 	del /q *.*
@@ -28,8 +28,8 @@
 
 Cái này để lưu trữ lại một vài command hữu dụng hoặc ghi chú một số thứ quan trọng cho từng máy. Thường thì để tra cứu trực tiếp trong cmd cho tiện, đỡ phải lục lọi mở thêm notepad hoặc gì đó. Nhược điểm đương nhiên là mở ra `console` nên khả năng tương tác với đa ngôn ngữ rất kém.
 
-??? example "note.bat"
-	```bat
+??? abstract "note.bat"
+	```batch
 	@echo off
 
 	set "rfs=%USERPROFILE%\.user_cmd\NOTE"
@@ -66,8 +66,8 @@ Cái này để lưu trữ lại một vài command hữu dụng hoặc ghi chú
 > - Nếu dùng trực tiếp thì `git-here` trong cửa sổ _console_ nó sẽ thay thế _console_ hiện tại thành _bash_.
 > - Nếu muốn mở cửa sổ khác thì dùng `start git-here`
 
-??? example "git-here"
-	```bash
+??? abstract "git-here"
+	```batch
 	@echo off
 
 	"C:\Program Files\Git\bin\bash.exe" --cd="%CD%"
@@ -76,8 +76,8 @@ Cái này để lưu trữ lại một vài command hữu dụng hoặc ghi chú
 
 Dùng để ssh đến các địa chỉ IP đã biết. Lý do để làm cái này là vì trên công ty mình có rất nhiều địa chỉ ip
 
-??? example "sshw.bat"
-	```bat
+??? abstract "sshw.bat"
+	```batch
 	@echo off
 	setlocal enabledelayedexpansion
 
@@ -175,8 +175,8 @@ Tạo command và xóa command. Dự định mong muốn là làm nó giống nh
 - `mkcmd <command>` sẽ tự động tạo một _command_ mới có tên như thế vào ngay lập tức mở trình duyệt chỉnh sửa văn bản mặc định cho người dùng sửa đổi.
 - `mkcmd -d <command>`: Với cờ `-d` nghĩa là ___delete___, cờ này sẽ chuyển thao tác sang lệnh xóa _command_ được đề cập tới tránh làm lãng phí bộ nhớ.
 
-??? example "mkcmd.bat"
-	```bash
+??? abstract "mkcmd.bat"
+	```batch
 	@echo off
 
 	IF "%1"=="" goto ERR_EMPTY_ALIAS
@@ -225,9 +225,37 @@ Tạo command và xóa command. Dự định mong muốn là làm nó giống nh
 
 Bật __Google Chrome__ dựa bằng nhiều ___accounts___ khác nhau
 
-??? example "chrome.bat"
-	```bash
+??? abstract "chrome.bat"
+	```batch
 	@echo off
 
 	"C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile %1"
+	```
+
+### msys
+
+Sử dụng msys2 trong cmd (tuyệt vời luôn ạ)
+
+??? abstract "msys.bat"
+	```batch
+	@echo off 
+
+	IF "%1"=="-m64" (
+		C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw64 -where "%CD%"
+		exit /b
+	)
+	IF "%1"=="-m32" (
+		C:\msys64\msys2_shell.cmd -defterm -here -no-start -mingw32 -where "%CD%"
+		exit /b
+	)
+	IF "%1"=="-c" (
+		C:\msys64\msys2_shell.cmd -defterm -here -no-start -ucrt64 -where "%CD%"
+		exit /b
+	)
+	IF "%1"=="-u" (
+		C:\msys64\msys2_shell.cmd -defterm -here -no-start -ucrt64 -where "%CD%"
+		exit /b
+	)
+
+	C:\msys64\msys2_shell.cmd -defterm -here -no-start -ucrt64 -where "%CD%"
 	```

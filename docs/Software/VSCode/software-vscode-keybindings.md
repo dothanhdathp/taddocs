@@ -8,7 +8,7 @@ Ngoài ra chức năng này cũng giống _Settings_, có thể thêm một số
 
 Đường dẫn cục bộ đến tệp cấu hình của _Keybindings_ ở đây trong trường hợp cài đặt mặc định:
 
-```bash
+```txt
 %USERPROFILE%\AppData\Roaming\Code\User\keybindings.json
 ```
 

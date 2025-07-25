@@ -1,4 +1,4 @@
-# Run
+# Regedit
 
 ## Tự tạo lệnh hệ thống trong hộp thoại `run`
 
@@ -19,3 +19,6 @@
 
 > Xong! Từ giờ khi mở hộp thoại `run` và gõ lệnh đó vào, ứng dụng sẽ được mở.
 
+## Thêm "Open with ..."
+
+_Làm sau_
