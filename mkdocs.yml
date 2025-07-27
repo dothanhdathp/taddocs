@@ -152,6 +152,7 @@ nav:
         - ListView:
           - ListView: Developer/Android/dev-android-app-listview.md
           - ListView Custom: Developer/Android/dev-android-app-listview-custom.md
+        - Menu Option: Developer/Android/dev-android-menu-option.md
     - FTXUI:
       - Getting Start: Developer/FTXUI/dev-lib-ftxui.md
     - ROS2: Developer/ROS2/dev-ros2.md
