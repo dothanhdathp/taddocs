@@ -14,7 +14,6 @@ Xin chào đến với tài liệu của Tad Zeila. Tên mình là Đạt và Ta
 - Study
 - Ngôn Ngữ
 - Dự án
-- [Sách](Book/book.md)
 
 ## Note
 

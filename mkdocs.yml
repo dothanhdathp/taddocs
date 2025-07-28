@@ -123,12 +123,7 @@ nav:
   - Developer:
     - Developer: Developer/dev.md
     - Một số khái niệm:
-      - OOP: Developer/dev/dev-oop.md
-    - Build Tools:
-      - Make: Developer/dev/dev-make.md
-      - Yocto:
-        - Overview: Developer/Yocto/yocto-overview.md
-        - Bitbake: Developer/Yocto/yocto-bitbake.md
+      - OOP: Developer/OOP/oop.md
     - Technique:
       - DataStruct:
         - Overview: Developer/DataStruct/dev-dataStruct-overview.md
@@ -164,7 +159,7 @@ nav:
       - Overview: Developer/Qt/qt-overview.md
   - Practice:
     - Leetcode:
-      - Leetcode 46 - Permutations: Developer/practice/leetcode-44.md
+      - Leetcode 46 - Permutations: Developer/practice/leetcode-46.md
   # ---------- Software ----------
   - Software:
     - Overview: Software/software.md
@@ -199,6 +194,14 @@ nav:
       - PlantUml: Tools/MKDocs/mkdocs-plantuml.md
       - Markdown Extensions: Tools/MKDocs/mkdocs-markdown-extensions.md
       - Markdown Github Publish: Tools/MKDocs/mkdocs-github-publish.md
+    - Make:
+      - Introduce: Tools/Make/make.md
+      - Install: Tools/Make/make-install.md
+      - Getting Start: Tools/Make/make-getting-start.md
+      - Template: Tools/Make/make-template.md
+    - Yocto:
+      - Overview: Tools/Yocto/yocto-overview.md
+      - Bitbake: Tools/Yocto/yocto-bitbake.md
     - Version Control:
       - Git:
         - About Git: Tools/Git/git-about.md
@@ -291,6 +294,8 @@ nav:
       - FWDN: Work/EVO/work-evo-fwdn.md
       - Task: Work/EVO/work-evo-task.md
       - Note: Work/EVO/work-evo-note.md
+    - KAMA:
+      - Start: Work\KAMA\work-kama.md
   # ---------- Study ----------
   - Study:
     - Overview: Study/study.md
@@ -325,11 +330,6 @@ nav:
   - Project:
     - Pokedex: 
       - README: Project/Pokedex/project-pokedex.md
-  # ---------- Sách ----------
-  - Sách:
-    - Tổng Quan: Book/book.md
-    - Review:
-      - Book/book-review.md
 
 extra_css:
   - stylesheets/theme.css
