@@ -290,12 +290,13 @@ nav:
       - About BHMC:  Work/BHMC/work-about-bhmc.md
       - Download:  Work/BHMC/work-bhmc-download.md
     - EVO:
-      - Start: Work/EVO/work-evo-start.md
-      - FWDN: Work/EVO/work-evo-fwdn.md
-      - Task: Work/EVO/work-evo-task.md
-      - Note: Work/EVO/work-evo-note.md
+      - Evo Start: Work/EVO/work-evo-start.md
+      - Evo FWDN: Work/EVO/work-evo-fwdn.md
+      - Evo Task: Work/EVO/work-evo-task.md
+      - Evo Note: Work/EVO/work-evo-note.md
     - KAMA:
-      - Start: Work\KAMA\work-kama.md
+      - Kama Start: Work\KAMA\work-kama.md
+      - Kama Note: Work\KAMA\work-kama-note.md
   # ---------- Study ----------
   - Study:
     - Overview: Study/study.md
