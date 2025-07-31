@@ -79,3 +79,9 @@
     ```bash
     ps -A | grep "audioserver" | awk '{print $2}' | xargs su 0 kill -9
     ```
+### LoudSpeakerProcess.so
+
+- __Load__:
+    ```bash
+    adb push /home/dtdat/workstation/evo/maincore/out/target/product/aevo_n3000rv_r/obj/SHARED_LIBRARIES/LoudSpeakerProcess_intermediates/LoudSpeakerProcess.so /vendor/lib64/hw/
+    ```

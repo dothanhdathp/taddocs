@@ -212,7 +212,8 @@ nav:
         - Github Start: Tools/Github/github-start.md
         - Github Page: Tools/Github/github-page.md
       - Repo:
-        - Repo Overview: Tools/Repo/repo-overview.md
+        - Repo Overview: Tools/Repo/repo.md
+        - Repo for Win: Tools/Repo/repo-windows.md
     - MSYS2:
       - Overview: Tools/msys2/software-msys2-overview.md
       - Install: Tools/msys2/software-msys2-install.md
