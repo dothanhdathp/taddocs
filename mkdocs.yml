@@ -173,6 +173,7 @@ nav:
     - Android Studio:
       - Overview: Software/AndroidStudio/software-android-studio-overview.md
       - Install: Software/AndroidStudio/software-android-studio-install.md
+      - Gradle: Software/AndroidStudio/software-android-gradle.md
       - SDK: Software/AndroidStudio/software-android-studio-sdk.md
       - Theme: Software/AndroidStudio/software-android-studio-theme.md
       - Troubleshoot: Software/AndroidStudio/software-android-studio-troubleshoot.md
@@ -228,8 +229,8 @@ nav:
       - Troubleshoots: Tools/Electron/electron-troubleshoots.md
   # ---------- Operator System ----------
   - Operator System:
-    - OS Overview: OS/os.md
     - Common:
+      - OS Overview: OS/os.md
       - File System: OS/os-file-system.md
     - Ubuntu:
       - Overview & Install: OS/Ubuntu/os-ubuntu-family-overview-and-install.md

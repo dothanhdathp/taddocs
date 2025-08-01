@@ -18,4 +18,7 @@ Các phần trình bày này về cơ bản là chỉ nói về tải, cài đ�
 
 ### Đa phương tiện
 
-- Photoshop Portable
+- Photoshop
+    - Photoshop Portable
+- VLC
+- Audacity
