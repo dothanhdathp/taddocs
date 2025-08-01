@@ -26,6 +26,8 @@
     --primary-theme-color: #4682B4; /* Light theme text */
     --primary-theme-color-transparent: #4682B4CC; /* Light theme text */
     --secondary-theme-color: #498789; /* Accent color */
+    --tertiary-theme-color: #ffae0090; /* Light theme text */
+    --quaternary-theme-color: #8b1a8f90; /* Light theme text */
     --soft-gray-theme-color: #E2E2E2; /* Accent color */
     --code-color: black;
     --code-background-color: #fdddb490;
@@ -61,26 +63,21 @@ h1 {
 
 h2 {
     font-weight: bold;
-    color:var(--primary-theme-color-transparent);
+    color:var(--primary-theme-color);
 }
 h3 {
     font-weight: bold;
     color:var(--secondary-theme-color);
 }
 h4 {
-    font-weight: bold;
-    font-style    : italic;
-    color:var(--secondary-theme-color);
+    color:var(--tertiary-theme-color);
 }
 h5 {
-    font-weight: bold;
-    font-style    : italic;
-    color:var(--secondary-theme-color);
+    color:var(--quaternary-theme-color);
 }
 h6 {
-    font-weight: bold;
-    font-style    : italic;
-    color:var(--secondary-theme-color);
+    font-style: italic;
+    color:var(--quaternary-theme-color);
 }
 
 mark.green {
