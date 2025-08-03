@@ -63,6 +63,12 @@ pacman -S mingw-w64-x86_64-cmake
 pacman -S mingw-w64-x86_64-make
 ```
 
+Nếu gặp lỗi hãy tải về gói `toolchain` trước:
+
+```bash
+pacman -S mingw-w64-x86_64-toolchain
+```
+
 Tải thư viện `ncurses`
 
 ```bash
@@ -87,6 +93,6 @@ cmake --install . --config Release
 
 Trong cả hai trường hợp, kết quả sẽ được ba tệp thư viện:
 
-- libftxui-component.a
-- libftxui-dom.a
-- libftxui-screen.a
+- `libftxui-component.a`
+- `libftxui-dom.a`
+- `libftxui-screen.a`

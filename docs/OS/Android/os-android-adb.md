@@ -169,7 +169,23 @@ adb shell am start -n package_name/app_name
 
 ### 3Party Apps
 
-TO_DO
+Đầu tiên dùng lệnh này để hiển thị tất cả 3-party application.
+
+```bash
+adb shell pm list packages -3
+```
+
+Sau đó có thể sao chép tất cả ra ngoài để xoá bằng lệnh:
+
+```bash
+adb uninstall <package_name>
+```
+
+Hoặc 
+
+```bash
+This command with --user 0 <package_name>
+```
 
 ## Thêm quyền cho ứng dụng trong khi chạy
 

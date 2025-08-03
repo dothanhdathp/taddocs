@@ -10,7 +10,6 @@ Xin chào đến với tài liệu của Tad Zeila. Tên mình là Đạt và Ta
 - [Software](Software/software.md)
 - [Tools](Tools/tools.md)
 - [OS (Operator System)](OS/os.md)
-- [Work](Work/work.md)
 - Study
 - Ngôn Ngữ
 - Dự án

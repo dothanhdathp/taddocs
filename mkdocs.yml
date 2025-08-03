@@ -150,6 +150,7 @@ nav:
         - Menu Option: Developer/Android/dev-android-menu-option.md
     - FTXUI:
       - Getting Start: Developer/FTXUI/dev-lib-ftxui.md
+      - Example: Developer/FTXUI/dev-lib-ftxui-example.md
     - ROS2: Developer/ROS2/dev-ros2.md
     - AWE:
       - AWE: Developer/AWE/awe.md
@@ -193,8 +194,9 @@ nav:
       - Katex: Tools/MKDocs/mkdocs-katex.md
       - Mermaid: Tools/MKDocs/mkdocs-mermaid.md
       - PlantUml: Tools/MKDocs/mkdocs-plantuml.md
-      - Markdown Extensions: Tools/MKDocs/mkdocs-markdown-extensions.md
-      - Markdown Github Publish: Tools/MKDocs/mkdocs-github-publish.md
+      - Extensions Markdown: Tools/MKDocs/mkdocs-markdown-extensions.md
+      - Markdocs Github Publish: Tools/MKDocs/mkdocs-github-publish.md
+      - Markdocs Clone Tad: Tools/MKDocs/mkdocs-clone-tad-style.md
     - Make:
       - Introduce: Tools/Make/make.md
       - Install: Tools/Make/make-install.md
@@ -218,7 +220,8 @@ nav:
     - MSYS2:
       - Overview: Tools/msys2/software-msys2-overview.md
       - Install: Tools/msys2/software-msys2-install.md
-      - Package: Tools/msys2/software-msys2-pacman.md
+      - Pacman: Tools/msys2/software-msys2-pacman.md
+      - Package: Tools/msys2/software-msys2-package.md
     - NodeJS:
       - Overview: Tools/NodeJS/nodejs.md
       - Getting Start: Tools/NodeJS/nodejs-getting-start.md
@@ -262,43 +265,6 @@ nav:
     - Android:
       - Overview: OS/Android/os-android-overview.md
       - ADB: OS/Android/os-android-adb.md
-  # ---------- Work ----------
-  - Work:
-    - Overview: Work/work.md
-    - MnM:
-      - Common:
-        - Về MnM: Work/MnM/work-about-mnm.md
-        - OSAL: Work/MnM/work-mnm-common-osal.md
-      - S201:
-        - Overview: Work/MnM/work-s201-overview.md
-      - W501:
-        - Overview: Work/MnM/work-w501-overview.md
-      - Z101:
-        - Overview: Work/MnM/work-z101-overview.md
-      - S210:
-        - Overview: Work/MnM/work-s210-overview.md
-      - WSA:
-        - Overview: Work/MnM/work-wsa-overview.md
-        - Download: Work/MnM/work-wsa-download.md
-        - Released: Work/MnM/work-wsa-released.md
-        - Use FWDN and HDF: Work/MnM/work-wsa-fwdn-and-hdf.md
-        - Build: Work/MnM/work-wsa-build.md
-        - Task:
-          - Phone Noise Sound: Work/MnM/work-wsa-task-mail-phone-noise.md
-          - DAB+: Work/MnM/work-wsa-dab+.md
-      - ZX:
-        - Overview: Work/MnM/work-zx-overview.md
-    - BHMC:
-      - About BHMC:  Work/BHMC/work-about-bhmc.md
-      - Download:  Work/BHMC/work-bhmc-download.md
-    - EVO:
-      - Evo Start: Work/EVO/work-evo-start.md
-      - Evo FWDN: Work/EVO/work-evo-fwdn.md
-      - Evo Task: Work/EVO/work-evo-task.md
-      - Evo Note: Work/EVO/work-evo-note.md
-    - KAMA:
-      - Kama Start: Work\KAMA\work-kama.md
-      - Kama Note: Work\KAMA\work-kama-note.md
   # ---------- Study ----------
   - Study:
     - Overview: Study/study.md
