@@ -197,6 +197,7 @@ nav:
       - Extensions Markdown: Tools/MKDocs/mkdocs-markdown-extensions.md
       - Markdocs Github Publish: Tools/MKDocs/mkdocs-github-publish.md
       - Markdocs Clone Tad: Tools/MKDocs/mkdocs-clone-tad-style.md
+      - Markdocs Issue: Tools/MKDocs/mkdocs-issue.md
     - Make:
       - Introduce: Tools/Make/make.md
       - Install: Tools/Make/make-install.md
@@ -210,6 +211,8 @@ nav:
         - About Git: Tools/Git/git-about.md
         - Install: Tools/Git/git-install.md
         - Git Config: Tools/Git/git-config.md
+        - Git Start: Tools/Git/git-start.md
+        - Git Clone: Tools/Git/git-clone.md
       - Github:
         - Github Overview: Tools/Github/github-overview.md
         - Github Start: Tools/Github/github-start.md
