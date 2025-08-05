@@ -38,10 +38,6 @@ nav:
   # ---------- Home (Main page) ----------
   - Home: 
     - About me: index.md
-    - Diary:
-      - Năm 2025: 
-        - Tháng 7: Diary/2025/diary-2025-month-7.md
-        - Tháng 6: Diary/2025/diary-2025-month-6.md
     - Example: example.md
   # ---------- Programming ----------
   # Tổng hợp các ngôn ngữ lập trình và các cách viết
@@ -198,6 +194,7 @@ nav:
       - Markdocs Github Publish: Tools/MKDocs/mkdocs-github-publish.md
       - Markdocs Clone Tad: Tools/MKDocs/mkdocs-clone-tad-style.md
       - Markdocs Issue: Tools/MKDocs/mkdocs-issue.md
+      - Markdocs Projects: Tools/MKDocs/mkdocs-projects.md
     - Make:
       - Introduce: Tools/Make/make.md
       - Install: Tools/Make/make-install.md
@@ -233,6 +230,7 @@ nav:
       - Create App: Tools/Electron/electron-create-app.md
       - Load Link: Tools/Electron/electron-load-link.md
       - Troubleshoots: Tools/Electron/electron-troubleshoots.md
+      - Projects: Tools/Electron/electron-projects.md
   # ---------- Operator System ----------
   - Operator System:
     - Common:
@@ -298,7 +296,6 @@ nav:
       - Bài Tập:
         - Reading:
           - An Introduction to Film Sound: Language/English/language-english-an-introduction-to-film-sound.md
-  # ---------- Diary ----------
   - Project:
     - Pokedex: 
       - README: Project/Pokedex/project-pokedex.md
