@@ -21,34 +21,41 @@ Trong dự án này có phần chú trọng là tệp `config.json` cần đư�
 
     ```json
     {
-        "docsServer": "https://dothanhdathp.github.io/taddocs/",
-        "booksServer": "https://dothanhdathp.github.io/tadbooks/",
-        "diaryServer": "https://dothanhdathp.github.io/taddiary/",
-        "docsPath": "D:\\Doc\\taddocs",
-        "booksPath": "D:\\Doc\\tadbooks",
-        "worksPath": "D:\\Doc\\tadworks",
-        "diaryPath": "D:\\Doc\\taddiary",
-        "docsPort": 8000,
-        "booksPort": 8001,
-        "worksPort": 8002,
-        "diaryPort": 8003
+    "docsServer": "https://dothanhdathp.github.io/taddocs/",
+    "booksServer": "https://dothanhdathp.github.io/tadbooks/",
+    "diaryServer": "https://dothanhdathp.github.io/taddiary/",
+    "studyServer": "https://dothanhdathp.github.io/taddiary/",
+    "docsPath": "D:\\Git\\taddocs",
+    "booksPath": "D:\\Git\\tadbooks",
+    "worksPath": "D:\\Git\\tadworks",
+    "diaryPath": "D:\\Git\\taddiary",
+    "studyPath": "D:\\Git\\tadstudy",
+    "docsPort": 8000,
+    "booksPort": 8001,
+    "worksPort": 8002,
+    "diaryPort": 8003,
+    "studyPort": 8004
     }
     ```
 
 === "Công ty"
+
     ```json
     {
-        "docsServer": "https://dothanhdathp.github.io/taddocs/",
-        "booksServer": "https://dothanhdathp.github.io/tadbooks/",
-        "diaryServer": "https://dothanhdathp.github.io/taddiary/",
-        "docsPath": "D:\\Doc\\taddocs",
-        "booksPath": "D:\\Doc\\tadbooks",
-        "worksPath": "D:\\Doc\\tadworks",
-        "diaryPath": "D:\\Doc\\taddiary",
-        "docsPort": 8000,
-        "booksPort": 8001,
-        "worksPort": 8002,
-        "diaryPort": 8003
+    "docsServer": "https://dothanhdathp.github.io/taddocs/",
+    "booksServer": "https://dothanhdathp.github.io/tadbooks/",
+    "diaryServer": "https://dothanhdathp.github.io/taddiary/",
+    "studyServer": "https://dothanhdathp.github.io/taddiary/",
+    "docsPath": "D:\\Doc\\taddocs",
+    "booksPath": "D:\\Doc\\tadbooks",
+    "worksPath": "D:\\Doc\\tadworks",
+    "diaryPath": "D:\\Doc\\taddiary",
+    "studyPath": "D:\\Doc\\tadstudy",
+    "docsPort": 8000,
+    "booksPort": 8001,
+    "worksPort": 8002,
+    "diaryPort": 8003,
+    "studyPort": 8004
     }
     ```
 

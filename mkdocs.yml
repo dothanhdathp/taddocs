@@ -195,6 +195,7 @@ nav:
       - PlantUml: Tools/MKDocs/mkdocs-plantuml.md
       - Extensions Markdown: Tools/MKDocs/mkdocs-markdown-extensions.md
       - Markdocs Github Publish: Tools/MKDocs/mkdocs-github-publish.md
+      - Markdocs Lv2: Tools/MKDocs/mkdocs_lv2.md
       - Markdocs Clone Tad: Tools/MKDocs/mkdocs-clone-tad-style.md
       - Markdocs Issue: Tools/MKDocs/mkdocs-issue.md
       - Markdocs Projects: Tools/MKDocs/mkdocs-projects.md
@@ -269,37 +270,9 @@ nav:
     - Android:
       - Overview: OS/Android/os-android-overview.md
       - ADB: OS/Android/os-android-adb.md
-  # ---------- Study ----------
-  - Study:
-    - Overview: Study/study.md
-    - Toán học:
-      - Chung:
-        - Tổng quan: Study/Math/math-overview.md
-        - Tập hợp số: Study/Math/math-phan-so.md
-      - Số học:
-        - Số học: Study/Math/math-numberic-overview.md
-      - Hình học:
-        - Hình học cơ bản: Study/Math/math-geometry-overview.md
-    - Vật Lý:
-      - Overview: Study/Physics/physics-overview.md
-    - Hoá học:
-      - Overview: Study/Chemistry/chemistry-overview.md
-    - Lịch Sử:
-      - Overview: Study/History/history-overview.md
-    - Triết học:
-      - Overview: Study/Philosophy/philosophy-overview.md
-      - Stoicism:
-        - Overview: Study/Philosophy/stoicism-overview.md
-        - Stoicism, Virtue, and Mental Health: Study/Philosophy/stoicism-virtue-and-mental-health.md
-  # ---------- Ngôn Ngữ ----------
-  - Ngôn Ngữ:
-    - Tiếng Anh:
-      - Kiến thức:
-        - Từ và Câu: Language/English/language-english-words-and-sentences.md
-      - Bài Tập:
-        - Reading:
-          - An Introduction to Film Sound: Language/English/language-english-an-introduction-to-film-sound.md
   - Project:
+    - Tad: 
+      - Mô tả: Project/Tad/project-tad.md
     - Pokedex: 
       - README: Project/Pokedex/project-pokedex.md
 

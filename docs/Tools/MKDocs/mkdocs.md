@@ -8,7 +8,6 @@ MKDocs là một công cụ viết và tạo tài liệu vô cùng mạnh mẽ.
 
 - Yêu cầu có cài đặt Python, [xem hướng dẫn ở đây]().
 
-
 ### Tải về python
 
 Python xem tải về và cài đặt ở đây: ___
