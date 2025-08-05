@@ -155,8 +155,10 @@ nav:
     - Qt:
       - Overview: Developer/Qt/qt-overview.md
   - Practice:
+    - Prepare: Developer/practice/practice.md
     - Leetcode:
-      - Leetcode 46 - Permutations: Developer/practice/leetcode-46.md
+      - Leetcode 46: Developer/practice/leetcode-46.md
+      - Leetcode 1486: Developer/practice/leetcode-1486.md
   # ---------- Software ----------
   - Software:
     - Overview: Software/software.md
@@ -167,6 +169,7 @@ nav:
       - Snippets: Software/VSCode/software-vscode-snippets.md
       - Extensions: Software/VSCode/software-vscode-extensions.md
       - Custom: Software/VSCode/software-vscode-my-custom.md
+      - Trick: Software/VSCode/software-vscode-trick.md
     - Android Studio:
       - Overview: Software/AndroidStudio/software-android-studio-overview.md
       - Install: Software/AndroidStudio/software-android-studio-install.md

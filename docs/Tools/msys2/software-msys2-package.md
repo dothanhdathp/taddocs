@@ -8,6 +8,17 @@ Gói này sử dụng để xem các tệp dưới dạng cây thư mục:
 pacman -Sy tree
 ```
 
+## Make
+
+```txt
+pacman -S make
+```
+
+Hoặc
+
+```bash
+pacman -S mingw-w64-x86_64-make
+```
 
 ## Cmake
 
