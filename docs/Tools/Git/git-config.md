@@ -92,3 +92,34 @@ Lệnh đó sẽ yêu cầu git từ chối kiểm soát các thay đổi về q
     Điều này là do trong dự án có tệp __quan trọng__, có tệp có thể ít quan trọng hơn. Các quyền được sử dụng chủ yếu để bảo về và một người dùng hiểu biết sẽ _hạn chế_ tác động vào các tệp được bảo vệ.
 
     Khác với người dùng, cấp độ lập trình viên, người trực tiếp sửa đổi cần có quyền dể sửa nhưng mỗi lần sửa xong lại đóng lại quyền cực kỳ phiền phức. Thế nên nếu họ có quyền được sửa đổi kho lưu trữ, nên có một tính năng hỗ trợ cho việc dó.
+
+## File LF/CRLF
+
+Khi thêm tệp vào bị vướng lỗi này:
+
+```txt
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.da.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.de.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.du.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.es.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.fi.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.fr.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.hu.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.it.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.nl.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'site/assets/javascripts/lunr/min/lunr.no.min.js', LF will be replaced by CRLF the next time Git touches it
+```
+
+Để loại bỏ vấn đề này thì cần đặt lại cấu hình như sau:
+
+=== "Windows"
+
+    ```bash
+    git config --global core.autocrlf true 
+    ```
+
+=== "Unix/macOS"
+
+    ```bash
+    git config --global core.autocrlf input
+    ```
