@@ -45,3 +45,50 @@ Với:
 | `-l` hoặc `--list` | Hiển thị đầy đủ các cài đặt đã làm.                        |
 | `-e` hoặc `--edit` | Chỉnh sửa tệp cài đặt gốc bằng phần mềm chỉnh sửa văn bản. |
 | `--add`            | Chưa rõ                                                    |
+
+## Thay đổi text-editor mặc định
+
+Dùng cài đặt này để thay đổi `text-editor` mặc định.
+
+`text-editor` này sẽ được dùng làm công cụ sửa đổi văn bản chính của __git__ và nó khá là tiện. Ví dụ như là thay đổi vim thành nano trên Linux hoặc là dùng __Notepad++__, __Sublime__, __VScode__, ... trên __Windows__
+
+```bash
+git config --global core.editor "<tool>"
+```
+
+Thường thì trên __Linux__ đã mặc định là sử dụng `nano` rồi nên không có vấn đề gì cả, chỉ có __Windows__ là hơi lởm.
+
+Ví dụ này là dùng `notepad++` thay cho cái _notepad_ dởm của __Windows__. Vì mỗi máy tính sẽ khác nhau nên tốt nhất cần kiểm tra chính xác đường dẫn.
+
+```bash
+git config --global core.editor "C:/Program\ Files/Notepad++/notepad++.exe"
+```
+
+Nhưng vậy chưa đủ vì nó sẽ mở tệp cùng với cửa sổ __Notepad++__ hiện đang được mở. Thế nên sự thay đổi chỉ được lưu khi mà đóng toàn bộ cửa sổ (mất cả các cửa sổ đang làm việc), khá là bất tiện. Thế nên hãy dùng:
+
+```bash
+git config --global core.editor "'C:\Program Files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+```
+
+Với các cờ được thêm vào thì __Notepad++__ sẽ được mở ở cửa sổ độc lập khác với cửa sổ gốc. Thế nên sau khi chỉnh sửa xong _commit message_ có thể đóng độc lập cửa sổ đó đi.
+
+## Hủy bỏ file.mode
+
+Trong nhiều trường hợp, git sẽ kiểm tra và sau lưu cả _permission_ của tệp. Điều này khá là bất tiện.
+
+Ví dụ nếu trên _kho lưu trữ_ dự án lưu mọi tệp dưới quyền _admin (sudo)_ thì cực kỳ phiền. Sau khi kéo được dự án về, xong rồi không chỉnh sửa được nên đã thay đổi hết tất cả quyền thành _public_. Và lúc `git status` thấy nó __tracking__ một đống tệp.
+
+Để xử lý tình trang đó thì dùng lệnh sau:
+
+```bash
+git config --global code.filemode "false"
+```
+
+Lệnh đó sẽ yêu cầu git từ chối kiểm soát các thay đổi về quyền của tệp. Nghĩa là nếu bạn kéo tệp về, hiện tại là quyền `private`, sửa lại thành `public` và thay đổi nội dung rồi đẩy lên. Lúc này người khác kéo dự án về quyền vẫn là `private`.
+
+!!! info "Info"
+    __Tại sao phải phức tạo như vậy?__
+
+    Điều này là do trong dự án có tệp __quan trọng__, có tệp có thể ít quan trọng hơn. Các quyền được sử dụng chủ yếu để bảo về và một người dùng hiểu biết sẽ _hạn chế_ tác động vào các tệp được bảo vệ.
+
+    Khác với người dùng, cấp độ lập trình viên, người trực tiếp sửa đổi cần có quyền dể sửa nhưng mỗi lần sửa xong lại đóng lại quyền cực kỳ phiền phức. Thế nên nếu họ có quyền được sửa đổi kho lưu trữ, nên có một tính năng hỗ trợ cho việc dó.

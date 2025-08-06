@@ -148,16 +148,14 @@ nav:
       - Getting Start: Developer/FTXUI/dev-lib-ftxui.md
       - Example: Developer/FTXUI/dev-lib-ftxui-example.md
     - ROS2: Developer/ROS2/dev-ros2.md
-    - AWE:
-      - AWE: Developer/AWE/awe.md
-      - AWE Core: Developer/AWE/awe-core.md
-      - AWE Core OS: Developer/AWE/awe-coreos.md
     - Qt:
       - Overview: Developer/Qt/qt-overview.md
   - Practice:
     - Prepare: Developer/practice/practice.md
     - Leetcode:
-      - Leetcode 46: Developer/practice/leetcode-46.md
+      - Leetcode 39: Developer/practice/leetcode-0039.md
+      - Leetcode 46: Developer/practice/leetcode-0046.md
+      - Leetcode 47: Developer/practice/leetcode-0047.md
       - Leetcode 1486: Developer/practice/leetcode-1486.md
   # ---------- Software ----------
   - Software:
@@ -207,20 +205,21 @@ nav:
     - Yocto:
       - Overview: Tools/Yocto/yocto-overview.md
       - Bitbake: Tools/Yocto/yocto-bitbake.md
-    - Version Control:
-      - Git:
-        - About Git: Tools/Git/git-about.md
-        - Install: Tools/Git/git-install.md
-        - Git Config: Tools/Git/git-config.md
-        - Git Start: Tools/Git/git-start.md
-        - Git Clone: Tools/Git/git-clone.md
-      - Github:
-        - Github Overview: Tools/Github/github-overview.md
-        - Github Start: Tools/Github/github-start.md
-        - Github Page: Tools/Github/github-page.md
-      - Repo:
-        - Repo Overview: Tools/Repo/repo.md
-        - Repo for Win: Tools/Repo/repo-windows.md
+    - Git:
+      - About Git: Tools/Git/git-about.md
+      - Install: Tools/Git/git-install.md
+      - Git Config: Tools/Git/git-config.md
+      - Git Example: Tools/Git/git-example.md
+      - Git Beginer: Tools/Git/git-beginer.md
+      - Git Clone: Tools/Git/git-clone.md
+      - Trick: Tools/Git/git-trick.md
+    - Github:
+      - Github Overview: Tools/Github/github-overview.md
+      - Github Start: Tools/Github/github-start.md
+      - Github Page: Tools/Github/github-page.md
+    - Repo:
+      - Repo Overview: Tools/Repo/repo.md
+      - Repo for Win: Tools/Repo/repo-windows.md
     - MSYS2:
       - Overview: Tools/msys2/software-msys2-overview.md
       - Install: Tools/msys2/software-msys2-install.md
@@ -234,7 +233,6 @@ nav:
       - Create App: Tools/Electron/electron-create-app.md
       - Load Link: Tools/Electron/electron-load-link.md
       - Troubleshoots: Tools/Electron/electron-troubleshoots.md
-      - Projects: Tools/Electron/electron-projects.md
   # ---------- Operator System ----------
   - Operator System:
     - Common:
@@ -247,6 +245,10 @@ nav:
         - Folder Hierarch: OS/Ubuntu/os-ubuntu-system-folder-hierarch.md
         - System File: OS/Ubuntu/os-ubuntu-system-file.md
         - File: OS/Ubuntu/os-ubuntu-file.md
+      - Tools:
+        - Tmux: OS/Ubuntu/os-ubuntu-tools-tmux.md
+        - Minicom: OS/Ubuntu/os-ubuntu-tools-minicom.md
+        - FFmpeg: OS/Ubuntu/os-ubuntu-tools-ffmpeg.md
     - Windows:
       - Overview: OS/Windows/os-windows-overview.md
       - Một số lệnh thường dùng: OS/Windows/os-windows-cmd-common-command.md
@@ -271,8 +273,8 @@ nav:
       - Overview: OS/Android/os-android-overview.md
       - ADB: OS/Android/os-android-adb.md
   - Project:
-    - Tad: 
-      - Mô tả: Project/Tad/project-tad.md
+    - Tad App: 
+      - Mô tả: Project/Tad/project-tad-app.md
     - Pokedex: 
       - README: Project/Pokedex/project-pokedex.md
 

@@ -1,7 +1,7 @@
 # 46. Permutations (Hoán vị)
 
-> Link: https://leetcode.com/problems/permutations/description/\
-> 🌟 Bài này cực hay!
+> - Link: [https://leetcode.com/problems/permutations/description/](https://leetcode.com/problems/permutations/description/)
+> - 🌟 Bài này cực hay!
 
 ## Mô tả
 
@@ -22,6 +22,7 @@ Out:
 ```
 
 Với cách làm hiện tại của mình là dùng đệ quy:
+
 ```c++
 vector<vector<int>> permute(vector<int> nums) {
 	vector<vector<int>> ans;
@@ -49,9 +50,9 @@ vector<vector<int>> permute(vector<int> nums) {
 
 1. Trả về khi chuỗi dài 1, 2.
 2. Nếu lớn hơn 1 và hai thì tách thành từng chuỗi con. Ví dụ {1,2,3} thì lần lượt đưa vào là:
-	- {1} + ___each_item_in___ `permute{2,3}`
-	- {2} + ___each_item_in___ `permute{1,3}`
-	- {3} + ___each_item_in___ `permute{1,2}`
+	- {1} + __each_item_in__ `permute{2,3}`
+	- {2} + __each_item_in__ `permute{1,3}`
+	- {3} + __each_item_in__ `permute{1,2}`
 
 Cách này siêu tệ, tốc độ và cả bộ nhớ đều tốn ở mức cao.
 
@@ -86,6 +87,7 @@ Kết quả hãy nhìn:
 - `1`423
 - ... continue ...
 
-Có thấy không? Họ giữ nguyên số đầu, giữ số tiếp và ... xoay lần lượt như cái cách mình nghĩ đầu tiên nhưng không biết code thế nào.
-
-Giải thuật ở đây tên là `Backtracking`. Đây là một câu hỏi phỏng vấn thật sự. Cần nghiền ngẫm.
+!!! note "Note"
+	Có thấy không? Họ giữ nguyên số đầu, giữ số tiếp và ... xoay lần lượt như cái cách mình nghĩ đầu tiên nhưng không biết code thế nào.
+	
+	Giải thuật ở đây tên là `Backtracking`. Đây là một câu hỏi phỏng vấn thật sự. Cần nghiền ngẫm.

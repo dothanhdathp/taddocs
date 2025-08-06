@@ -1,20 +1,37 @@
-# Project
+# Tad
 
-## Mục lục
+## Mô tả
 
-- [electrone-docs-app](#electrone-docs-app)
+Dự án này mình dự định sẽ bao gồm nhiều các dự án con cái mà sẽ được liên kết và `mirgarate` đến các trang tài liệu của mình. Và mở đầu là dành cho __Windows__
 
-## electrone-docs-app
+## Nguồn
 
-### Mô tả
+Tải về source code:
 
-Dự án này để quản lý các ___"dự án mkdocs"___ của mình, tổng hợp chúng lại một chỗ và có thể điều hướng sang nhiều thành phần khác nhau.
+```bash
+git clone git@github.com:dothanhdathp/electrone-docs-app.git
+```
 
-Dự án này được để ở đây: [electrone-docs-app](https://github.com/dothanhdathp/electrone-docs-app)
+!!! warning "Warning"
+    Tương lai rất có thể mình sẽ thay đổi cái tên của dự án này.
 
-Trong dự án này có phần chú trọng là tệp `config.json` cần được để bên cạnh ứng dụng để tải ra các thông tin cần thiết. Vì để tránh phiền phức nên mình đã không đưa đường dẫn vào trong code mẫu dự án.
+## Tad.exe
 
-### Cài đặt
+Đầu tiên thì đây là một ứng dụng được viết bằng [Electron](../../Tools/Electron/electron-getting-start.md) với `npm`.
+
+Để dựng ứng dụng thì dùng lệnh này:
+
+```txt
+npm install electron --save-dev
+npm run dist
+```
+
+- Sau đó sẽ có tệp __tad Setup 1.0.0.exe__ nằm trong thư mục __dist__. Dùng nó để cài ứng dụng.
+- Trường hợp ứng dụng đã có rồi thì nên gỡ nó ra và cài lại.
+
+## Tệp config
+
+Ứng dụng sẽ tải lên các cấu hình diều chỉnh bằng tệp `config.json`. Tệp này sẽ không được xuất bản cùng ứng dụng mà yêu cầu tự tạo. Đến hiện tại nội dung như này:
 
 === "Nhà"
     _Sau chép vào đây sau._
@@ -59,6 +76,7 @@ Trong dự án này có phần chú trọng là tệp `config.json` cần đư�
     }
     ```
 
+
 ### To do
 
 - [ ] Cần một trang dùng riêng để cấu hình. Trong đó nó sẽ dùng để khởi động, gán port, cấu hình động cho `mkdocs serve` thay cho việc cấu hình tĩnh bằng tệp `json` thế này.
@@ -66,3 +84,4 @@ Trong dự án này có phần chú trọng là tệp `config.json` cần đư�
 - [ ] Làm thêm nút chuột phải vào đường dẫn thì có lựa chọn:
     1. ___Copy Link___
     1. ___Open Link in WebBrower___
+- Trong tương lai có thể thay đổi tệp config.json để nó sẽ _tải động_ được lên các tệp tài liệu chứ không cần thiết phải sửa code nhiều như này nữa. Dù sao `json` có nhiều tầng mà.
