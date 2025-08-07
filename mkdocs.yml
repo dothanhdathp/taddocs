@@ -149,7 +149,7 @@ nav:
       - Example: Developer/FTXUI/dev-lib-ftxui-example.md
     - ROS2: Developer/ROS2/dev-ros2.md
     - Qt:
-      - Overview: Developer/Qt/qt-overview.md
+      - Overview: Developer/Qt/qt.md
   - Practice:
     - Prepare: Developer/practice/practice.md
     - Leetcode:
@@ -246,9 +246,10 @@ nav:
         - System File: OS/Ubuntu/os-ubuntu-system-file.md
         - File: OS/Ubuntu/os-ubuntu-file.md
       - Tools:
-        - Tmux: OS/Ubuntu/os-ubuntu-tools-tmux.md
-        - Minicom: OS/Ubuntu/os-ubuntu-tools-minicom.md
+        - Common: OS/Ubuntu/os-ubuntu-tools-common.md
         - FFmpeg: OS/Ubuntu/os-ubuntu-tools-ffmpeg.md
+        - Minicom: OS/Ubuntu/os-ubuntu-tools-minicom.md
+        - Tmux: OS/Ubuntu/os-ubuntu-tools-tmux.md
     - Windows:
       - Overview: OS/Windows/os-windows-overview.md
       - Một số lệnh thường dùng: OS/Windows/os-windows-cmd-common-command.md
