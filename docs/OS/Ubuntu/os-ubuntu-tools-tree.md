@@ -1,8 +1,6 @@
-# Common Tools
+# Tree
 
-## Tree
-
-### Tải về
+## Tải về
 
 Lệnh `tree` trên Ubuntu (và các bản phân phối Linux khác) là một tiện ích dòng lệnh liệt kê đệ quy các nội dung của một thư mục theo định dạng giống như cây có chiều sâu. Điều này cung cấp một biểu diễn trực quan về cấu trúc phân cấp của hệ thống tệp.
 
@@ -14,7 +12,7 @@ sudo apt-get install tree
 
 Lệnh này cung cấp một cách trực quan hơn nhiều để xem xét cây thư mục ở trên cửa sổ dòng lệnh `console`. Không bắt buộc phải sử dụng, nhưng khuyến nghị!
 
-### Sử dụng
+## Sử dụng
 
 Lệnh này không có nhiều lệnh, và không phức tạp. Một số cách tiêu biểu như sau:
 
