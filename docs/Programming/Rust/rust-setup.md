@@ -7,6 +7,8 @@
 
 ## Cài đặt cho Windows
 
+### Windows Install Normal
+
 Với hệ điều hành windows thì chỉ cần tải xuống bản cài đặt phù hợp với hệ điều hành _([64-bit](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe) hoặc [32-bit](https://www.rust-lang.org/tools/install))_.
 
 Chương trình sẽ chạy trên `terminal` giống như này:
@@ -51,6 +53,14 @@ Nếu kết quả trả về dạng như này là thành công rồi:
 
 ```bash
 rustc 1.79.0 (129f3b996 2024-06-10)
+```
+
+### Install for MSYS2
+
+Cách này mình thoải mái hơn vì nó hoạt động được cả với __Makefile__
+
+```bash
+pacman -S mingw-w64-x86_64-rust
 ```
 
 ## Cài đặt cho Linux

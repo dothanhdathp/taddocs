@@ -125,8 +125,10 @@ nav:
       - Overview:
         - Setup: Programming/Rust/rust-setup.md
         - Document: Programming/Rust/rust-document.md
+        - HelloWorld: Programming/Rust/rust-helloworld.md
       - Basic:
         - Variables: Programming/Rust/rust-variables.md
+        - I/O Printer: Programming/Rust/rust-io-printer.md
   - Hybrid:
     - Hybrid language: Programming/hybrid-language.md
     - Java:

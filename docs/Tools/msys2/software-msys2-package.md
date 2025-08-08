@@ -30,3 +30,11 @@ pacman -S mingw-w64-x86_64-make
     ```bash
     pacman -S mingw-w64-x86_64-cmake
     ```
+
+## Rust
+
+Tải gói `rust`
+
+```bash
+pacman -S mingw-w64-x86_64-rust
+```
