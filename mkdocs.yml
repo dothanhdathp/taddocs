@@ -60,7 +60,7 @@ nav:
           - FNV1a: Developer/Algorithm/dev-algorithm-hashing-fnv1a.md
       - Design Pattern:
         - Overview: Developer/Design_Pattern/dev-design-pattern-overview.md
-    - Android:
+    - Android Developer:
       - Android Application:
         - First Application: Developer/Android/dev-android-first-application.md
         - Activity: Developer/Android/dev-android-app-activity.md
@@ -68,6 +68,9 @@ nav:
           - ListView: Developer/Android/dev-android-app-listview.md
           - ListView Custom: Developer/Android/dev-android-app-listview-custom.md
         - Menu Option: Developer/Android/dev-android-menu-option.md
+        - JNI:
+          - Create JNI: Developer/Android/dev-android-application-jni.md
+          - JNI Type: Developer/Android/dev-android-jni-type.md
     - FTXUI:
       - Getting Start: Developer/FTXUI/dev-lib-ftxui.md
       - Example: Developer/FTXUI/dev-lib-ftxui-example.md
