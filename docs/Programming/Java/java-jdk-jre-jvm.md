@@ -42,7 +42,7 @@ JVM gồm <u>__4 nhiệm vụ chính__</u>:
 
 ### JDK là
 
-> __JDK__ là _Java Development Kit_ là môi trường phát triển phần mềm được sử dụng để phát triển các ứng dụng và applet ___Java___.
+> **JDK** là _Java Development Kit_, là môi trường phát triển phần mềm được sử dụng để phát triển các ứng dụng và applet ___Java___.
 
 __Java Development Kit (JDK)__ là một môi trường phát triển phần mềm đa nền tảng cung cấp một bộ công cụ và thư viện cần thiết để phát triển các ứng dụng phần mềm và applet dựa trên Java. Đây là một gói cốt lõi được sử dụng trong Java, cùng với _JVM (Java Virtual Machine)_ và _JRE (Java Runtime Environment)_. 
 
