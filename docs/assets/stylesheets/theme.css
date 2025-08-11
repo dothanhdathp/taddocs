@@ -23,8 +23,9 @@
     --primary-header-5-size: 16px;
     --primary-font-size: 15px; /* Light theme background */
     --primary-padding-common: 10px;
-    --primary-theme-color: #4682B4; /* Light theme text */
-    --primary-theme-color-transparent: #4682B4CC; /* Light theme text */
+    --primary-linker-color: #5488e8;
+    --primary-theme-color: #6767CE; /* Light theme text */
+    --primary-theme-color-transparent: #6767CE; /* Light theme text */
     --secondary-theme-color: #498789; /* Accent color */
     --tertiary-theme-color: #ffae0090; /* Light theme text */
     --quaternary-theme-color: #8b1a8f90; /* Light theme text */
@@ -53,28 +54,33 @@
 }
 
 body {
-    font-family: var(--primary-family);
+  font-family: var(--primary-family);
 }
-
-h1 {
-    font-weight: bold;
-    text-align: center;
+  
+.md-typeset h1 {
+  font-weight: bold;
+  text-align: center;
+  color:var(--primary-linker-color);
 }
-
+  
 h2 {
+    color: gray;
     font-weight: bold;
-    color:var(--primary-theme-color);
 }
+
 h3 {
-    font-weight: bold;
-    color:var(--secondary-theme-color);
+  font-weight: bold;
+  color:var(--secondary-theme-color);
 }
+
 h4 {
     color:var(--tertiary-theme-color);
 }
+
 h5 {
     color:var(--quaternary-theme-color);
 }
+
 h6 {
     font-style: italic;
     color:var(--quaternary-theme-color);

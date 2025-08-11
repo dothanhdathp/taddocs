@@ -15,6 +15,11 @@ Hiểu được sự khác biệt giữa JDK, JRE và JVM đóng vai trò rất 
 | Bao gồm            | Nó bao gồm các công cụ phát triển như (trình biên dịch) + JRE | Nó bao gồm các thư viện để chạy ứng dụng Java + JVM | Nó chạy mã byte Java và làm cho ứng dụng Java có thể hoạt động trên mọi nền tảng. |
 | Trường hợp sử dụng | Viết và biên dịch mã Java                                     | Chạy ứng dụng Java trên hệ thống                    | Chuyển đổi bytecode thành mã máy gốc                                              |
 
+<figure markdown="span">
+    ![](img/java-jdk-jre-jvm.png)
+    <figcaption>Tổng quát về JDK, JRE và JVM</figcaption>
+</figure>
+
 !!! warning "Lưu ý"
     Lưu ý: JVM không phụ thuộc vào nền tảng, nhưng JVM triển khai khác nhau ở mỗi nền tảng vì nó tương tác với hệ điều hành gốc và phần cứng. Vì vậy, trên thực tế, nó phụ thuộc vào nền tảng .
 

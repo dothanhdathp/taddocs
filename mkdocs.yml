@@ -149,7 +149,8 @@ nav:
         - Any Version: Programming/Python/python-any-version.md
       - Lập trình:
         - Hello World: Programming/Python/python-hello-world.md
-    - Kotlin: Programming/Kotlin/kotlin.md
+    - Kotlin:
+      - Kotlin: Programming/Kotlin/kotlin.md
     - PhP: Programming/php/php.md
   - Interpreted:
     - Interpreted language: Programming/interpreted-language.md
@@ -194,6 +195,7 @@ nav:
         - FFmpeg: OS/Ubuntu/os-ubuntu-tools-ffmpeg.md
         - Minicom: OS/Ubuntu/os-ubuntu-tools-minicom.md
         - Tmux: OS/Ubuntu/os-ubuntu-tools-tmux.md
+        - Tar: OS/Ubuntu/os-ubuntu-tools-tar.md
     - Windows:
       - Overview: OS/Windows/os-windows-overview.md
       - Một số lệnh thường dùng: OS/Windows/os-windows-cmd-common-command.md
