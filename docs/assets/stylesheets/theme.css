@@ -49,6 +49,10 @@
   max-width: initial;
 } */
 
+.md-main__inner.md-grid.full-width {
+  max-width: initial;
+}
+
 .md-tabs {
   background-color: #434a74;
 }

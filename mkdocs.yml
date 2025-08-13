@@ -254,6 +254,7 @@ nav:
       - Getting Start: Tools/MKDocs/mkdocs.md
       - Theme: Tools/MKDocs/mkdocs-theme.md
       - CSS: Tools/MKDocs/mkdocs-css.md
+      - Script: Tools/MKDocs/mkdocs-script.md
       - Katex: Tools/MKDocs/mkdocs-katex.md
       - Mermaid: Tools/MKDocs/mkdocs-mermaid.md
       - PlantUml: Tools/MKDocs/mkdocs-plantuml.md
@@ -330,6 +331,7 @@ markdown_extensions:
 
 extra_javascript:
   - assets/scripts/katex.js
+  - assets/scripts/keyevent.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
