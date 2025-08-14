@@ -64,7 +64,7 @@ body {
 .md-typeset h1 {
   font-weight: bold;
   text-align: center;
-  color:var(--primary-linker-color);
+  color:var(--primary-theme-color);
 }
   
 h2 {

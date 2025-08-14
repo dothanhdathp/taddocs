@@ -77,6 +77,17 @@ nav:
     - ROS2: Developer/ROS2/dev-ros2.md
     - Qt:
       - Overview: Developer/Qt/qt.md
+    - GStreamer:
+      - Command:
+        - About: Developer/GStreamer/gstreamer.md
+        - Tải về: Developer/GStreamer/gstreamer-installing.md
+      - GStreamer Ubuntu:
+        - Tutorial: Developer/GStreamer/gstreamer-u-tutorial.md
+        - Hello world!: Developer/GStreamer/gstreamer-u-hello-world.md
+      - Command Tools:
+        - gst-launch-1.0: Developer/GStreamer/gstreamer-gst-launch.md
+        - gst-inspect-1.0: Developer/GStreamer/gstreamer-gst-inspect.md
+        - Pipeline Samples: Developer/GStreamer/gstreamer-pipeline-samples.md
   # ---------- Programming ----------
   - Compiled:
     - Compiled language: Programming/compiled-language.md
