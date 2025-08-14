@@ -78,26 +78,40 @@ nav:
     - Qt:
       - Overview: Developer/Qt/qt.md
     - GStreamer:
-      - Command:
-        - About: Developer/GStreamer/gstreamer.md
-        - Tải về: Developer/GStreamer/gstreamer-installing.md
-      - GStreamer Ubuntu:
+      - About: Developer/GStreamer/gstreamer.md
+      - Tải về: Developer/GStreamer/gstreamer-installing.md
+      - Foundations: Developer/GStreamer/gstreamer-foundations.md
+      - Tutorial:
         - Tutorial: Developer/GStreamer/gstreamer-u-tutorial.md
         - Hello world!: Developer/GStreamer/gstreamer-u-hello-world.md
       - Command Tools:
         - gst-launch-1.0: Developer/GStreamer/gstreamer-gst-launch.md
         - gst-inspect-1.0: Developer/GStreamer/gstreamer-gst-inspect.md
-        - Pipeline Samples: Developer/GStreamer/gstreamer-pipeline-samples.md
+      - Pipeline Samples:
+        - Intro:  Developer/GStreamer/gstreamer-pipeline-samples.md
+        - Tips for Debug: Developer/GStreamer/gstreamer-pipeline-samples-tips-for-debug.md
+        - Video: Developer/GStreamer/gstreamer-pipeline-samples-video.md
+        - Audio: Developer/GStreamer/gstreamer-pipeline-samples-audio.md
+        - Mux Video and Audio: Developer/GStreamer/gstreamer-pipeline-samples-mux-video-and-audio.md
+        - Media File: Developer/GStreamer/gstreamer-pipeline-samples-media-file.md
+        - Network Streaming: Developer/GStreamer/gstreamer-pipeline-samples-network-streaming.md
+        - Mixing: Developer/GStreamer/gstreamer-pipeline-samples-mixing.md
+        - SHM (Shared Memory): Developer/GStreamer/gstreamer-pipeline-samples-shm.md
+        - Fallbacksrc: Developer/GStreamer/gstreamer-pipeline-samples-fallbacksrc.md
+        - Live Stream, ...: Developer/GStreamer/gstreamer-pipeline-samples-live-stream.md
+        - Python Opencv: Developer/GStreamer/gstreamer-pipeline-samples-python-opencv.md
+      - Another:
+        - Graphs: Developer/GStreamer/gstreamer-pipeline-graphs.md
+
   # ---------- Programming ----------
   - Compiled:
     - Compiled language: Programming/compiled-language.md
     - C: Programming/c/c.md
     - C++:
-      - Giới thiệu:
-        - Overview: Programming/cpp/cpp-0-overview.md
-        - Install: Programming/cpp/cpp-0-install.md
+      - Overview: Programming/cpp/cpp-0-overview.md
+      - Install: Programming/cpp/cpp-0-install.md
+      - Tutorial:
         - HelloWorld: Programming/cpp/cpp-0-helloworld.md
-      - Cơ bản:
         - Data Types: Programming/cpp/cpp-1-datatypes.md
         - Basic Operator: Programming/cpp/cpp-1-basic-operator.md
         - Flow Control: Programming/cpp/cpp-1-flow-control.md
@@ -108,15 +122,15 @@ nav:
         - Namespace: Programming/cpp/cpp-1-namespace.md
         - Define: Programming/cpp/cpp-1-define.md
         - Include: Programming/cpp/cpp-1-include.md
-      - Feature:
-        - Function: Programming/cpp/cpp-2-function.md
-        - Lambda: Programming/cpp/cpp-2-lambda.md
-        - Function as Parameter: Programming/cpp/cpp-2-function-as-parameter.md
-      - Pointer:
-        - Pointer: Programming/cpp/cpp-3-pointer.md
-        - Smart Pointer: Programming/cpp/cpp-3-smart-pointer.md
-        - Raw Pointer: Programming/cpp/cpp-3-raw-pointer.md
-        - Memory Model: Programming/cpp/cpp-3-memory-model.md
+        - Feature:
+          - Function: Programming/cpp/cpp-2-function.md
+          - Lambda: Programming/cpp/cpp-2-lambda.md
+          - Function as Parameter: Programming/cpp/cpp-2-function-as-parameter.md
+        - Pointer:
+          - Pointer: Programming/cpp/cpp-3-pointer.md
+          - Smart Pointer: Programming/cpp/cpp-3-smart-pointer.md
+          - Raw Pointer: Programming/cpp/cpp-3-raw-pointer.md
+          - Memory Model: Programming/cpp/cpp-3-memory-model.md
       - STANDARD LIBRARY STD:
         - Datatype:
           - std::string: Programming/cpp/cpp-3-std-string.md
@@ -136,11 +150,10 @@ nav:
       - Reference & Document: Programming/cpp/cpp-reference-document.md
     - C#: Programming/c-sharp/c-sharp.md
     - Rust:
-      - Overview:
-        - Setup: Programming/Rust/rust-setup.md
-        - Document: Programming/Rust/rust-document.md
+      - Setup: Programming/Rust/rust-setup.md
+      - Document: Programming/Rust/rust-document.md
+      - Tutorial:
         - HelloWorld: Programming/Rust/rust-helloworld.md
-      - Basic:
         - Variables: Programming/Rust/rust-variables.md
         - I/O Printer: Programming/Rust/rust-io-printer.md
   - Hybrid:
@@ -311,6 +324,7 @@ nav:
       - Create App: Tools/Electron/electron-create-app.md
       - Load Link: Tools/Electron/electron-load-link.md
       - Troubleshoots: Tools/Electron/electron-troubleshoots.md
+    - AnyDesk: Tools/AnyDesk/anydesk.md
   - Project:
     - Tad App: 
       - Mô tả: Project/Tad/project-tad-app.md
