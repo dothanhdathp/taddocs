@@ -64,7 +64,7 @@ Sau bài trước và chạy thành công thì bài này sẽ bắt đầu ví d
 
 - Sau đó chạy lệnh sau để __build__:
     ```bash
-    gcc main.c -o mains `pkg-config --cflags --libs gstreamer-1.0`
+    gcc main.c -o main `pkg-config --cflags --libs gstreamer-1.0`
     ```
 - Ta được tệp thực thi tên là `main`, chạy thử chương trình:
     ```bash

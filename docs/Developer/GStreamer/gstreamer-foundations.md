@@ -1,10 +1,10 @@
 # Foundations
 
-Các khái niệm cơ bản xem ở đây [Foundations](https://gstreamer.freedesktop.org/documentation/application-development/introduction/basics.html?gi-language=c)
+Bài này giới thiệu <u>các khái niệm cơ bản của __Gstreamer__</u>. Hiểu được các khái niệm này sẽ rất quan trọng trong việc đọc bất kỳ phần còn lại của hướng dẫn này, tất cả chúng đều cho rằng sự hiểu biết về các khái niệm cơ bản này.
 
 ## Elements
 
-Đối tượng cơ bản
+Elements là thành phần quan trọng nhất của GStreammer
 
 ## Bins
 
@@ -26,3 +26,7 @@ Các khái niệm cơ bản xem ở đây [Foundations](https://gstreamer.freede
     ![alt text](img/gstreamer-foundations-1.png)
     <figcaption></figcaption>
 </figure>
+
+## Tham khảo
+
+- [Foundations](https://gstreamer.freedesktop.org/documentation/application-development/introduction/basics.html?gi-language=c)

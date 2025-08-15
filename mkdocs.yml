@@ -84,6 +84,7 @@ nav:
       - Tutorial:
         - Tutorial: Developer/GStreamer/gstreamer-u-tutorial.md
         - Hello world!: Developer/GStreamer/gstreamer-u-hello-world.md
+        - Pipeline Graphs: Developer/GStreamer/gstreamer-u-pipeline-graphs.md
       - Command Tools:
         - gst-launch-1.0: Developer/GStreamer/gstreamer-gst-launch.md
         - gst-inspect-1.0: Developer/GStreamer/gstreamer-gst-inspect.md
